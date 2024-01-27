@@ -16,7 +16,7 @@ import numpy as np
 
 from model import Net, NUM_CLIENTS
 import ipfshttpclient
-# ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
+ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
 
 
 # #############################################################################
@@ -120,8 +120,8 @@ class FlowerClient(fl.client.NumPyClient):
         with open(file_name, 'wb') as f:
             pickle.dump(params, f)
 
-        # res = ipfs_client.add(file_name)
-        # print('IPFS file hash:', res['Hash'])
+        res = ipfs_client.add(file_name)
+        print(f"File: {file_name} IPFS file hash: {res['Hash']}")
 
         return params, len(trainloader.dataset), {}
 
@@ -133,6 +133,6 @@ class FlowerClient(fl.client.NumPyClient):
 
 # Start Flower client
 fl.client.start_client(
-    server_address="127.0.0.1:8080",
+    server_address="127.0.0.1:8000",
     client=FlowerClient().to_client(),
 )

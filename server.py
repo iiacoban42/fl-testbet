@@ -8,7 +8,7 @@ import uuid
 import ipfshttpclient
 from model import Net, NUM_CLIENTS
 
-# ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
+ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
 
 # Define metric aggregation function
 def weighted_average(metrics: List[Tuple[int, Metrics]]) -> Metrics:
@@ -25,8 +25,12 @@ class CustomFedAvg(fl.server.strategy.FedAvg):
         aggregated_params = super().aggregate_fit(rnd, results, failures)
 
         # Save the aggregated parameters to a file
-        with open(f'storage/aggregated_model_{uuid.uuid4()}.pkl', 'wb') as f:
+        file_name = f'storage/aggregated_model_{uuid.uuid4()}.pkl'
+        with open(file_name, 'wb') as f:
             pickle.dump(aggregated_params, f)
+
+        res = ipfs_client.add(file_name)
+        print(f"File: {file_name} IPFS file hash: {res['Hash']}")
 
         return aggregated_params
 
@@ -56,12 +60,12 @@ file_name = f'storage/init_model_{uuid.uuid4()}.pkl'
 with open(file_name, 'wb') as f:
     pickle.dump(model.state_dict(), f)
 
-# res = ipfs_client.add(file_name)
-# print('IPFS file hash:', res['Hash'])
+res = ipfs_client.add(file_name)
+print(f"File: {file_name} IPFS file hash: {res['Hash']}")
 
 # Start Flower server
 fl.server.start_server(
-    server_address="0.0.0.0:8080",
+    server_address="0.0.0.0:8000",
     config=fl.server.ServerConfig(num_rounds=1),
     strategy=strategy,
 )

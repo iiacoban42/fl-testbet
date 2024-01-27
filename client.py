@@ -1,5 +1,7 @@
 import argparse
 import warnings
+import pickle
+import uuid
 from collections import OrderedDict
 
 import flwr as fl
@@ -10,6 +12,11 @@ import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from torchvision.transforms import Compose, Normalize, ToTensor
 from tqdm import tqdm
+import numpy as np
+
+from model import Net, NUM_CLIENTS
+import ipfshttpclient
+# ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
 
 
 # #############################################################################
@@ -18,27 +25,6 @@ from tqdm import tqdm
 
 warnings.filterwarnings("ignore", category=UserWarning)
 DEVICE = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
-
-
-class Net(nn.Module):
-    """Model (simple CNN adapted from 'PyTorch: A 60 Minute Blitz')"""
-
-    def __init__(self) -> None:
-        super(Net, self).__init__()
-        self.conv1 = nn.Conv2d(3, 6, 5)
-        self.pool = nn.MaxPool2d(2, 2)
-        self.conv2 = nn.Conv2d(6, 16, 5)
-        self.fc1 = nn.Linear(16 * 5 * 5, 120)
-        self.fc2 = nn.Linear(120, 84)
-        self.fc3 = nn.Linear(84, 10)
-
-    def forward(self, x: torch.Tensor) -> torch.Tensor:
-        x = self.pool(F.relu(self.conv1(x)))
-        x = self.pool(F.relu(self.conv2(x)))
-        x = x.view(-1, 16 * 5 * 5)
-        x = F.relu(self.fc1(x))
-        x = F.relu(self.fc2(x))
-        return self.fc3(x)
 
 
 def train(net, trainloader, epochs):
@@ -71,7 +57,7 @@ def test(net, testloader):
 
 def load_data(node_id):
     """Load partition CIFAR10 data."""
-    fds = FederatedDataset(dataset="cifar10", partitioners={"train": 3})
+    fds = FederatedDataset(dataset="cifar10", partitioners={"train": NUM_CLIENTS})
     partition = fds.load_partition(node_id)
     # Divide data on each node: 80% train, 20% test
     partition_train_test = partition.train_test_split(test_size=0.2)
@@ -98,7 +84,7 @@ def load_data(node_id):
 parser = argparse.ArgumentParser(description="Flower")
 parser.add_argument(
     "--node-id",
-    choices=[0, 1, 2],
+    choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
     required=True,
     type=int,
     help="Partition of the dataset divided into 3 iid partitions created artificially.",
@@ -112,8 +98,12 @@ trainloader, testloader = load_data(node_id=node_id)
 
 # Define Flower client
 class FlowerClient(fl.client.NumPyClient):
+
+
     def get_parameters(self, config):
-        return [val.cpu().numpy() for _, val in net.state_dict().items()]
+        params = [val.cpu().numpy() for _, val in net.state_dict().items()]
+        return params
+
 
     def set_parameters(self, parameters):
         params_dict = zip(net.state_dict().keys(), parameters)
@@ -123,7 +113,17 @@ class FlowerClient(fl.client.NumPyClient):
     def fit(self, parameters, config):
         self.set_parameters(parameters)
         train(net, trainloader, epochs=1)
-        return self.get_parameters(config={}), len(trainloader.dataset), {}
+
+        params = self.get_parameters(config={})
+        # Save the updated parameters to a file
+        file_name = f'storage/updated_weights_{uuid.uuid4()}.pkl'
+        with open(file_name, 'wb') as f:
+            pickle.dump(params, f)
+
+        # res = ipfs_client.add(file_name)
+        # print('IPFS file hash:', res['Hash'])
+
+        return params, len(trainloader.dataset), {}
 
     def evaluate(self, parameters, config):
         self.set_parameters(parameters)

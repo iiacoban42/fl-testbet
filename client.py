@@ -14,7 +14,8 @@ from torchvision.transforms import Compose, Normalize, ToTensor
 from tqdm import tqdm
 import numpy as np
 
-from model import Net, NUM_CLIENTS
+from model import Net, NUM_CLIENTS, IPFS_ON
+
 import ipfshttpclient
 ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
 
@@ -84,7 +85,7 @@ def load_data(node_id):
 parser = argparse.ArgumentParser(description="Flower")
 parser.add_argument(
     "--node-id",
-    choices=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+    choices=np.arange(NUM_CLIENTS),
     required=True,
     type=int,
     help="Partition of the dataset divided into 3 iid partitions created artificially.",
@@ -96,9 +97,13 @@ net = Net().to(DEVICE)
 trainloader, testloader = load_data(node_id=node_id)
 
 
+# create an array containing all integers between 0 and 99
+
 # Define Flower client
 class FlowerClient(fl.client.NumPyClient):
 
+    def __init__(self, cid):
+        self.cid = cid
 
     def get_parameters(self, config):
         params = [val.cpu().numpy() for _, val in net.state_dict().items()]
@@ -116,12 +121,13 @@ class FlowerClient(fl.client.NumPyClient):
 
         params = self.get_parameters(config={})
         # Save the updated parameters to a file
-        file_name = f'storage/updated_weights_{uuid.uuid4()}.pkl'
+        file_name = f'storage/updated_weights_{self.cid}_{uuid.uuid4()}.pkl'
         with open(file_name, 'wb') as f:
             pickle.dump(params, f)
 
-        res = ipfs_client.add(file_name)
-        print(f"File: {file_name} IPFS file hash: {res['Hash']}")
+        if IPFS_ON:
+            res = ipfs_client.add(file_name)
+            print(f"File: {file_name} IPFS file hash: {res['Hash']}")
 
         return params, len(trainloader.dataset), {}
 
@@ -134,5 +140,5 @@ class FlowerClient(fl.client.NumPyClient):
 # Start Flower client
 fl.client.start_client(
     server_address="127.0.0.1:8000",
-    client=FlowerClient().to_client(),
+    client=FlowerClient(node_id).to_client(),
 )

@@ -72,3 +72,18 @@ python3 client.py --node-id 1
 ```
 
 You will see that PyTorch is starting a federated training. Look at the [code](https://github.com/adap/flower/tree/main/examples/quickstart-pytorch) for a detailed explanation.
+
+## Run IPFS in Docker
+
+1. Retrieve the IPFS v0.7.0 source code to build
+```shell
+git clone https://github.com/ipfs/go-ipfs.git
+cd go-ipfs
+git checkout tags/v0.7.0 -b v7
+```
+
+2. Run the IPFS Docker container
+```shell
+docker build -t my-ipfs-node:v7 .
+docker run -d --name ipfs-node -p 4001:4001 -p 8080:8080 -p 5001:5001 my-ipfs-node:v7
+```

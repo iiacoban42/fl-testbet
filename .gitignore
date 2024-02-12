@@ -1,0 +1,14 @@
+/.venev
+__pycache__
+
+/ipfs_data/**
+!/ipfs_data/*/
+!/ipfs_data/*/.gitkeep
+
+/ipfs_staging/**
+!/ipfs_staging/*/
+!/ipfs_staging/*/.gitkeep
+
+/storage/**
+!/storage/*/
+!/storage/*/.gitkeep

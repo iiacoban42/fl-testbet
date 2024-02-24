@@ -14,10 +14,14 @@ from torchvision.transforms import Compose, Normalize, ToTensor
 from tqdm import tqdm
 import numpy as np
 
-from model import Net, NUM_CLIENTS, IPFS_ON
+from model import Net, NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON
+from con import send_command
 
 import ipfshttpclient
-ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
+
+ipfs_client = None
+if IPFS_ON:
+    ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
 
 
 # #############################################################################
@@ -104,6 +108,8 @@ class FlowerClient(fl.client.NumPyClient):
 
     def __init__(self, cid):
         self.cid = cid
+        self.perun_node_host = "127.0.0.1"
+        self.perun_node_port = str(8081 + cid)
 
     def get_parameters(self, config):
         params = [val.cpu().numpy() for _, val in net.state_dict().items()]
@@ -128,6 +134,9 @@ class FlowerClient(fl.client.NumPyClient):
         if IPFS_ON:
             res = ipfs_client.add(file_name)
             print(f"File: {file_name} IPFS file hash: {res['Hash']}")
+
+        if INCENTIVES_ON:
+            send_command(self.perun_node_host, self.perun_node_port, f"set,peer_{NUM_CLIENTS},1,{NUM_ROUNDS},10,0,0".encode(), "client")
 
         return params, len(trainloader.dataset), {}
 

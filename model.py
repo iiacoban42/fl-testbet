@@ -2,8 +2,10 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-NUM_CLIENTS = 5
+NUM_CLIENTS = 2
+NUM_ROUNDS = 1
 IPFS_ON = False
+INCENTIVES_ON = True
 
 class Net(nn.Module):
     """Model (simple CNN adapted from 'PyTorch: A 60 Minute Blitz')"""

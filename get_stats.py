@@ -35,5 +35,3 @@ for i, (timestamp, log_text) in enumerate(timestamps):
                 elapsed_time = calculate_elapsed_time(timestamp, timestamp_second)
                 print(f"{timestamp} | time: {elapsed_time} seconds | {log_text.replace('Start ', '')}")
                 break
-
-

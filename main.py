@@ -30,15 +30,11 @@ def main():
     if not INCENTIVES_ON:
         subprocess.call("/Users/pi/Desktop/fl-testbet/run.sh", shell=True)
     else:
-        fl.common.logger.configure(identifier="FL-experiment", filename="fllog.log")
-
         log(INFO, "Start opening channels")
         setup_channels()
         log(INFO, "Done opening channels")
 
-
         subprocess.call("/Users/pi/Desktop/fl-testbet/run.sh", shell=True)
-
 
         log(INFO, "Start settling channels")
         settle_channels()

@@ -13,6 +13,8 @@ from torch.utils.data import DataLoader
 from torchvision.transforms import Compose, Normalize, ToTensor
 from tqdm import tqdm
 import numpy as np
+from logging import INFO, DEBUG
+from flwr.common.logger import log
 
 from model import Net, NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON
 from con import send_command
@@ -122,9 +124,9 @@ class FlowerClient(fl.client.NumPyClient):
         net.load_state_dict(state_dict, strict=True)
 
     def fit(self, parameters, config):
+        log(INFO, "Start Training client=%s", self.cid)
         self.set_parameters(parameters)
         train(net, trainloader, epochs=1)
-
         params = self.get_parameters(config={})
         # Save the updated parameters to a file
         file_name = f'storage/updated_weights_{self.cid}_{uuid.uuid4()}.pkl'
@@ -133,11 +135,16 @@ class FlowerClient(fl.client.NumPyClient):
 
         if IPFS_ON:
             res = ipfs_client.add(file_name)
-            print(f"File: {file_name} IPFS file hash: {res['Hash']}")
+            log(DEBUG, "File: %s IPFS file hash: %s", file_name, res['Hash'])
 
+        log(INFO, "Start sending updated weights to the perun node (client=%s)", self.cid)
         if INCENTIVES_ON:
+            log(INFO, "PERUN REQUEST: Setting weight client=%s", self.cid)
             send_command(self.perun_node_host, self.perun_node_port, f"set,peer_{NUM_CLIENTS},1,{NUM_ROUNDS},10,0,0".encode(), "client")
+            log(INFO, "Done sending updated weights to the perun node (client=%s)", self.cid)
 
+
+        log(INFO, "Done Training client=%s", self.cid)
         return params, len(trainloader.dataset), {}
 
     def evaluate(self, parameters, config):
@@ -145,6 +152,8 @@ class FlowerClient(fl.client.NumPyClient):
         loss, accuracy = test(net, testloader)
         return loss, len(testloader.dataset), {"accuracy": accuracy}
 
+
+fl.common.logger.configure(identifier="FL-experiment", filename="fllog.log")
 
 # Start Flower client
 fl.client.start_client(

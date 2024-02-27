@@ -48,7 +48,7 @@ class CustomFedAvg(fl.server.strategy.FedAvg):
 
 
     def aggregate_fit(self, rnd, results, failures):
-        log(INFO, "Start Aggregating (round=%s)", rnd)
+        log(INFO, "Start Aggregating round=%s", rnd)
         aggregated_params = super().aggregate_fit(rnd, results, failures)
 
         # aggregated_loss, aggregated_accuracy = super().aggregate_evaluate(rnd, results, failures)

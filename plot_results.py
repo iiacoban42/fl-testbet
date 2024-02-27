@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 
 def parse_log(file_path):
     data = []
@@ -27,23 +28,80 @@ def parse_log(file_path):
 
     return data
 
-def plot_data(data):
-    for config in set(entry['config'] for entry in data):
-        config_data = [entry for entry in data if entry['config'] == config]
-        event_types = [entry['event_type'] for entry in config_data]
-        time_seconds = [entry['time_seconds'] for entry in config_data]
 
-        plt.figure(figsize=(10, 5))
-        plt.bar(event_types, time_seconds, label='Time (seconds)')
-        plt.title(f'Config: {config}')
-        plt.xlabel('Event Type')
-        plt.ylabel('Time (seconds)')
-        plt.legend()
-        plt.xticks(rotation=45)
-        plt.tight_layout()
-        plt.show()
+def get_mean_time(data, event):
+    config_data = {}
+    for entry in data:
+        if event in entry['event_type'].lower():
+            config = entry['config']
+            time_seconds = entry['time_seconds']
+
+            if config not in config_data:
+                config_data[config] = {'times': [], 'rounds_clients': ''}
+
+            config_data[config]['times'].append(time_seconds)
+
+    for config, values in config_data.items():
+        rounds_clients = tuple(map(int, [s.split('=')[1] for s in config.split(',') if 'ROUNDS' in s or 'NUM_CLIENTS' in s]))
+        mean_time = np.mean(values['times'])
+
+        config_data[config]['rounds_clients'] = rounds_clients
+        config_data[config]['mean_time'] = mean_time
 
 
-log_file_path = "results.txt"
-log_data = parse_log(log_file_path)
-plot_data(log_data)
+    labels = ['({}, {})'.format(*values['rounds_clients']) for values in config_data.values()]
+    mean_times = [values['mean_time'] for values in config_data.values()]
+
+    return labels, mean_times
+
+
+def plot_mean_time_diff(data_FL, data_FLChan, event, title):
+
+    labels, mean_times_FL = get_mean_time(data_FL, event)
+    labels, mean_times_FLChan = get_mean_time(data_FLChan, event)
+
+    plt.figure(figsize=(12, 6))
+    width = 0.35
+    x = np.arange(len(labels))
+
+    plt.bar(x - width/2, mean_times_FL, width, label='Mean Times FL', color='blue')
+    plt.bar(x + width/2, mean_times_FLChan, width, label='Mean Times FLChan', color='orange')
+
+    plt.title(title)
+    plt.xlabel('Configuration (NUM_CLIENTS, ROUNDS)')
+    plt.ylabel('Mean Time (seconds)')
+    plt.xticks(x, labels, rotation=45, ha='right')
+    plt.tight_layout()
+    plt.legend()
+    plt.savefig(title + '.png')
+    plt.show()
+
+
+def plot_mean_time(data, event, title):
+
+    labels, mean_times = get_mean_time(data, event)
+
+    plt.figure(figsize=(12, 6))
+    width = 0.35
+    x = np.arange(len(labels))
+
+    plt.figure(figsize=(12, 6))
+    plt.bar(range(len(labels)), mean_times, tick_label=labels, color='blue')
+    plt.title(title)
+    plt.xlabel('(ROUNDS, NUM_CLIENTS)')
+    plt.ylabel('Mean Time (seconds)')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.savefig(title + '.png')
+    plt.show()
+
+
+log_data_FL = parse_log("results_FL.txt")
+log_data_FLChan = parse_log("results_chanFL.txt")
+
+plot_mean_time_diff(log_data_FL, log_data_FLChan, "training", 'Mean Training Time FL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_FLChan, "round", 'Mean Round Time FL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_FLChan, "experiment", 'Mean E2E Time FL vs FLChan')
+
+plot_mean_time(log_data_FLChan, "opening channels", 'Mean Time to Open Channels')
+plot_mean_time(log_data_FLChan, "settling channels", 'Mean Time to Settle Channels')

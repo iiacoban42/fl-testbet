@@ -29,7 +29,6 @@ def calculate_elapsed_time(start_time, end_time):
         return None
 
 
-
 # loop through the logs and find the start and done logs with the same parameters
 # then calculate the time between the start and done logs
 # and print the time and the parameters

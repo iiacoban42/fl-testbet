@@ -139,8 +139,9 @@ class FlowerClient(fl.client.NumPyClient):
 
         log(INFO, "Start sending updated weights to the perun node (client=%s)", self.cid)
         if INCENTIVES_ON:
-            log(INFO, "PERUN REQUEST: Setting weight client=%s", self.cid)
-            send_command(self.perun_node_host, self.perun_node_port, f"set,peer_{NUM_CLIENTS},1,{NUM_ROUNDS},10,0,0".encode(), "client")
+            request = f"set,peer_{NUM_CLIENTS},1,{NUM_ROUNDS},10,0,0"
+            log(INFO, "PERUN REQUEST: Setting weight client=%s, REQ=%s", self.cid, request)
+            send_command(self.perun_node_host, self.perun_node_port, request.encode(), "client")
             log(INFO, "Done sending updated weights to the perun node (client=%s)", self.cid)
 
 

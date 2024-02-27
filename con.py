@@ -1,6 +1,6 @@
 """Communicate with the perun node using websockets."""
 import socket
-# import time
+import time
 
 def send_command(host: str, port: int, request: bytes, caller: str="") -> str:
     """Sent a command to the perun node using websockets and return the response."""
@@ -19,7 +19,7 @@ def send_command(host: str, port: int, request: bytes, caller: str="") -> str:
         return err_message
 
     # Send a message to the server
-    conn.sendall(request)
+    conn.send(request)
 
     # Read the server's response
     try:
@@ -48,7 +48,7 @@ def test():
     command = b"open,peer_1,50,50"
     send_command("0.0.0.0", 8081, command)
 
-    # time.sleep(1)
+    # time.sleep(0.01)
 
     print("Init FL...")
     command = b"set,peer_1,1,1,0,0,0"
@@ -79,26 +79,95 @@ def test():
     send_command("0.0.0.0", 8082, command)
 
 
+def testRounds():
+    """Test the communication with the perun node."""
+    print("Opening channel...")
+    command = b"open,peer_1,50,50"
+    send_command("0.0.0.0", 8081, command)
+
+    print("Init FL...")
+    command = b"set,peer_1,1,3,0,0,0"
+    send_command("0.0.0.0", 8081, command)
+
+    print("Set weights...")
+    command = b"set,peer_0,1,3,10,0,0"
+    send_command("0.0.0.0", 8082, command)
+
+    print("Aggregate...")
+    command = b"set,peer_1,1,3,10,66,34"
+    send_command("0.0.0.0", 8081, command)
+
+    print("Set weights...")
+    command = b"set,peer_0,1,3,10,0,0"
+    send_command("0.0.0.0", 8082, command)
+
+    print("Aggregate...")
+    command = b"set,peer_1,1,3,10,66,34"
+    send_command("0.0.0.0", 8081, command)
+
+    print("Set weights...")
+    command = b"set,peer_0,1,3,10,0,0"
+    send_command("0.0.0.0", 8082, command)
+
+    print("Aggregate...")
+    command = b"set,peer_1,1,3,10,66,34"
+    send_command("0.0.0.0", 8081, command)
+
+    time.sleep(0.1)
+
+    print("Settle channel...")
+
+    command = b"settle,peer_0"
+    send_command("0.0.0.0", 8082, command)
+
+
+def testTwoRounds():
+    """Test the communication with the perun node."""
+    print("Opening channel...")
+    command = b"open,peer_1,50,50"
+    send_command("0.0.0.0", 8081, command)
+
+    print("Init FL...")
+    command = b"set,peer_1,1,2,0,0,0"
+    send_command("0.0.0.0", 8081, command)
+
+    print("Set weights...")
+    command = b"set,peer_0,1,2,10,0,0"
+    send_command("0.0.0.0", 8082, command)
+
+    print("Aggregate...")
+    command = b"set,peer_1,1,2,0,0,99"
+    send_command("0.0.0.0", 8081, command)
+
+    print("Set weights...")
+    command = b"set,peer_0,1,2,10,0,0"
+    send_command("0.0.0.0", 8082, command)
+
+    print("Aggregate...")
+    command = b"set,peer_1,1,2,0,0,99"
+    send_command("0.0.0.0", 8081, command)
+
+    time.sleep(0.1)
+
+    print("Settle channel...")
+
+    command = b"settle,peer_0"
+    send_command("0.0.0.0", 8082, command)
+
+
 def testDisputes():
     """Test the communication with the perun node."""
     print("Opening channel...")
     command = b"open,peer_1,50,50"
     send_command("0.0.0.0", 8081, command)
 
-    # time.sleep(1)
-
     print("Init FL...")
     command = b"forceset,peer_1,1,1,0,0,0"
     send_command("0.0.0.0", 8081, command)
 
-    # time.sleep(1)
-
-
     print("Set weights...")
     command = b"forceset,peer_0,1,1,10,0,0"
     send_command("0.0.0.0", 8082, command)
-
-    # time.sleep(1)
 
 
     print("Aggregate...")
@@ -106,8 +175,7 @@ def testDisputes():
     send_command("0.0.0.0", 8081, command)
 
     print("Settle channel...")
-
-    # time.sleep(1)
+    time.sleep(0.1)
 
     # command = b"settle,peer_1"
     # send_command("0.0.0.0", 8081, command)
@@ -118,3 +186,5 @@ def testDisputes():
 
 # test()
 # testDisputes()
+# testRounds()
+# testTwoRounds()

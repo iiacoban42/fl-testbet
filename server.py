@@ -40,9 +40,10 @@ class CustomFedAvg(fl.server.strategy.FedAvg):
         if INCENTIVES_ON:
             log(INFO, "Start sharing model with perun nodes")
             for i in range(NUM_CLIENTS):
-                log(INFO, "PERUN REQUEST: Sharing model with peer_%s", i)
+                request = f"set,peer_{i},1,{NUM_ROUNDS},0,0,0"
+                log(INFO, "PERUN REQUEST: Sharing model with peer_%s, REQ=%s", i, request)
                 # send_command(self.perun_node_host, self.perun_node_port, f"open,peer_{i},10,10".encode(), "server")
-                send_command(self.perun_node_host, self.perun_node_port, f"set,peer_{i},1,1,0,0,0".encode(), "server")
+                send_command(self.perun_node_host, self.perun_node_port, request.encode(), "server")
             log(INFO, "Done sharing model with perun nodes")
 
 
@@ -80,11 +81,12 @@ class CustomFedAvg(fl.server.strategy.FedAvg):
         if INCENTIVES_ON:
             log(INFO, "Start sending aggregated model to perun nodes round=%s", rnd)
             for i in range(NUM_CLIENTS):
-                log(INFO, "PERUN REQUEST: Setting model with peer_%s", i)
+                request = f"set,peer_{i},1,{NUM_ROUNDS},0,{int(aggregated_accuracy['accuracy'])},{int((100 - aggregated_accuracy['accuracy']))}"
+                log(INFO, "PERUN REQUEST: Setting model with peer_%s, REQ=%s", i, request)
 
                 send_command(self.perun_node_host,
                             self.perun_node_port,
-                            f"set,peer_{i},1,{NUM_ROUNDS},0,{int(aggregated_accuracy['accuracy'])},{int((100 - aggregated_accuracy['accuracy']))}".encode(),
+                            request.encode(),
                             "server")
 
             log(INFO, "Done sending aggregated model to perun nodes round=%s", rnd)

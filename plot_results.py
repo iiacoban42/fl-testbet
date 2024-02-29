@@ -32,7 +32,7 @@ def parse_log(file_path):
 def get_mean_time(data, event):
     config_data = {}
     for entry in data:
-        if event in entry['event_type'].lower():
+        if event in entry['event_type']:
             config = entry['config']
             time_seconds = entry['time_seconds']
 
@@ -74,7 +74,7 @@ def plot_mean_time_diff(data_FL, data_FLChan, event, title):
     plt.tight_layout()
     plt.legend()
     plt.savefig(title + '.png')
-    plt.show()
+    # plt.show()
 
 
 def plot_mean_time(data, event, title):
@@ -93,15 +93,15 @@ def plot_mean_time(data, event, title):
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
     plt.savefig(title + '.png')
-    plt.show()
+    # plt.show()
 
 
-log_data_FL = parse_log("results_FL.txt")
-log_data_FLChan = parse_log("results_chanFL.txt")
+log_data_FL = parse_log("logs/res_plot/results_FL.txt")
+log_data_FLChan = parse_log("logs/res_plot/results_chanFL.txt")
 
-plot_mean_time_diff(log_data_FL, log_data_FLChan, "training", 'Mean Training Time FL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_FLChan, "round", 'Mean Round Time FL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_FLChan, "experiment", 'Mean E2E Time FL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_FLChan, "Training", 'Mean Training Time FL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_FLChan, "Round", 'Mean Round Time FL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_FLChan, "Experiment", 'Mean E2E Time FL vs FLChan')
 
 plot_mean_time(log_data_FLChan, "opening channels", 'Mean Time to Open Channels')
 plot_mean_time(log_data_FLChan, "settling channels", 'Mean Time to Settle Channels')

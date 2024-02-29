@@ -16,7 +16,7 @@ import numpy as np
 from logging import INFO, DEBUG
 from flwr.common.logger import log
 
-from model import Net, NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON
+from model import Net, NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON, LOG_FILE
 from con import send_command
 
 import ipfshttpclient
@@ -65,7 +65,7 @@ def test(net, testloader):
 def load_data(node_id):
     """Load partition CIFAR10 data."""
     fds = FederatedDataset(dataset="cifar10", partitioners={"train": NUM_CLIENTS})
-    partition = fds.load_partition(node_id)
+    partition = fds.load_full(split="train")
     # Divide data on each node: 80% train, 20% test
     partition_train_test = partition.train_test_split(test_size=0.2)
     pytorch_transforms = Compose(
@@ -154,7 +154,7 @@ class FlowerClient(fl.client.NumPyClient):
         return loss, len(testloader.dataset), {"accuracy": accuracy}
 
 
-fl.common.logger.configure(identifier="FL-experiment", filename="fllog.log")
+fl.common.logger.configure(identifier="FL-experiment", filename=LOG_FILE)
 
 # Start Flower client
 fl.client.start_client(

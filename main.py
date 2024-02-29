@@ -2,7 +2,7 @@
 import subprocess
 import time
 from con import send_command
-from model import NUM_CLIENTS, INCENTIVES_ON, IPFS_ON, NUM_ROUNDS
+from model import NUM_CLIENTS, INCENTIVES_ON, IPFS_ON, NUM_ROUNDS, LOG_FILE
 
 import flwr as fl
 from logging import INFO, DEBUG
@@ -21,20 +21,20 @@ def settle_channels():
 
 
 def main():
-    fl.common.logger.configure(identifier="FL-experiment", filename="fllog.log")
+    fl.common.logger.configure(identifier="FL-experiment", filename=LOG_FILE)
 
     log(INFO, "Config: INCENTIVES_ON=%s, IPFS_ON=%s, NUM_CLIENTS=%s, NUM_ROUNDS=%s", INCENTIVES_ON, IPFS_ON, NUM_CLIENTS, NUM_ROUNDS)
     log(INFO, "Start Experiment")
 
 
     if not INCENTIVES_ON:
-        subprocess.call("/Users/pi/Desktop/fl-testbet/run.sh", shell=True)
+        subprocess.call(f"/Users/pi/Desktop/fl-testbet/run.sh {NUM_CLIENTS-1}", shell=True)
     else:
         log(INFO, "Start opening channels")
         setup_channels()
         log(INFO, "Done opening channels")
 
-        subprocess.call("/Users/pi/Desktop/fl-testbet/run.sh", shell=True)
+        subprocess.call(f"/Users/pi/Desktop/fl-testbet/run.sh {NUM_CLIENTS-1}", shell=True)
 
         log(INFO, "Start settling channels")
         settle_channels()

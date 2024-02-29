@@ -2,10 +2,17 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 
-NUM_CLIENTS = 2
+NUM_CLIENTS = 5
 NUM_ROUNDS = 1
-IPFS_ON = False
+IPFS_ON = True
 INCENTIVES_ON = True
+LOG_FILE = ""
+
+if INCENTIVES_ON:
+    LOG_FILE = f"logs/logs_flchan/exp{NUM_CLIENTS}{NUM_ROUNDS}.log"
+else:
+    LOG_FILE = f"logs/logs_fl/exp{NUM_CLIENTS}{NUM_ROUNDS}.log"
+
 
 class Net(nn.Module):
     """Model (simple CNN adapted from 'PyTorch: A 60 Minute Blitz')"""

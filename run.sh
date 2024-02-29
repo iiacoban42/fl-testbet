@@ -2,11 +2,12 @@
 set -e
 cd "$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"/
 
+num_clients=$1
 echo "Starting server"
 python server.py &
 sleep 3  # Sleep for 3s to give the server enough time to start
 
-for i in $(seq 0 1); do
+for i in $(seq 0 $num_clients); do
     echo "Starting client $i"
     python client.py --node-id "$i" &
 done

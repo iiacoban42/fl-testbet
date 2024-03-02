@@ -1,5 +1,6 @@
 from flwr.common import Metrics
-from model import Net, NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON, LOG_FILE
+from model import Net
+from main import NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON, LOG_FILE
 from con import send_command
 from typing import List, Tuple
 from logging import INFO, DEBUG

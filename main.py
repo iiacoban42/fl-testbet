@@ -2,11 +2,22 @@
 import subprocess
 import time
 from con import send_command
-from model import NUM_CLIENTS, INCENTIVES_ON, IPFS_ON, NUM_ROUNDS, LOG_FILE
 
 import flwr as fl
 from logging import INFO, DEBUG
 from flwr.common.logger import log
+
+NUM_CLIENTS = 2
+NUM_ROUNDS = 1
+IPFS_ON = False
+INCENTIVES_ON = False
+LOG_FILE = ""
+
+if INCENTIVES_ON:
+    LOG_FILE = f"logs/logs_flchan/exp{NUM_CLIENTS}{NUM_ROUNDS}.log"
+else:
+    LOG_FILE = f"logs/logs_fl/exp{NUM_CLIENTS}{NUM_ROUNDS}.log"
+
 
 def setup_channels():
     for i in range(NUM_CLIENTS):

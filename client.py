@@ -7,8 +7,6 @@ from collections import OrderedDict
 import flwr as fl
 from flwr_datasets import FederatedDataset
 import torch
-import torch.nn as nn
-import torch.nn.functional as F
 from torch.utils.data import DataLoader
 from torchvision.transforms import Compose, Normalize, ToTensor
 from tqdm import tqdm
@@ -16,7 +14,8 @@ import numpy as np
 from logging import INFO, DEBUG
 from flwr.common.logger import log
 
-from model import Net, NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON, LOG_FILE
+from model import Net
+from main import NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON, LOG_FILE
 from con import send_command
 
 import ipfshttpclient

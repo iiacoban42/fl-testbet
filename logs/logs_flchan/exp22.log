@@ -1,0 +1,97 @@
+FL-experiment | INFO flwr 2024-03-07 03:25:32,341 | main.py:37 | Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=2
+FL-experiment | INFO flwr 2024-03-07 03:25:32,341 | main.py:38 | Start Experiment
+FL-experiment | INFO flwr 2024-03-07 03:25:32,341 | main.py:44 | Start opening channels
+FL-experiment | INFO flwr 2024-03-07 03:26:02,173 | main.py:46 | Done opening channels
+FL-experiment | DEBUG flwr 2024-03-07 03:26:03,043 | server.py:111 | File: storage/init_model_9597e6d0-2e1e-4bb0-9b10-bf15600a8f62.pkl IPFS file hash: QmTyiZXVJQ1Jy8kdcQwYUbGXNkJVxBdcZwn5E4FPf7wKaD
+FL-experiment | INFO flwr 2024-03-07 03:26:03,043 | server.py:35 | Start Round=1
+FL-experiment | INFO flwr 2024-03-07 03:26:03,043 | server.py:42 | Start sharing model with perun nodes
+FL-experiment | INFO flwr 2024-03-07 03:26:03,043 | server.py:45 | PERUN REQUEST: Sharing model with peer_0, REQ=set,peer_0,1,2,0,0,0
+FL-experiment | INFO flwr 2024-03-07 03:26:03,047 | server.py:45 | PERUN REQUEST: Sharing model with peer_1, REQ=set,peer_1,1,2,0,0,0
+FL-experiment | INFO flwr 2024-03-07 03:26:03,051 | server.py:48 | Done sharing model with perun nodes
+FL-experiment | INFO flwr 2024-03-07 03:26:03,051 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=2, round_timeout=None)
+FL-experiment | INFO flwr 2024-03-07 03:26:03,064 | app.py:176 | Flower ECE: gRPC server running (2 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-03-07 03:26:03,065 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-03-07 03:26:03,069 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-03-07 03:26:10,741 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-07 03:26:10,742 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-07 03:26:10,743 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-03-07 03:26:10,744 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-03-07 03:26:10,754 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-03-07 03:26:10,754 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-03-07 03:26:10,754 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-03-07 03:26:10,954 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-07 03:26:10,955 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-07 03:26:10,957 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-03-07 03:26:10,957 | server.py:222 | fit_round 1: strategy sampled 2 clients (out of 2)
+FL-experiment | INFO flwr 2024-03-07 03:26:10,959 | client.py:126 | Start Training client=1
+FL-experiment | INFO flwr 2024-03-07 03:26:10,963 | client.py:126 | Start Training client=0
+FL-experiment | DEBUG flwr 2024-03-07 03:26:28,712 | client.py:137 | File: storage/updated_weights_0_650a2305-9a1c-4f22-a641-5523c88b4c12.pkl IPFS file hash: QmVELkejZRzx6GuKXhnBPRvG1MNfjRDtg42kKNMc7EfMaT
+FL-experiment | INFO flwr 2024-03-07 03:26:28,712 | client.py:139 | Start sending updated weights to the perun node (client=0)
+FL-experiment | INFO flwr 2024-03-07 03:26:28,712 | client.py:142 | PERUN REQUEST: Setting weight client=0, REQ=set,peer_2,1,2,10,0,0
+FL-experiment | INFO flwr 2024-03-07 03:26:28,716 | client.py:144 | Done sending updated weights to the perun node (client=0)
+FL-experiment | INFO flwr 2024-03-07 03:26:28,716 | client.py:147 | Done Training client=0
+FL-experiment | DEBUG flwr 2024-03-07 03:26:29,247 | client.py:137 | File: storage/updated_weights_1_bbae4d7f-96c1-41f7-aceb-a8183a5dbd7f.pkl IPFS file hash: QmVqcPLJ2HELf3EwnScQBCbT5KK48eYZJTBi8jEoLa7Xio
+FL-experiment | INFO flwr 2024-03-07 03:26:29,248 | client.py:139 | Start sending updated weights to the perun node (client=1)
+FL-experiment | INFO flwr 2024-03-07 03:26:29,248 | client.py:142 | PERUN REQUEST: Setting weight client=1, REQ=set,peer_2,1,2,10,0,0
+FL-experiment | INFO flwr 2024-03-07 03:26:29,256 | client.py:144 | Done sending updated weights to the perun node (client=1)
+FL-experiment | INFO flwr 2024-03-07 03:26:29,256 | client.py:147 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-03-07 03:26:29,257 | server.py:236 | fit_round 1 received 2 results and 0 failures
+FL-experiment | INFO flwr 2024-03-07 03:26:29,257 | server.py:52 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-03-07 03:26:29,259 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | INFO flwr 2024-03-07 03:26:29,259 | server.py:58 | Start saving aggregated model to storage (round=1)
+FL-experiment | DEBUG flwr 2024-03-07 03:26:29,282 | server.py:67 | File: storage/aggregated_model_90746828-9194-4099-a20e-16286220df82.pkl IPFS file hash: QmPNqKyAbFmKkGEQghR9rLKbG5Vy41beekSdHvzN8eCNhX
+FL-experiment | INFO flwr 2024-03-07 03:26:29,282 | server.py:70 | Done saving aggregated model to storage (round=1)
+FL-experiment | DEBUG flwr 2024-03-07 03:26:29,282 | server.py:173 | evaluate_round 1: strategy sampled 2 clients (out of 2)
+FL-experiment | DEBUG flwr 2024-03-07 03:26:31,090 | server.py:187 | evaluate_round 1 received 2 results and 0 failures
+FL-experiment | INFO flwr 2024-03-07 03:26:31,091 | server.py:77 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-03-07 03:26:31,091 | server.py:79 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-03-07 03:26:31,091 | server.py:80 | Round: 1, Aggregated accuracy: {'accuracy': 0.253}, Aggregated loss: 643.255126953125, IPFS hash: QmPNqKyAbFmKkGEQghR9rLKbG5Vy41beekSdHvzN8eCNhX
+FL-experiment | INFO flwr 2024-03-07 03:26:31,091 | server.py:83 | Start sending aggregated model to perun nodes round=1
+FL-experiment | INFO flwr 2024-03-07 03:26:31,091 | server.py:86 | PERUN REQUEST: Setting model with peer_0, REQ=set,peer_0,1,2,0,0,99
+FL-experiment | INFO flwr 2024-03-07 03:26:31,095 | server.py:86 | PERUN REQUEST: Setting model with peer_1, REQ=set,peer_1,1,2,0,0,99
+FL-experiment | INFO flwr 2024-03-07 03:26:31,101 | server.py:93 | Done sending aggregated model to perun nodes round=1
+FL-experiment | INFO flwr 2024-03-07 03:26:31,101 | server.py:95 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-03-07 03:26:31,101 | server.py:96 | Done Round=1
+FL-experiment | INFO flwr 2024-03-07 03:26:31,101 | server.py:98 | Start Round=2
+FL-experiment | DEBUG flwr 2024-03-07 03:26:31,101 | server.py:222 | fit_round 2: strategy sampled 2 clients (out of 2)
+FL-experiment | INFO flwr 2024-03-07 03:26:31,104 | client.py:126 | Start Training client=1
+FL-experiment | INFO flwr 2024-03-07 03:26:31,104 | client.py:126 | Start Training client=0
+FL-experiment | DEBUG flwr 2024-03-07 03:26:48,755 | client.py:137 | File: storage/updated_weights_0_f37a48fb-5176-4ac2-b5fa-53c14899cb62.pkl IPFS file hash: QmQpY6v11XjKAbCX3NdfGfU8ynsnV6yNMbPrUk2hfR414z
+FL-experiment | INFO flwr 2024-03-07 03:26:48,755 | client.py:139 | Start sending updated weights to the perun node (client=0)
+FL-experiment | INFO flwr 2024-03-07 03:26:48,756 | client.py:142 | PERUN REQUEST: Setting weight client=0, REQ=set,peer_2,1,2,10,0,0
+FL-experiment | INFO flwr 2024-03-07 03:26:48,760 | client.py:144 | Done sending updated weights to the perun node (client=0)
+FL-experiment | INFO flwr 2024-03-07 03:26:48,760 | client.py:147 | Done Training client=0
+FL-experiment | DEBUG flwr 2024-03-07 03:26:49,360 | client.py:137 | File: storage/updated_weights_1_87fad305-6320-43ff-923c-037a8fa79f0d.pkl IPFS file hash: QmZsYAmkGC3rMWyVWt9NWuXSef33XDVUJMva4qd2SXKRzW
+FL-experiment | INFO flwr 2024-03-07 03:26:49,360 | client.py:139 | Start sending updated weights to the perun node (client=1)
+FL-experiment | INFO flwr 2024-03-07 03:26:49,360 | client.py:142 | PERUN REQUEST: Setting weight client=1, REQ=set,peer_2,1,2,10,0,0
+FL-experiment | INFO flwr 2024-03-07 03:26:49,367 | client.py:144 | Done sending updated weights to the perun node (client=1)
+FL-experiment | INFO flwr 2024-03-07 03:26:49,367 | client.py:147 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-03-07 03:26:49,368 | server.py:236 | fit_round 2 received 2 results and 0 failures
+FL-experiment | INFO flwr 2024-03-07 03:26:49,368 | server.py:52 | Start Aggregating round=2
+FL-experiment | INFO flwr 2024-03-07 03:26:49,370 | server.py:58 | Start saving aggregated model to storage (round=2)
+FL-experiment | DEBUG flwr 2024-03-07 03:26:49,388 | server.py:67 | File: storage/aggregated_model_a9b5f082-a203-49e0-9bc7-2337d519de00.pkl IPFS file hash: QmVtAD99RUqgEMsrVoGcbC5kJPkFmwq9eLr1varcnaPNZN
+FL-experiment | INFO flwr 2024-03-07 03:26:49,388 | server.py:70 | Done saving aggregated model to storage (round=2)
+FL-experiment | DEBUG flwr 2024-03-07 03:26:49,388 | server.py:173 | evaluate_round 2: strategy sampled 2 clients (out of 2)
+FL-experiment | DEBUG flwr 2024-03-07 03:26:51,199 | server.py:187 | evaluate_round 2 received 2 results and 0 failures
+FL-experiment | INFO flwr 2024-03-07 03:26:51,200 | server.py:77 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-03-07 03:26:51,200 | server.py:79 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-03-07 03:26:51,200 | server.py:80 | Round: 2, Aggregated accuracy: {'accuracy': 0.35715}, Aggregated loss: 555.32080078125, IPFS hash: QmVtAD99RUqgEMsrVoGcbC5kJPkFmwq9eLr1varcnaPNZN
+FL-experiment | INFO flwr 2024-03-07 03:26:51,200 | server.py:83 | Start sending aggregated model to perun nodes round=2
+FL-experiment | INFO flwr 2024-03-07 03:26:51,200 | server.py:86 | PERUN REQUEST: Setting model with peer_0, REQ=set,peer_0,1,2,0,0,99
+FL-experiment | INFO flwr 2024-03-07 03:26:51,205 | server.py:86 | PERUN REQUEST: Setting model with peer_1, REQ=set,peer_1,1,2,0,0,99
+FL-experiment | INFO flwr 2024-03-07 03:26:51,210 | server.py:93 | Done sending aggregated model to perun nodes round=2
+FL-experiment | INFO flwr 2024-03-07 03:26:51,210 | server.py:95 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-03-07 03:26:51,210 | server.py:96 | Done Round=2
+FL-experiment | INFO flwr 2024-03-07 03:26:51,210 | server.py:153 | FL finished in 40.456406582999996
+FL-experiment | INFO flwr 2024-03-07 03:26:51,211 | app.py:226 | app_fit: losses_distributed [(1, 643.255126953125), (2, 555.32080078125)]
+FL-experiment | INFO flwr 2024-03-07 03:26:51,211 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-03-07 03:26:51,211 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.253), (2, 0.35715)]}
+FL-experiment | INFO flwr 2024-03-07 03:26:51,211 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-03-07 03:26:51,211 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-03-07 03:26:51,213 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-03-07 03:26:51,213 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-03-07 03:26:51,213 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-03-07 03:26:51,213 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-03-07 03:26:58,596 | main.py:50 | Start settling channels
+FL-experiment | INFO flwr 2024-03-07 03:27:58,378 | main.py:52 | Done settling channels
+FL-experiment | INFO flwr 2024-03-07 03:27:58,378 | main.py:54 | Done Experiment

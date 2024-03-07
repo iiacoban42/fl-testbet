@@ -1,5 +1,6 @@
 from datetime import datetime
 import os
+from natsort import natsorted
 
 def parse_log_file(log_file_path):
     logs = []
@@ -39,7 +40,7 @@ def get_stats(path, output_path=None):
     # open output file in append mode and write the results to it
     res = ""
 
-    for file in sorted(os.listdir(path)):
+    for file in natsorted(os.listdir(path)):
         if file.endswith(".log"):
             log_file_path = path + file
             timestamps = parse_log_file(log_file_path)

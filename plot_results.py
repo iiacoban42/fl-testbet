@@ -48,7 +48,7 @@ def get_mean_time(data, event):
         config_data[config]['rounds_clients'] = rounds_clients
         config_data[config]['mean_time'] = mean_time
 
-
+        print(rounds_clients, mean_time)
     labels = ['({}, {})'.format(*values['rounds_clients']) for values in config_data.values()]
     mean_times = [values['mean_time'] for values in config_data.values()]
 
@@ -100,8 +100,10 @@ log_data_FL = parse_log("logs/res_plot/results_FL.txt")
 log_data_FLChan = parse_log("logs/res_plot/results_chanFL.txt")
 
 plot_mean_time_diff(log_data_FL, log_data_FLChan, "Training", 'Mean Training Time FL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_FLChan, "Aggregating", 'Mean Aggregation Time FL vs FLChan')
 plot_mean_time_diff(log_data_FL, log_data_FLChan, "Round", 'Mean Round Time FL vs FLChan')
 plot_mean_time_diff(log_data_FL, log_data_FLChan, "Experiment", 'Mean E2E Time FL vs FLChan')
+
 
 plot_mean_time(log_data_FLChan, "opening channels", 'Mean Time to Open Channels')
 plot_mean_time(log_data_FLChan, "settling channels", 'Mean Time to Settle Channels')

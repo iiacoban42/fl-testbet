@@ -1,0 +1,330 @@
+Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=1
+2024-03-07 03:22:25.981000 | time: 122.102 seconds | Experiment
+2024-03-07 03:22:25.981000 | time: 25.861 seconds | opening channels
+2024-03-07 03:22:54.660000 | time: 29.155 seconds | Round=1
+2024-03-07 03:22:54.660000 | time: 0.024 seconds | sharing model with perun nodes
+2024-03-07 03:23:03.490000 | time: 18.003 seconds | Training client=0
+2024-03-07 03:23:03.491000 | time: 18.528 seconds | Training client=1
+2024-03-07 03:23:21.480000 | time: 0.012 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:23:22.009000 | time: 0.01 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:23:22.020000 | time: 1.795 seconds | Aggregating round=1
+2024-03-07 03:23:22.023000 | time: 0.018 seconds | saving aggregated model to storage (round=1)
+2024-03-07 03:23:23.805000 | time: 0.01 seconds | sending aggregated model to perun nodes round=1
+2024-03-07 03:23:29.644000 | time: 58.438 seconds | settling channels
+
+Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=2
+2024-03-07 03:25:32.341000 | time: 146.037 seconds | Experiment
+2024-03-07 03:25:32.341000 | time: 29.832 seconds | opening channels
+2024-03-07 03:26:03.043000 | time: 28.058 seconds | Round=1
+2024-03-07 03:26:03.043000 | time: 0.008 seconds | sharing model with perun nodes
+2024-03-07 03:26:10.959000 | time: 18.297 seconds | Training client=1
+2024-03-07 03:26:10.963000 | time: 17.753 seconds | Training client=0
+2024-03-07 03:26:28.712000 | time: 0.004 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:26:29.248000 | time: 0.008 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:26:29.257000 | time: 1.844 seconds | Aggregating round=1
+2024-03-07 03:26:29.259000 | time: 0.023 seconds | saving aggregated model to storage (round=1)
+2024-03-07 03:26:31.091000 | time: 0.01 seconds | sending aggregated model to perun nodes round=1
+2024-03-07 03:26:31.101000 | time: 20.109 seconds | Round=2
+2024-03-07 03:26:31.104000 | time: 18.263 seconds | Training client=1
+2024-03-07 03:26:31.104000 | time: 17.656 seconds | Training client=0
+2024-03-07 03:26:48.755000 | time: 0.005 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:26:49.360000 | time: 0.007 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:26:49.368000 | time: 1.842 seconds | Aggregating round=2
+2024-03-07 03:26:49.370000 | time: 0.018 seconds | saving aggregated model to storage (round=2)
+2024-03-07 03:26:51.200000 | time: 0.01 seconds | sending aggregated model to perun nodes round=2
+2024-03-07 03:26:58.596000 | time: 59.782 seconds | settling channels
+
+Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=3
+2024-03-07 03:28:16.320000 | time: 157.27 seconds | Experiment
+2024-03-07 03:28:16.320000 | time: 26.079 seconds | opening channels
+2024-03-07 03:28:43.230000 | time: 28.861 seconds | Round=1
+2024-03-07 03:28:43.231000 | time: 0.008 seconds | sharing model with perun nodes
+2024-03-07 03:28:51.076000 | time: 19.177 seconds | Training client=0
+2024-03-07 03:28:51.082000 | time: 19.184 seconds | Training client=1
+2024-03-07 03:29:10.248000 | time: 0.005 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:29:10.260000 | time: 0.006 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:29:10.268000 | time: 1.822 seconds | Aggregating round=1
+2024-03-07 03:29:10.270000 | time: 0.015 seconds | saving aggregated model to storage (round=1)
+2024-03-07 03:29:12.079000 | time: 0.011 seconds | sending aggregated model to perun nodes round=1
+2024-03-07 03:29:12.091000 | time: 20.866 seconds | Round=2
+2024-03-07 03:29:12.093000 | time: 19.053 seconds | Training client=1
+2024-03-07 03:29:12.094000 | time: 19.041 seconds | Training client=0
+2024-03-07 03:29:31.126000 | time: 0.009 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:29:31.137000 | time: 0.009 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:29:31.148000 | time: 1.809 seconds | Aggregating round=2
+2024-03-07 03:29:31.150000 | time: 0.015 seconds | saving aggregated model to storage (round=2)
+2024-03-07 03:29:32.950000 | time: 0.007 seconds | sending aggregated model to perun nodes round=2
+2024-03-07 03:29:32.957000 | time: 20.948 seconds | Round=3
+2024-03-07 03:29:32.960000 | time: 19.14 seconds | Training client=0
+2024-03-07 03:29:32.961000 | time: 19.107 seconds | Training client=1
+2024-03-07 03:29:52.061000 | time: 0.007 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:29:52.095000 | time: 0.005 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:29:52.101000 | time: 1.804 seconds | Aggregating round=3
+2024-03-07 03:29:52.104000 | time: 0.012 seconds | saving aggregated model to storage (round=3)
+2024-03-07 03:29:53.895000 | time: 0.01 seconds | sending aggregated model to perun nodes round=3
+2024-03-07 03:29:55.660000 | time: 57.929 seconds | settling channels
+
+Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=1
+2024-03-07 03:36:36.383000 | time: 262.999 seconds | Experiment
+2024-03-07 03:36:36.383000 | time: 71.563 seconds | opening channels
+2024-03-07 03:37:48.796000 | time: 38.457 seconds | Round=1
+2024-03-07 03:37:48.796000 | time: 0.027 seconds | sharing model with perun nodes
+2024-03-07 03:37:56.858000 | time: 28.211 seconds | Training client=3
+2024-03-07 03:37:56.859000 | time: 27.802 seconds | Training client=2
+2024-03-07 03:37:56.859000 | time: 28.029 seconds | Training client=1
+2024-03-07 03:37:56.860000 | time: 27.797 seconds | Training client=4
+2024-03-07 03:37:56.860000 | time: 28.021 seconds | Training client=0
+2024-03-07 03:38:24.652000 | time: 0.005 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 03:38:24.656000 | time: 0.005 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 03:38:24.871000 | time: 0.01 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:38:24.880000 | time: 0.008 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:38:25.061000 | time: 0.008 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 03:38:25.071000 | time: 2.182 seconds | Aggregating round=1
+2024-03-07 03:38:25.076000 | time: 0.016 seconds | saving aggregated model to storage (round=1)
+2024-03-07 03:38:27.225000 | time: 0.028 seconds | sending aggregated model to perun nodes round=1
+2024-03-07 03:38:32.301000 | time: 147.08 seconds | settling channels
+
+Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=2
+2024-03-07 03:41:13.761000 | time: 306.177 seconds | Experiment
+2024-03-07 03:41:13.761000 | time: 74.74 seconds | opening channels
+2024-03-07 03:42:29.366000 | time: 42.41 seconds | Round=1
+2024-03-07 03:42:29.366000 | time: 0.009 seconds | sharing model with perun nodes
+2024-03-07 03:42:41.186000 | time: 28.026 seconds | Training client=2
+2024-03-07 03:42:41.186000 | time: 28.168 seconds | Training client=1
+2024-03-07 03:42:41.187000 | time: 28.144 seconds | Training client=0
+2024-03-07 03:42:41.187000 | time: 28.359 seconds | Training client=3
+2024-03-07 03:42:41.192000 | time: 28.167 seconds | Training client=4
+2024-03-07 03:43:09.204000 | time: 0.007 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 03:43:09.325000 | time: 0.006 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:43:09.349000 | time: 0.005 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:43:09.354000 | time: 0.004 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 03:43:09.536000 | time: 0.009 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 03:43:09.547000 | time: 2.229 seconds | Aggregating round=1
+2024-03-07 03:43:09.552000 | time: 0.015 seconds | saving aggregated model to storage (round=1)
+2024-03-07 03:43:11.748000 | time: 0.028 seconds | sending aggregated model to perun nodes round=1
+2024-03-07 03:43:11.776000 | time: 29.873 seconds | Round=2
+2024-03-07 03:43:11.779000 | time: 27.597 seconds | Training client=0
+2024-03-07 03:43:11.780000 | time: 24.726 seconds | Training client=1
+2024-03-07 03:43:11.780000 | time: 27.486 seconds | Training client=2
+2024-03-07 03:43:11.781000 | time: 27.488 seconds | Training client=4
+2024-03-07 03:43:11.781000 | time: 27.695 seconds | Training client=3
+2024-03-07 03:43:36.502000 | time: 0.004 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:43:39.245000 | time: 0.021 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 03:43:39.261000 | time: 0.008 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 03:43:39.371000 | time: 0.005 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:43:39.470000 | time: 0.006 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 03:43:39.478000 | time: 2.171 seconds | Aggregating round=2
+2024-03-07 03:43:39.482000 | time: 0.017 seconds | saving aggregated model to storage (round=2)
+2024-03-07 03:43:41.627000 | time: 0.022 seconds | sending aggregated model to perun nodes round=2
+2024-03-07 03:43:49.651000 | time: 150.286 seconds | settling channels
+
+Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=3
+2024-03-07 03:51:50.362000 | time: 335.424 seconds | Experiment
+2024-03-07 03:51:50.362000 | time: 73.967 seconds | opening channels
+2024-03-07 03:53:05.313000 | time: 37.962 seconds | Round=1
+2024-03-07 03:53:05.313000 | time: 0.018 seconds | sharing model with perun nodes
+2024-03-07 03:53:13.387000 | time: 27.536 seconds | Training client=3
+2024-03-07 03:53:13.387000 | time: 27.677 seconds | Training client=0
+2024-03-07 03:53:13.388000 | time: 27.527 seconds | Training client=1
+2024-03-07 03:53:13.392000 | time: 27.752 seconds | Training client=2
+2024-03-07 03:53:13.394000 | time: 27.537 seconds | Training client=4
+2024-03-07 03:53:40.911000 | time: 0.004 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:53:40.917000 | time: 0.005 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 03:53:40.923000 | time: 0.008 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 03:53:41.056000 | time: 0.008 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:53:41.139000 | time: 0.005 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 03:53:41.145000 | time: 2.13 seconds | Aggregating round=1
+2024-03-07 03:53:41.150000 | time: 0.015 seconds | saving aggregated model to storage (round=1)
+2024-03-07 03:53:43.248000 | time: 0.027 seconds | sending aggregated model to perun nodes round=1
+2024-03-07 03:53:43.275000 | time: 30.201 seconds | Round=2
+2024-03-07 03:53:43.278000 | time: 27.894 seconds | Training client=4
+2024-03-07 03:53:43.278000 | time: 27.906 seconds | Training client=2
+2024-03-07 03:53:43.279000 | time: 25.351 seconds | Training client=1
+2024-03-07 03:53:43.279000 | time: 28.042 seconds | Training client=0
+2024-03-07 03:53:43.280000 | time: 28.083 seconds | Training client=3
+2024-03-07 03:54:08.624000 | time: 0.006 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:54:11.167000 | time: 0.005 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 03:54:11.177000 | time: 0.007 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 03:54:11.316000 | time: 0.005 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:54:11.353000 | time: 0.01 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 03:54:11.364000 | time: 2.112 seconds | Aggregating round=2
+2024-03-07 03:54:11.369000 | time: 0.014 seconds | saving aggregated model to storage (round=2)
+2024-03-07 03:54:13.449000 | time: 0.026 seconds | sending aggregated model to perun nodes round=2
+2024-03-07 03:54:13.476000 | time: 29.885 seconds | Round=3
+2024-03-07 03:54:13.478000 | time: 27.811 seconds | Training client=2
+2024-03-07 03:54:13.479000 | time: 27.802 seconds | Training client=4
+2024-03-07 03:54:13.479000 | time: 27.463 seconds | Training client=3
+2024-03-07 03:54:13.480000 | time: 24.767 seconds | Training client=0
+2024-03-07 03:54:13.481000 | time: 24.561 seconds | Training client=1
+2024-03-07 03:54:38.037000 | time: 0.005 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 03:54:38.241000 | time: 0.006 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 03:54:40.935000 | time: 0.006 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 03:54:41.275000 | time: 0.005 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 03:54:41.284000 | time: 0.005 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 03:54:41.291000 | time: 2.07 seconds | Aggregating round=3
+2024-03-07 03:54:41.295000 | time: 0.017 seconds | saving aggregated model to storage (round=3)
+2024-03-07 03:54:43.329000 | time: 0.032 seconds | sending aggregated model to perun nodes round=3
+2024-03-07 03:54:55.298000 | time: 150.487 seconds | settling channels
+
+Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=1
+2024-03-07 03:57:36.438000 | time: 520.446 seconds | Experiment
+2024-03-07 03:57:36.438000 | time: 148.609 seconds | opening channels
+2024-03-07 04:00:05.885000 | time: 63.546 seconds | Round=1
+2024-03-07 04:00:05.885000 | time: 0.041 seconds | sharing model with perun nodes
+2024-03-07 04:00:15.249000 | time: 50.053 seconds | Training client=4
+2024-03-07 04:00:15.249000 | time: 49.39 seconds | Training client=0
+2024-03-07 04:00:15.249000 | time: 49.614 seconds | Training client=8
+2024-03-07 04:00:15.250000 | time: 49.848 seconds | Training client=3
+2024-03-07 04:00:15.251000 | time: 50.178 seconds | Training client=2
+2024-03-07 04:00:15.251000 | time: 49.984 seconds | Training client=6
+2024-03-07 04:00:15.253000 | time: 49.738 seconds | Training client=1
+2024-03-07 04:00:15.253000 | time: 49.831 seconds | Training client=9
+2024-03-07 04:00:15.256000 | time: 49.911 seconds | Training client=5
+2024-03-07 04:00:15.261000 | time: 49.554 seconds | Training client=7
+2024-03-07 04:01:04.630000 | time: 0.009 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 04:01:04.805000 | time: 0.01 seconds | sending updated weights to the perun node (client=7)
+2024-03-07 04:01:04.852000 | time: 0.011 seconds | sending updated weights to the perun node (client=8)
+2024-03-07 04:01:04.985000 | time: 0.006 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 04:01:05.074000 | time: 0.01 seconds | sending updated weights to the perun node (client=9)
+2024-03-07 04:01:05.093000 | time: 0.005 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 04:01:05.162000 | time: 0.005 seconds | sending updated weights to the perun node (client=5)
+2024-03-07 04:01:05.220000 | time: 0.015 seconds | sending updated weights to the perun node (client=6)
+2024-03-07 04:01:05.296000 | time: 0.006 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 04:01:05.420000 | time: 0.009 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 04:01:05.430000 | time: 4.001 seconds | Aggregating round=1
+2024-03-07 04:01:05.439000 | time: 0.017 seconds | saving aggregated model to storage (round=1)
+2024-03-07 04:01:09.395000 | time: 0.036 seconds | sending aggregated model to perun nodes round=1
+2024-03-07 04:01:15.389000 | time: 301.494 seconds | settling channels
+
+Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=2
+2024-03-07 15:21:55.341000 | time: 598.831 seconds | Experiment
+2024-03-07 15:21:55.341000 | time: 146.964 seconds | opening channels
+2024-03-07 15:24:25.220000 | time: 66.252 seconds | Round=1
+2024-03-07 15:24:25.220000 | time: 0.057 seconds | sharing model with perun nodes
+2024-03-07 15:24:36.443000 | time: 50.538 seconds | Training client=8
+2024-03-07 15:24:36.444000 | time: 51.073 seconds | Training client=7
+2024-03-07 15:24:36.444000 | time: 50.966 seconds | Training client=4
+2024-03-07 15:24:36.444000 | time: 50.888 seconds | Training client=3
+2024-03-07 15:24:36.445000 | time: 50.139 seconds | Training client=1
+2024-03-07 15:24:36.445000 | time: 50.613 seconds | Training client=6
+2024-03-07 15:24:36.446000 | time: 50.171 seconds | Training client=0
+2024-03-07 15:24:36.447000 | time: 50.793 seconds | Training client=5
+2024-03-07 15:24:36.454000 | time: 50.979 seconds | Training client=2
+2024-03-07 15:24:36.456000 | time: 51.16 seconds | Training client=9
+2024-03-07 15:25:26.570000 | time: 0.014 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 15:25:26.603000 | time: 0.014 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 15:25:26.970000 | time: 0.011 seconds | sending updated weights to the perun node (client=8)
+2024-03-07 15:25:27.047000 | time: 0.011 seconds | sending updated weights to the perun node (client=6)
+2024-03-07 15:25:27.224000 | time: 0.016 seconds | sending updated weights to the perun node (client=5)
+2024-03-07 15:25:27.325000 | time: 0.007 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 15:25:27.401000 | time: 0.009 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 15:25:27.421000 | time: 0.012 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 15:25:27.503000 | time: 0.014 seconds | sending updated weights to the perun node (client=7)
+2024-03-07 15:25:27.606000 | time: 0.01 seconds | sending updated weights to the perun node (client=9)
+2024-03-07 15:25:27.618000 | time: 3.854 seconds | Aggregating round=1
+2024-03-07 15:25:27.627000 | time: 0.026 seconds | saving aggregated model to storage (round=1)
+2024-03-07 15:25:31.432000 | time: 0.039 seconds | sending aggregated model to perun nodes round=1
+2024-03-07 15:25:31.472000 | time: 59.144 seconds | Round=2
+2024-03-07 15:25:31.475000 | time: 54.627 seconds | Training client=0
+2024-03-07 15:25:31.475000 | time: 54.838 seconds | Training client=3
+2024-03-07 15:25:31.475000 | time: 54.677 seconds | Training client=5
+2024-03-07 15:25:31.477000 | time: 54.684 seconds | Training client=2
+2024-03-07 15:25:31.478000 | time: 41.714 seconds | Training client=4
+2024-03-07 15:25:31.478000 | time: 54.692 seconds | Training client=6
+2024-03-07 15:25:31.480000 | time: 55.191 seconds | Training client=9
+2024-03-07 15:25:31.482000 | time: 55.155 seconds | Training client=7
+2024-03-07 15:25:31.484000 | time: 54.762 seconds | Training client=1
+2024-03-07 15:25:31.485000 | time: 54.548 seconds | Training client=8
+2024-03-07 15:26:13.186000 | time: 0.006 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 15:26:26.025000 | time: 0.008 seconds | sending updated weights to the perun node (client=8)
+2024-03-07 15:26:26.094000 | time: 0.008 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 15:26:26.140000 | time: 0.011 seconds | sending updated weights to the perun node (client=5)
+2024-03-07 15:26:26.146000 | time: 0.015 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 15:26:26.158000 | time: 0.012 seconds | sending updated weights to the perun node (client=6)
+2024-03-07 15:26:26.237000 | time: 0.009 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 15:26:26.308000 | time: 0.005 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 15:26:26.629000 | time: 0.007 seconds | sending updated weights to the perun node (client=7)
+2024-03-07 15:26:26.668000 | time: 0.003 seconds | sending updated weights to the perun node (client=9)
+2024-03-07 15:26:26.672000 | time: 3.944 seconds | Aggregating round=2
+2024-03-07 15:26:26.681000 | time: 0.015 seconds | saving aggregated model to storage (round=2)
+2024-03-07 15:26:30.575000 | time: 0.041 seconds | sending aggregated model to perun nodes round=2
+2024-03-07 15:26:53.973000 | time: 300.198 seconds | settling channels
+
+Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=3
+2024-03-07 15:57:08.607000 | time: 634.005 seconds | Experiment
+2024-03-07 15:57:08.607000 | time: 147.063 seconds | opening channels
+2024-03-07 15:59:38.480000 | time: 66.425 seconds | Round=1
+2024-03-07 15:59:38.480000 | time: 0.05 seconds | sharing model with perun nodes
+2024-03-07 15:59:50.591000 | time: 50.117 seconds | Training client=3
+2024-03-07 15:59:50.591000 | time: 50.113 seconds | Training client=5
+2024-03-07 15:59:50.591000 | time: 50.388 seconds | Training client=2
+2024-03-07 15:59:50.592000 | time: 50.511 seconds | Training client=7
+2024-03-07 15:59:50.593000 | time: 49.248 seconds | Training client=8
+2024-03-07 15:59:50.593000 | time: 49.529 seconds | Training client=9
+2024-03-07 15:59:50.595000 | time: 49.932 seconds | Training client=0
+2024-03-07 15:59:50.597000 | time: 50.254 seconds | Training client=6
+2024-03-07 15:59:50.600000 | time: 50.497 seconds | Training client=4
+2024-03-07 15:59:50.607000 | time: 49.644 seconds | Training client=1
+2024-03-07 16:00:39.828000 | time: 0.013 seconds | sending updated weights to the perun node (client=8)
+2024-03-07 16:00:40.110000 | time: 0.012 seconds | sending updated weights to the perun node (client=9)
+2024-03-07 16:00:40.241000 | time: 0.01 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 16:00:40.516000 | time: 0.011 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 16:00:40.695000 | time: 0.009 seconds | sending updated weights to the perun node (client=5)
+2024-03-07 16:00:40.703000 | time: 0.004 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 16:00:40.838000 | time: 0.013 seconds | sending updated weights to the perun node (client=6)
+2024-03-07 16:00:40.969000 | time: 0.01 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 16:00:41.082000 | time: 0.015 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 16:00:41.095000 | time: 0.008 seconds | sending updated weights to the perun node (client=7)
+2024-03-07 16:00:41.104000 | time: 3.801 seconds | Aggregating round=1
+2024-03-07 16:00:41.113000 | time: 0.018 seconds | saving aggregated model to storage (round=1)
+2024-03-07 16:00:44.866000 | time: 0.038 seconds | sending aggregated model to perun nodes round=1
+2024-03-07 16:00:44.905000 | time: 55.921 seconds | Round=2
+2024-03-07 16:00:44.907000 | time: 32.085 seconds | Training client=5
+2024-03-07 16:00:44.908000 | time: 51.496 seconds | Training client=4
+2024-03-07 16:00:44.908000 | time: 51.11 seconds | Training client=0
+2024-03-07 16:00:44.909000 | time: 51.574 seconds | Training client=6
+2024-03-07 16:00:44.909000 | time: 32.106 seconds | Training client=3
+2024-03-07 16:00:44.910000 | time: 32.507 seconds | Training client=7
+2024-03-07 16:00:44.911000 | time: 51.893 seconds | Training client=9
+2024-03-07 16:00:44.911000 | time: 51.768 seconds | Training client=1
+2024-03-07 16:00:44.913000 | time: 52.1 seconds | Training client=8
+2024-03-07 16:00:44.914000 | time: 51.69 seconds | Training client=2
+2024-03-07 16:01:16.982000 | time: 0.01 seconds | sending updated weights to the perun node (client=5)
+2024-03-07 16:01:17.010000 | time: 0.005 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 16:01:17.409000 | time: 0.008 seconds | sending updated weights to the perun node (client=7)
+2024-03-07 16:01:36.011000 | time: 0.007 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 16:01:36.395000 | time: 0.009 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 16:01:36.478000 | time: 0.004 seconds | sending updated weights to the perun node (client=6)
+2024-03-07 16:01:36.597000 | time: 0.007 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 16:01:36.673000 | time: 0.006 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 16:01:36.797000 | time: 0.007 seconds | sending updated weights to the perun node (client=9)
+2024-03-07 16:01:37.009000 | time: 0.004 seconds | sending updated weights to the perun node (client=8)
+2024-03-07 16:01:37.015000 | time: 3.811 seconds | Aggregating round=2
+2024-03-07 16:01:37.024000 | time: 0.015 seconds | saving aggregated model to storage (round=2)
+2024-03-07 16:01:40.781000 | time: 0.045 seconds | sending aggregated model to perun nodes round=2
+2024-03-07 16:01:40.826000 | time: 51.017 seconds | Round=3
+2024-03-07 16:01:40.829000 | time: 47.06 seconds | Training client=0
+2024-03-07 16:01:40.829000 | time: 25.078 seconds | Training client=6
+2024-03-07 16:01:40.830000 | time: 24.819 seconds | Training client=2
+2024-03-07 16:01:40.831000 | time: 25.402 seconds | Training client=7
+2024-03-07 16:01:40.831000 | time: 46.808 seconds | Training client=9
+2024-03-07 16:01:40.832000 | time: 25.119 seconds | Training client=3
+2024-03-07 16:01:40.832000 | time: 46.837 seconds | Training client=4
+2024-03-07 16:01:40.834000 | time: 25.244 seconds | Training client=5
+2024-03-07 16:01:40.835000 | time: 46.991 seconds | Training client=1
+2024-03-07 16:01:40.838000 | time: 24.51 seconds | Training client=8
+2024-03-07 16:02:05.340000 | time: 0.008 seconds | sending updated weights to the perun node (client=8)
+2024-03-07 16:02:05.644000 | time: 0.005 seconds | sending updated weights to the perun node (client=2)
+2024-03-07 16:02:05.902000 | time: 0.005 seconds | sending updated weights to the perun node (client=6)
+2024-03-07 16:02:05.945000 | time: 0.006 seconds | sending updated weights to the perun node (client=3)
+2024-03-07 16:02:06.053000 | time: 0.025 seconds | sending updated weights to the perun node (client=5)
+2024-03-07 16:02:06.227000 | time: 0.006 seconds | sending updated weights to the perun node (client=7)
+2024-03-07 16:02:27.633000 | time: 0.006 seconds | sending updated weights to the perun node (client=9)
+2024-03-07 16:02:27.662000 | time: 0.007 seconds | sending updated weights to the perun node (client=4)
+2024-03-07 16:02:27.812000 | time: 0.014 seconds | sending updated weights to the perun node (client=1)
+2024-03-07 16:02:27.881000 | time: 0.008 seconds | sending updated weights to the perun node (client=0)
+2024-03-07 16:02:27.891000 | time: 3.952 seconds | Aggregating round=3
+2024-03-07 16:02:27.899000 | time: 0.014 seconds | saving aggregated model to storage (round=3)
+2024-03-07 16:02:31.803000 | time: 0.04 seconds | sending aggregated model to perun nodes round=3
+2024-03-07 16:02:41.774000 | time: 300.837 seconds | settling channels
+

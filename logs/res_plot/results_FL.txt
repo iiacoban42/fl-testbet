@@ -1,74 +1,165 @@
-Results
-
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=1
-2024-02-26 21:23:42.387000 | time: 19.932 seconds | Experiment
-2024-02-26 21:23:43.419000 | time: 18.414 seconds | Round=1
-2024-02-26 21:23:51.259000 | time: 9.672 seconds | Training client=0
-2024-02-26 21:23:51.263000 | time: 9.668 seconds | Training client=1
+2024-03-04 13:17:40.324000 | time: 32.478 seconds | Experiment
+2024-03-04 13:17:41.810000 | time: 30.523 seconds | Round=1
+2024-03-04 13:17:51.325000 | time: 19.19 seconds | Training client=0
+2024-03-04 13:17:51.325000 | time: 19.231 seconds | Training client=1
+2024-03-04 13:18:10.557000 | time: 1.776 seconds | Aggregating round=1
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=2
-2024-02-26 21:40:55.024000 | time: 32.328 seconds | Experiment
-2024-02-26 21:40:55.957000 | time: 20.25 seconds | Round=1
-2024-02-26 21:41:05.725000 | time: 9.577 seconds | Training client=0
-2024-02-26 21:41:05.731000 | time: 9.584 seconds | Training client=1
-2024-02-26 21:41:16.207000 | time: 10.691 seconds | Round=2
-2024-02-26 21:41:16.209000 | time: 9.8 seconds | Training client=0
-2024-02-26 21:41:16.209000 | time: 9.8 seconds | Training client=1
+2024-03-04 13:18:20.927000 | time: 49.408 seconds | Experiment
+2024-03-04 13:18:21.866000 | time: 28.036 seconds | Round=1
+2024-03-04 13:18:29.762000 | time: 17.578 seconds | Training client=1
+2024-03-04 13:18:29.768000 | time: 18.352 seconds | Training client=0
+2024-03-04 13:18:48.122000 | time: 1.78 seconds | Aggregating round=1
+2024-03-04 13:18:49.902000 | time: 19.921 seconds | Round=2
+2024-03-04 13:18:49.904000 | time: 17.538 seconds | Training client=1
+2024-03-04 13:18:49.905000 | time: 18.143 seconds | Training client=0
+2024-03-04 13:19:08.049000 | time: 1.774 seconds | Aggregating round=2
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=3
-2024-02-26 21:53:00.052000 | time: 42.165 seconds | Experiment
-2024-02-26 21:53:00.958000 | time: 19.044 seconds | Round=1
-2024-02-26 21:53:09.508000 | time: 9.561 seconds | Training client=1
-2024-02-26 21:53:09.508000 | time: 9.602 seconds | Training client=0
-2024-02-26 21:53:20.002000 | time: 10.685 seconds | Round=2
-2024-02-26 21:53:20.003000 | time: 9.789 seconds | Training client=1
-2024-02-26 21:53:20.003000 | time: 9.748 seconds | Training client=0
-2024-02-26 21:53:30.687000 | time: 10.697 seconds | Round=3
-2024-02-26 21:53:30.689000 | time: 9.807 seconds | Training client=0
-2024-02-26 21:53:30.689000 | time: 9.76 seconds | Training client=1
+2024-03-04 13:19:30.182000 | time: 69.614 seconds | Experiment
+2024-03-04 13:19:31.096000 | time: 27.981 seconds | Round=1
+2024-03-04 13:19:38.901000 | time: 18.419 seconds | Training client=1
+2024-03-04 13:19:38.906000 | time: 17.988 seconds | Training client=0
+2024-03-04 13:19:57.321000 | time: 1.756 seconds | Aggregating round=1
+2024-03-04 13:19:59.077000 | time: 20.187 seconds | Round=2
+2024-03-04 13:19:59.079000 | time: 18.413 seconds | Training client=1
+2024-03-04 13:19:59.080000 | time: 17.999 seconds | Training client=0
+2024-03-04 13:20:17.494000 | time: 1.77 seconds | Aggregating round=2
+2024-03-04 13:20:19.264000 | time: 20.071 seconds | Round=3
+2024-03-04 13:20:19.266000 | time: 17.857 seconds | Training client=0
+2024-03-04 13:20:19.267000 | time: 18.314 seconds | Training client=1
+2024-03-04 13:20:37.582000 | time: 1.753 seconds | Aggregating round=3
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=1
-2024-02-26 22:11:44.745000 | time: 15.856 seconds | Experiment
-2024-02-26 22:11:45.802000 | time: 14.795 seconds | Round=1
-2024-02-26 22:11:54.442000 | time: 5.53 seconds | Training client=1
-2024-02-26 22:11:54.443000 | time: 5.733 seconds | Training client=2
-2024-02-26 22:11:54.444000 | time: 5.632 seconds | Training client=3
-2024-02-26 22:11:54.444000 | time: 5.461 seconds | Training client=4
-2024-02-26 22:11:54.449000 | time: 5.688 seconds | Training client=0
+2024-03-04 13:21:25.823000 | time: 40.537 seconds | Experiment
+2024-03-04 13:21:26.678000 | time: 39.123 seconds | Round=1
+2024-03-04 13:21:35.691000 | time: 27.873 seconds | Training client=0
+2024-03-04 13:21:35.691000 | time: 27.978 seconds | Training client=2
+2024-03-04 13:21:35.691000 | time: 28.048 seconds | Training client=4
+2024-03-04 13:21:35.692000 | time: 28.069 seconds | Training client=1
+2024-03-04 13:21:35.696000 | time: 28.061 seconds | Training client=3
+2024-03-04 13:22:03.763000 | time: 2.038 seconds | Aggregating round=1
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=2
-2024-02-27 14:53:02.027000 | time: 22.93 seconds | Experiment
-2024-02-27 14:53:03.479000 | time: 14.872 seconds | Round=1
-2024-02-27 14:53:11.939000 | time: 5.867 seconds | Training client=2
-2024-02-27 14:53:11.941000 | time: 5.851 seconds | Training client=4
-2024-02-27 14:53:11.941000 | time: 5.684 seconds | Training client=1
-2024-02-27 14:53:11.946000 | time: 5.847 seconds | Training client=3
-2024-02-27 14:53:11.948000 | time: 5.826 seconds | Training client=0
-2024-02-27 14:53:18.351000 | time: 6.028 seconds | Round=2
-2024-02-27 14:53:18.353000 | time: 5.537 seconds | Training client=0
-2024-02-27 14:53:18.353000 | time: 5.479 seconds | Training client=1
-2024-02-27 14:53:18.353000 | time: 5.517 seconds | Training client=3
-2024-02-27 14:53:18.353000 | time: 5.567 seconds | Training client=2
-2024-02-27 14:53:18.354000 | time: 5.566 seconds | Training client=4
+2024-03-04 13:22:42.526000 | time: 70.581 seconds | Experiment
+2024-03-04 13:22:43.443000 | time: 38.794 seconds | Round=1
+2024-03-04 13:22:51.768000 | time: 28.287 seconds | Training client=3
+2024-03-04 13:22:51.768000 | time: 27.693 seconds | Training client=2
+2024-03-04 13:22:51.769000 | time: 28.409 seconds | Training client=1
+2024-03-04 13:22:51.769000 | time: 28.21 seconds | Training client=0
+2024-03-04 13:22:51.770000 | time: 28.203 seconds | Training client=4
+2024-03-04 13:23:20.179000 | time: 2.058 seconds | Aggregating round=1
+2024-03-04 13:23:22.237000 | time: 30.13 seconds | Round=2
+2024-03-04 13:23:22.240000 | time: 27.689 seconds | Training client=2
+2024-03-04 13:23:22.240000 | time: 27.591 seconds | Training client=3
+2024-03-04 13:23:22.240000 | time: 27.928 seconds | Training client=1
+2024-03-04 13:23:22.240000 | time: 28.094 seconds | Training client=4
+2024-03-04 13:23:22.241000 | time: 27.849 seconds | Training client=0
+2024-03-04 13:23:50.335000 | time: 2.032 seconds | Aggregating round=2
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=3
-2024-02-27 14:53:42.248000 | time: 28.096 seconds | Experiment
-2024-02-27 14:53:43.317000 | time: 14.38 seconds | Round=1
-2024-02-27 14:53:51.544000 | time: 5.697 seconds | Training client=2
-2024-02-27 14:53:51.545000 | time: 5.621 seconds | Training client=0
-2024-02-27 14:53:51.545000 | time: 5.643 seconds | Training client=3
-2024-02-27 14:53:51.546000 | time: 5.671 seconds | Training client=1
-2024-02-27 14:53:51.550000 | time: 5.732 seconds | Training client=4
-2024-02-27 14:53:57.697000 | time: 5.949 seconds | Round=2
-2024-02-27 14:53:57.698000 | time: 5.478 seconds | Training client=1
-2024-02-27 14:53:57.699000 | time: 5.525 seconds | Training client=0
-2024-02-27 14:53:57.699000 | time: 5.525 seconds | Training client=3
-2024-02-27 14:53:57.700000 | time: 5.416 seconds | Training client=2
-2024-02-27 14:53:57.700000 | time: 5.436 seconds | Training client=4
-2024-02-27 14:54:03.646000 | time: 6.124 seconds | Round=3
-2024-02-27 14:54:03.648000 | time: 5.691 seconds | Training client=0
-2024-02-27 14:54:03.648000 | time: 5.57 seconds | Training client=2
-2024-02-27 14:54:03.648000 | time: 5.454 seconds | Training client=4
-2024-02-27 14:54:03.649000 | time: 5.703 seconds | Training client=1
-2024-02-27 14:54:03.649000 | time: 5.659 seconds | Training client=3
+2024-03-04 13:24:16.379000 | time: 99.983 seconds | Experiment
+2024-03-04 13:24:17.434000 | time: 38.299 seconds | Round=1
+2024-03-04 13:24:25.651000 | time: 28.038 seconds | Training client=0
+2024-03-04 13:24:25.652000 | time: 27.859 seconds | Training client=3
+2024-03-04 13:24:25.652000 | time: 26.525 seconds | Training client=2
+2024-03-04 13:24:25.652000 | time: 27.771 seconds | Training client=4
+2024-03-04 13:24:25.653000 | time: 28.064 seconds | Training client=1
+2024-03-04 13:24:53.719000 | time: 2.014 seconds | Aggregating round=1
+2024-03-04 13:24:55.733000 | time: 29.916 seconds | Round=2
+2024-03-04 13:24:55.736000 | time: 27.676 seconds | Training client=0
+2024-03-04 13:24:55.736000 | time: 26.491 seconds | Training client=2
+2024-03-04 13:24:55.736000 | time: 27.904 seconds | Training client=3
+2024-03-04 13:24:55.737000 | time: 27.734 seconds | Training client=4
+2024-03-04 13:24:55.737000 | time: 27.795 seconds | Training client=1
+2024-03-04 13:25:23.642000 | time: 2.007 seconds | Aggregating round=2
+2024-03-04 13:25:25.649000 | time: 30.143 seconds | Round=3
+2024-03-04 13:25:25.651000 | time: 28.127 seconds | Training client=1
+2024-03-04 13:25:25.651000 | time: 27.551 seconds | Training client=4
+2024-03-04 13:25:25.652000 | time: 27.87 seconds | Training client=3
+2024-03-04 13:25:25.652000 | time: 26.885 seconds | Training client=2
+2024-03-04 13:25:25.652000 | time: 27.783 seconds | Training client=0
+2024-03-04 13:25:53.779000 | time: 2.013 seconds | Aggregating round=3
+
+Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=1
+2024-03-04 13:26:06.412000 | time: 64.675 seconds | Experiment
+2024-03-04 13:26:07.300000 | time: 62.984 seconds | Round=1
+2024-03-04 13:26:16.894000 | time: 49.53 seconds | Training client=5
+2024-03-04 13:26:16.895000 | time: 49.184 seconds | Training client=9
+2024-03-04 13:26:16.896000 | time: 49.789 seconds | Training client=7
+2024-03-04 13:26:16.896000 | time: 49.271 seconds | Training client=0
+2024-03-04 13:26:16.896000 | time: 49.371 seconds | Training client=4
+2024-03-04 13:26:16.897000 | time: 49.75 seconds | Training client=6
+2024-03-04 13:26:16.897000 | time: 49.785 seconds | Training client=2
+2024-03-04 13:26:16.897000 | time: 49.413 seconds | Training client=1
+2024-03-04 13:26:16.900000 | time: 49.129 seconds | Training client=8
+2024-03-04 13:26:16.900000 | time: 49.795 seconds | Training client=3
+2024-03-04 13:27:06.697000 | time: 3.586 seconds | Aggregating round=1
+
+Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=2
+2024-03-04 13:28:21.255000 | time: 119.645 seconds | Experiment
+2024-03-04 13:28:22.366000 | time: 64.156 seconds | Round=1
+2024-03-04 13:28:31.572000 | time: 51.069 seconds | Training client=0
+2024-03-04 13:28:31.574000 | time: 50.603 seconds | Training client=1
+2024-03-04 13:28:31.575000 | time: 51.085 seconds | Training client=7
+2024-03-04 13:28:31.575000 | time: 51.315 seconds | Training client=2
+2024-03-04 13:28:31.575000 | time: 51.222 seconds | Training client=9
+2024-03-04 13:28:31.575000 | time: 51.311 seconds | Training client=8
+2024-03-04 13:28:31.576000 | time: 50.72 seconds | Training client=3
+2024-03-04 13:28:31.577000 | time: 51.388 seconds | Training client=5
+2024-03-04 13:28:31.578000 | time: 51.032 seconds | Training client=4
+2024-03-04 13:28:31.585000 | time: 51.215 seconds | Training client=6
+2024-03-04 13:29:22.967000 | time: 3.555 seconds | Aggregating round=1
+2024-03-04 13:29:26.522000 | time: 53.545 seconds | Round=2
+2024-03-04 13:29:26.525000 | time: 49.714 seconds | Training client=7
+2024-03-04 13:29:26.525000 | time: 49.234 seconds | Training client=2
+2024-03-04 13:29:26.525000 | time: 50.059 seconds | Training client=6
+2024-03-04 13:29:26.525000 | time: 49.714 seconds | Training client=5
+2024-03-04 13:29:26.526000 | time: 49.688 seconds | Training client=4
+2024-03-04 13:29:26.527000 | time: 49.61 seconds | Training client=1
+2024-03-04 13:29:26.527000 | time: 49.706 seconds | Training client=0
+2024-03-04 13:29:26.528000 | time: 48.944 seconds | Training client=9
+2024-03-04 13:29:26.528000 | time: 49.915 seconds | Training client=8
+2024-03-04 13:29:26.530000 | time: 49.14 seconds | Training client=3
+2024-03-04 13:30:16.586000 | time: 3.481 seconds | Aggregating round=2
+
+Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=3
+2024-03-04 13:30:28.481000 | time: 173.14 seconds | Experiment
+2024-03-04 13:30:29.496000 | time: 62.845 seconds | Round=1
+2024-03-04 13:30:39.361000 | time: 49.162 seconds | Training client=7
+2024-03-04 13:30:39.361000 | time: 49.033 seconds | Training client=4
+2024-03-04 13:30:39.362000 | time: 49.412 seconds | Training client=8
+2024-03-04 13:30:39.362000 | time: 48.672 seconds | Training client=2
+2024-03-04 13:30:39.363000 | time: 48.972 seconds | Training client=0
+2024-03-04 13:30:39.365000 | time: 48.976 seconds | Training client=6
+2024-03-04 13:30:39.368000 | time: 48.914 seconds | Training client=5
+2024-03-04 13:30:39.368000 | time: 49.023 seconds | Training client=1
+2024-03-04 13:30:39.370000 | time: 48.873 seconds | Training client=9
+2024-03-04 13:30:39.377000 | time: 49.125 seconds | Training client=3
+2024-03-04 13:31:28.776000 | time: 3.565 seconds | Aggregating round=1
+2024-03-04 13:31:32.341000 | time: 53.626 seconds | Round=2
+2024-03-04 13:31:32.343000 | time: 49.902 seconds | Training client=6
+2024-03-04 13:31:32.344000 | time: 50.004 seconds | Training client=8
+2024-03-04 13:31:32.344000 | time: 49.827 seconds | Training client=4
+2024-03-04 13:31:32.344000 | time: 50.118 seconds | Training client=1
+2024-03-04 13:31:32.345000 | time: 49.549 seconds | Training client=7
+2024-03-04 13:31:32.345000 | time: 49.419 seconds | Training client=9
+2024-03-04 13:31:32.345000 | time: 49.609 seconds | Training client=5
+2024-03-04 13:31:32.346000 | time: 49.863 seconds | Training client=2
+2024-03-04 13:31:32.346000 | time: 49.04 seconds | Training client=0
+2024-03-04 13:31:32.348000 | time: 49.757 seconds | Training client=3
+2024-03-04 13:32:22.463000 | time: 3.504 seconds | Aggregating round=2
+2024-03-04 13:32:25.967000 | time: 54.861 seconds | Round=3
+2024-03-04 13:32:25.970000 | time: 50.699 seconds | Training client=1
+2024-03-04 13:32:25.970000 | time: 50.363 seconds | Training client=0
+2024-03-04 13:32:25.970000 | time: 51.076 seconds | Training client=7
+2024-03-04 13:32:25.971000 | time: 50.612 seconds | Training client=5
+2024-03-04 13:32:25.972000 | time: 51.333 seconds | Training client=6
+2024-03-04 13:32:25.972000 | time: 51.264 seconds | Training client=8
+2024-03-04 13:32:25.973000 | time: 50.962 seconds | Training client=2
+2024-03-04 13:32:25.973000 | time: 51.073 seconds | Training client=4
+2024-03-04 13:32:25.977000 | time: 51.258 seconds | Training client=3
+2024-03-04 13:32:26.023000 | time: 50.943 seconds | Training client=9
+2024-03-04 13:33:17.306000 | time: 3.522 seconds | Aggregating round=3
 

@@ -1,6 +1,8 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
+plot_path = "plots/"
+
 def parse_log(file_path):
     data = []
     current_config = None
@@ -48,7 +50,6 @@ def get_mean_time(data, event):
         config_data[config]['rounds_clients'] = rounds_clients
         config_data[config]['mean_time'] = mean_time
 
-        print(rounds_clients, mean_time)
     labels = ['({}, {})'.format(*values['rounds_clients']) for values in config_data.values()]
     mean_times = [values['mean_time'] for values in config_data.values()]
 
@@ -73,7 +74,7 @@ def plot_mean_time_diff(data_FL, data_FLChan, event, title):
     plt.xticks(x, labels, rotation=45, ha='right')
     plt.tight_layout()
     plt.legend()
-    plt.savefig(title + '.png')
+    plt.savefig(plot_path + title + '.png')
     # plt.show()
 
 
@@ -92,7 +93,7 @@ def plot_mean_time(data, event, title):
     plt.ylabel('Mean Time (seconds)')
     plt.xticks(rotation=45, ha='right')
     plt.tight_layout()
-    plt.savefig(title + '.png')
+    plt.savefig(plot_path + title + '.png')
     # plt.show()
 
 

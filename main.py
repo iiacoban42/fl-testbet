@@ -7,8 +7,8 @@ import flwr as fl
 from logging import INFO
 from flwr.common.logger import log
 
-NUM_CLIENTS = 2
-NUM_ROUNDS = 3
+NUM_CLIENTS = 10
+NUM_ROUNDS = 1
 IPFS_ON = True
 INCENTIVES_ON = False
 SOLO_BLOCKCHAIN_ON = True
@@ -40,15 +40,19 @@ def main():
     log(INFO, "Config: INCENTIVES_ON=%s, BCFL=%s, IPFS_ON=%s, NUM_CLIENTS=%s, NUM_ROUNDS=%s,", INCENTIVES_ON, SOLO_BLOCKCHAIN_ON, IPFS_ON, NUM_CLIENTS, NUM_ROUNDS)
     log(INFO, "Start Experiment")
 
+    server_sleep_time = 3
+
+    if SOLO_BLOCKCHAIN_ON:
+            server_sleep_time = 5 * NUM_CLIENTS
 
     if not INCENTIVES_ON:
-        subprocess.call(f"/Users/pi/Desktop/fl-testbet/run.sh {NUM_CLIENTS-1}", shell=True)
+        subprocess.call(f"/Users/pi/Desktop/fl-testbet/run.sh {NUM_CLIENTS-1} {server_sleep_time}", shell=True)
     else:
         log(INFO, "Start opening channels")
         setup_channels()
         log(INFO, "Done opening channels")
 
-        subprocess.call(f"/Users/pi/Desktop/fl-testbet/run.sh {NUM_CLIENTS-1}", shell=True)
+        subprocess.call(f"/Users/pi/Desktop/fl-testbet/run.sh {NUM_CLIENTS-1} {server_sleep_time}", shell=True)
 
         log(INFO, "Start settling channels")
         settle_channels()

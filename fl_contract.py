@@ -92,4 +92,4 @@ def test():
         set_aggregated_model(web3, contract, server, sk, client, "w"+str(r), 90, 10)
         print(f"Round {r} completed")
 
-test()
+# test()

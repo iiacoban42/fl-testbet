@@ -4,17 +4,20 @@ import time
 from con import send_command
 
 import flwr as fl
-from logging import INFO, DEBUG
+from logging import INFO
 from flwr.common.logger import log
 
 NUM_CLIENTS = 2
-NUM_ROUNDS = 1
-IPFS_ON = False
+NUM_ROUNDS = 3
+IPFS_ON = True
 INCENTIVES_ON = False
+SOLO_BLOCKCHAIN_ON = True
 LOG_FILE = ""
 
 if INCENTIVES_ON:
     LOG_FILE = f"logs/logs_flchan/exp{NUM_CLIENTS}{NUM_ROUNDS}.log"
+elif SOLO_BLOCKCHAIN_ON:
+    LOG_FILE = f"logs/logs_bcfl/exp{NUM_CLIENTS}{NUM_ROUNDS}.log"
 else:
     LOG_FILE = f"logs/logs_fl/exp{NUM_CLIENTS}{NUM_ROUNDS}.log"
 
@@ -34,7 +37,7 @@ def settle_channels():
 def main():
     fl.common.logger.configure(identifier="FL-experiment", filename=LOG_FILE)
 
-    log(INFO, "Config: INCENTIVES_ON=%s, IPFS_ON=%s, NUM_CLIENTS=%s, NUM_ROUNDS=%s", INCENTIVES_ON, IPFS_ON, NUM_CLIENTS, NUM_ROUNDS)
+    log(INFO, "Config: INCENTIVES_ON=%s, BCFL=%s, IPFS_ON=%s, NUM_CLIENTS=%s, NUM_ROUNDS=%s,", INCENTIVES_ON, SOLO_BLOCKCHAIN_ON, IPFS_ON, NUM_CLIENTS, NUM_ROUNDS)
     log(INFO, "Start Experiment")
 
 

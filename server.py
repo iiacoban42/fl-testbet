@@ -1,15 +1,21 @@
 from flwr.common import Metrics
 from model import Net
-from main import NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON, LOG_FILE
+from main import NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON, LOG_FILE, SOLO_BLOCKCHAIN_ON
 from con import send_command
 from typing import List, Tuple
 from logging import INFO, DEBUG
 from flwr.common.logger import log
+from fl_contract import deploy_contract, set_weight, set_aggregated_model, GANACHE_URL
 
 import flwr as fl
 import pickle
 import uuid
 import ipfshttpclient
+from web3 import Web3
+import json
+
+
+web3 = Web3(Web3.HTTPProvider(GANACHE_URL))
 
 fl.common.logger.configure(identifier="FL-experiment", filename=LOG_FILE)
 
@@ -30,13 +36,18 @@ def weighted_average(metrics: List[Tuple[int, Metrics]]) -> Metrics:
 
 class CustomFedAvg(fl.server.strategy.FedAvg):
 
-    def __init__(self, evaluate_metrics_aggregation_fn, min_available_clients, min_fit_clients, ipfs_model_hash="", perun_node_host="", perun_node_port=""):
+    def __init__(self, evaluate_metrics_aggregation_fn, min_available_clients, min_fit_clients,
+                 ipfs_model_hash="", perun_node_host="", perun_node_port="", secret_key="", account="", client_addresses=None):
         super().__init__(evaluate_metrics_aggregation_fn=evaluate_metrics_aggregation_fn, min_available_clients=min_available_clients, min_fit_clients=min_fit_clients)
         log(INFO, "Start Round=1")
 
         self.ipfs_hash = ipfs_model_hash
         self.perun_node_host = perun_node_host
         self.perun_node_port = perun_node_port
+        self.secret_key = secret_key
+        self.address = account
+        self.client_addresses = client_addresses
+        self.contracts = []
 
         if INCENTIVES_ON:
             log(INFO, "Start sharing model with perun nodes")
@@ -47,9 +58,30 @@ class CustomFedAvg(fl.server.strategy.FedAvg):
                 send_command(self.perun_node_host, self.perun_node_port, request.encode(), "server")
             log(INFO, "Done sharing model with perun nodes")
 
+        elif SOLO_BLOCKCHAIN_ON:
+            log(INFO, "Start deploying contract")
+            for i in range(NUM_CLIENTS):
+                contract = deploy_contract(web3, self.ipfs_hash, NUM_ROUNDS, self.address, self.secret_key)
+                self.contracts.append(contract)
+            log(INFO, "Done deploying contract")
+
 
     def aggregate_fit(self, rnd, results, failures):
         log(INFO, "Start Aggregating round=%s", rnd)
+
+        if SOLO_BLOCKCHAIN_ON:
+            log(INFO, "Start setting weights to the blockchain")
+            for i, (_, fit_res) in enumerate(sorted(results, key=lambda x: x[0].cid)):
+
+                file_path = f'storage/updated_weights_{i}_{uuid.uuid4()}.pkl'
+                with open(file_path, 'wb') as file:
+                    pickle.dump(fit_res, file)
+                res = ipfs_client.add(file_name)
+                log(DEBUG, "File: %s IPFS file hash: %s", file_name, res['Hash'])
+
+                set_weight(web3, self.contracts[i][0], self.address, self.secret_key, self.client_addresses[i], res['Hash'])
+            log(INFO, "Done setting weights to the blockchain")
+
         aggregated_params = super().aggregate_fit(rnd, results, failures)
 
         # aggregated_loss, aggregated_accuracy = super().aggregate_evaluate(rnd, results, failures)
@@ -92,6 +124,12 @@ class CustomFedAvg(fl.server.strategy.FedAvg):
 
             log(INFO, "Done sending aggregated model to perun nodes round=%s", rnd)
 
+        elif SOLO_BLOCKCHAIN_ON:
+            log(INFO, "Start setting aggregated model to the blockchain round=%s", rnd)
+            for i, (_, _) in enumerate(sorted(results, key=lambda x: x[0].cid)):
+                set_weight(web3, self.contracts[i][0], self.address, self.secret_key, self.client_addresses[i], self.ipfs_hash)
+            log(INFO, "Done setting aggregated model to the blockchain round=%s", rnd)
+
         log(INFO, "Done Aggregating round=%s", rnd)
         log(INFO, "Done Round=%s", rnd)
         if rnd < NUM_ROUNDS:
@@ -111,15 +149,39 @@ if IPFS_ON:
     log(DEBUG, "File: %s IPFS file hash: %s", file_name, init_model_hash)
 
 
-# Define strategy
-strategy = CustomFedAvg(evaluate_metrics_aggregation_fn=weighted_average,
-                        min_available_clients=NUM_CLIENTS,
-                        min_fit_clients=NUM_CLIENTS,
-                        ipfs_model_hash=init_model_hash,
-                        perun_node_host="127.0.0.1",
-                        perun_node_port=str(8080 + NUM_CLIENTS + 1),
-                        )
 
+if SOLO_BLOCKCHAIN_ON:
+    #  Read the keys and the addresses from the keys.json file
+    with open('keys.json', 'r') as f:
+        keys_data = json.load(f)
+
+    keys = keys_data['private_keys']
+    addresses = []
+
+    server_key = ""
+    for address, key in keys.items():
+        addresses.append(web3.to_checksum_address(address))
+        server_key = key
+    # Define strategy
+    strategy = CustomFedAvg(evaluate_metrics_aggregation_fn=weighted_average,
+                            min_available_clients=NUM_CLIENTS,
+                            min_fit_clients=NUM_CLIENTS,
+                            ipfs_model_hash=init_model_hash,
+                            perun_node_host="127.0.0.1",
+                            perun_node_port=str(8080 + NUM_CLIENTS + 1),
+                            secret_key=server_key,
+                            account=addresses[-1],
+                            client_addresses=addresses[:-1],
+                            )
+else:
+
+    strategy = CustomFedAvg(evaluate_metrics_aggregation_fn=weighted_average,
+                            min_available_clients=NUM_CLIENTS,
+                            min_fit_clients=NUM_CLIENTS,
+                            ipfs_model_hash=init_model_hash,
+                            perun_node_host="127.0.0.1",
+                            perun_node_port=str(8080 + NUM_CLIENTS + 1),
+                            )
 
 # Start Flower server
 fl.server.start_server(

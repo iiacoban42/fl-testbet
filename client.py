@@ -128,11 +128,11 @@ class FlowerClient(fl.client.NumPyClient):
         train(net, trainloader, epochs=1)
         params = self.get_parameters(config={})
         # Save the updated parameters to a file
-        file_name = f'storage/updated_weights_{self.cid}_{uuid.uuid4()}.pkl'
-        with open(file_name, 'wb') as f:
-            pickle.dump(params, f)
 
-        if IPFS_ON:
+        if IPFS_ON and INCENTIVES_ON:
+            file_name = f'storage/updated_weights_{self.cid}_{uuid.uuid4()}.pkl'
+            with open(file_name, 'wb') as f:
+                pickle.dump(params, f)
             res = ipfs_client.add(file_name)
             log(DEBUG, "File: %s IPFS file hash: %s", file_name, res['Hash'])
 

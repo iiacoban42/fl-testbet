@@ -1,0 +1,195 @@
+FL-experiment | INFO flwr 2024-03-11 22:38:44,974 | main.py:40 | Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=2,
+FL-experiment | INFO flwr 2024-03-11 22:38:44,974 | main.py:41 | Start Experiment
+FL-experiment | DEBUG flwr 2024-03-11 22:38:46,625 | server.py:149 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | INFO flwr 2024-03-11 22:38:46,633 | server.py:42 | Start Round=1
+FL-experiment | INFO flwr 2024-03-11 22:38:46,633 | server.py:62 | Start deploying contract
+FL-experiment | INFO flwr 2024-03-11 22:39:34,974 | server.py:66 | Done deploying contract
+FL-experiment | INFO flwr 2024-03-11 22:39:34,974 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=2, round_timeout=None)
+FL-experiment | INFO flwr 2024-03-11 22:39:35,012 | app.py:176 | Flower ECE: gRPC server running (2 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-03-11 22:39:35,013 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-03-11 22:39:35,013 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-03-11 22:39:42,023 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,082 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | INFO flwr 2024-03-11 22:39:42,237 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,238 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,239 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,241 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,244 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,247 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-03-11 22:39:42,247 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-03-11 22:39:42,248 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-03-11 22:39:42,248 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-03-11 22:39:42,318 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,320 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,347 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,348 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-03-11 22:39:42,458 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,465 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,469 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,483 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-03-11 22:39:42,560 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,562 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,564 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,564 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-03-11 22:39:42,578 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,587 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,587 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,588 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-03-11 22:39:42,605 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,607 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,610 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-03-11 22:39:42,623 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,624 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,625 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,626 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-03-11 22:39:42,630 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,646 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,648 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,648 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-03-11 22:39:42,658 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,660 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,660 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,661 | server.py:222 | fit_round 1: strategy sampled 10 clients (out of 10)
+FL-experiment | INFO flwr 2024-03-11 22:39:42,663 | client.py:126 | Start Training client=1
+FL-experiment | INFO flwr 2024-03-11 22:39:42,664 | client.py:126 | Start Training client=0
+FL-experiment | INFO flwr 2024-03-11 22:39:42,665 | client.py:126 | Start Training client=7
+FL-experiment | INFO flwr 2024-03-11 22:39:42,666 | client.py:126 | Start Training client=4
+FL-experiment | DEBUG flwr 2024-03-11 22:39:42,667 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-03-11 22:39:42,668 | client.py:126 | Start Training client=3
+FL-experiment | INFO flwr 2024-03-11 22:39:42,669 | client.py:126 | Start Training client=2
+FL-experiment | INFO flwr 2024-03-11 22:39:42,671 | client.py:126 | Start Training client=8
+FL-experiment | INFO flwr 2024-03-11 22:39:42,673 | client.py:126 | Start Training client=9
+FL-experiment | INFO flwr 2024-03-11 22:39:42,676 | client.py:126 | Start Training client=6
+FL-experiment | INFO flwr 2024-03-11 22:39:42,696 | client.py:126 | Start Training client=5
+FL-experiment | INFO flwr 2024-03-11 22:40:34,236 | client.py:139 | Start sending updated weights to the perun node (client=1)
+FL-experiment | INFO flwr 2024-03-11 22:40:34,236 | client.py:147 | Done Training client=1
+FL-experiment | INFO flwr 2024-03-11 22:40:34,271 | client.py:139 | Start sending updated weights to the perun node (client=2)
+FL-experiment | INFO flwr 2024-03-11 22:40:34,272 | client.py:147 | Done Training client=2
+FL-experiment | INFO flwr 2024-03-11 22:40:34,388 | client.py:139 | Start sending updated weights to the perun node (client=4)
+FL-experiment | INFO flwr 2024-03-11 22:40:34,388 | client.py:147 | Done Training client=4
+FL-experiment | INFO flwr 2024-03-11 22:40:34,400 | client.py:139 | Start sending updated weights to the perun node (client=6)
+FL-experiment | INFO flwr 2024-03-11 22:40:34,400 | client.py:147 | Done Training client=6
+FL-experiment | INFO flwr 2024-03-11 22:40:34,429 | client.py:139 | Start sending updated weights to the perun node (client=7)
+FL-experiment | INFO flwr 2024-03-11 22:40:34,429 | client.py:147 | Done Training client=7
+FL-experiment | INFO flwr 2024-03-11 22:40:34,455 | client.py:139 | Start sending updated weights to the perun node (client=9)
+FL-experiment | INFO flwr 2024-03-11 22:40:34,455 | client.py:147 | Done Training client=9
+FL-experiment | INFO flwr 2024-03-11 22:40:34,485 | client.py:139 | Start sending updated weights to the perun node (client=3)
+FL-experiment | INFO flwr 2024-03-11 22:40:34,486 | client.py:147 | Done Training client=3
+FL-experiment | INFO flwr 2024-03-11 22:40:34,521 | client.py:139 | Start sending updated weights to the perun node (client=0)
+FL-experiment | INFO flwr 2024-03-11 22:40:34,521 | client.py:147 | Done Training client=0
+FL-experiment | INFO flwr 2024-03-11 22:40:34,583 | client.py:139 | Start sending updated weights to the perun node (client=5)
+FL-experiment | INFO flwr 2024-03-11 22:40:34,583 | client.py:147 | Done Training client=5
+FL-experiment | INFO flwr 2024-03-11 22:40:34,610 | client.py:139 | Start sending updated weights to the perun node (client=8)
+FL-experiment | INFO flwr 2024-03-11 22:40:34,610 | client.py:147 | Done Training client=8
+FL-experiment | DEBUG flwr 2024-03-11 22:40:34,611 | server.py:236 | fit_round 1 received 10 results and 0 failures
+FL-experiment | INFO flwr 2024-03-11 22:40:34,611 | server.py:70 | Start Aggregating round=1
+FL-experiment | INFO flwr 2024-03-11 22:40:34,611 | server.py:73 | Start setting weights to the blockchain
+FL-experiment | DEBUG flwr 2024-03-11 22:40:34,622 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:40:34,980 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:40:39,971 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:40:44,992 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:40:49,969 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:40:55,023 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:40:59,993 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:41:05,042 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:41:09,975 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:41:14,981 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | INFO flwr 2024-03-11 22:41:19,984 | server.py:83 | Done setting weights to the blockchain
+FL-experiment | WARNING flwr 2024-03-11 22:41:20,001 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | INFO flwr 2024-03-11 22:41:20,001 | server.py:90 | Start saving aggregated model to storage (round=1)
+FL-experiment | DEBUG flwr 2024-03-11 22:41:20,039 | server.py:99 | File: storage/aggregated_model_f29ed01d-8351-4856-b2e7-15cd4ea1bc61.pkl IPFS file hash: QmYhJEJVjCZsH6yPHqc1BQ29UDDLo7jQUTt1z7H9P9ybfr
+FL-experiment | INFO flwr 2024-03-11 22:41:20,039 | server.py:102 | Done saving aggregated model to storage (round=1)
+FL-experiment | DEBUG flwr 2024-03-11 22:41:20,039 | server.py:173 | evaluate_round 1: strategy sampled 10 clients (out of 10)
+FL-experiment | DEBUG flwr 2024-03-11 22:41:23,938 | server.py:187 | evaluate_round 1 received 10 results and 0 failures
+FL-experiment | INFO flwr 2024-03-11 22:41:23,938 | server.py:109 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-03-11 22:41:23,938 | server.py:111 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-03-11 22:41:23,938 | server.py:112 | Round: 1, Aggregated accuracy: {'accuracy': 0.14642}, Aggregated loss: 717.3737731933594, IPFS hash: QmYhJEJVjCZsH6yPHqc1BQ29UDDLo7jQUTt1z7H9P9ybfr
+FL-experiment | INFO flwr 2024-03-11 22:41:23,938 | server.py:128 | Start setting aggregated model to the blockchain round=1
+FL-experiment | INFO flwr 2024-03-11 22:42:10,077 | server.py:131 | Done setting aggregated model to the blockchain round=1
+FL-experiment | INFO flwr 2024-03-11 22:42:10,077 | server.py:133 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-03-11 22:42:10,077 | server.py:134 | Done Round=1
+FL-experiment | INFO flwr 2024-03-11 22:42:10,077 | server.py:136 | Start Round=2
+FL-experiment | DEBUG flwr 2024-03-11 22:42:10,077 | server.py:222 | fit_round 2: strategy sampled 10 clients (out of 10)
+FL-experiment | INFO flwr 2024-03-11 22:42:10,083 | client.py:126 | Start Training client=4
+FL-experiment | INFO flwr 2024-03-11 22:42:10,084 | client.py:126 | Start Training client=1
+FL-experiment | INFO flwr 2024-03-11 22:42:10,086 | client.py:126 | Start Training client=9
+FL-experiment | INFO flwr 2024-03-11 22:42:10,087 | client.py:126 | Start Training client=5
+FL-experiment | INFO flwr 2024-03-11 22:42:10,088 | client.py:126 | Start Training client=8
+FL-experiment | INFO flwr 2024-03-11 22:42:10,089 | client.py:126 | Start Training client=2
+FL-experiment | INFO flwr 2024-03-11 22:42:10,090 | client.py:126 | Start Training client=3
+FL-experiment | INFO flwr 2024-03-11 22:42:10,092 | client.py:126 | Start Training client=6
+FL-experiment | INFO flwr 2024-03-11 22:42:10,093 | client.py:126 | Start Training client=0
+FL-experiment | INFO flwr 2024-03-11 22:42:10,093 | client.py:126 | Start Training client=7
+FL-experiment | INFO flwr 2024-03-11 22:42:35,464 | client.py:139 | Start sending updated weights to the perun node (client=2)
+FL-experiment | INFO flwr 2024-03-11 22:42:35,465 | client.py:147 | Done Training client=2
+FL-experiment | INFO flwr 2024-03-11 22:42:35,648 | client.py:139 | Start sending updated weights to the perun node (client=4)
+FL-experiment | INFO flwr 2024-03-11 22:42:35,648 | client.py:147 | Done Training client=4
+FL-experiment | INFO flwr 2024-03-11 22:42:35,702 | client.py:139 | Start sending updated weights to the perun node (client=9)
+FL-experiment | INFO flwr 2024-03-11 22:42:35,702 | client.py:147 | Done Training client=9
+FL-experiment | INFO flwr 2024-03-11 22:42:35,770 | client.py:139 | Start sending updated weights to the perun node (client=1)
+FL-experiment | INFO flwr 2024-03-11 22:42:35,770 | client.py:147 | Done Training client=1
+FL-experiment | INFO flwr 2024-03-11 22:42:35,840 | client.py:139 | Start sending updated weights to the perun node (client=8)
+FL-experiment | INFO flwr 2024-03-11 22:42:35,840 | client.py:147 | Done Training client=8
+FL-experiment | INFO flwr 2024-03-11 22:42:36,016 | client.py:139 | Start sending updated weights to the perun node (client=5)
+FL-experiment | INFO flwr 2024-03-11 22:42:36,016 | client.py:147 | Done Training client=5
+FL-experiment | INFO flwr 2024-03-11 22:42:57,845 | client.py:139 | Start sending updated weights to the perun node (client=3)
+FL-experiment | INFO flwr 2024-03-11 22:42:57,845 | client.py:147 | Done Training client=3
+FL-experiment | INFO flwr 2024-03-11 22:42:58,163 | client.py:139 | Start sending updated weights to the perun node (client=7)
+FL-experiment | INFO flwr 2024-03-11 22:42:58,163 | client.py:147 | Done Training client=7
+FL-experiment | INFO flwr 2024-03-11 22:42:58,172 | client.py:139 | Start sending updated weights to the perun node (client=0)
+FL-experiment | INFO flwr 2024-03-11 22:42:58,172 | client.py:147 | Done Training client=0
+FL-experiment | INFO flwr 2024-03-11 22:42:58,234 | client.py:139 | Start sending updated weights to the perun node (client=6)
+FL-experiment | INFO flwr 2024-03-11 22:42:58,234 | client.py:147 | Done Training client=6
+FL-experiment | DEBUG flwr 2024-03-11 22:42:58,236 | server.py:236 | fit_round 2 received 10 results and 0 failures
+FL-experiment | INFO flwr 2024-03-11 22:42:58,236 | server.py:70 | Start Aggregating round=2
+FL-experiment | INFO flwr 2024-03-11 22:42:58,236 | server.py:73 | Start setting weights to the blockchain
+FL-experiment | DEBUG flwr 2024-03-11 22:42:58,248 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:43:00,130 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:43:05,068 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:43:10,131 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:43:15,066 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:43:20,156 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:43:25,092 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:43:30,134 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:43:35,085 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | DEBUG flwr 2024-03-11 22:43:40,206 | server.py:80 | File: storage/init_model_96918350-4f86-40e9-80d9-febae29b3560.pkl IPFS file hash: QmaCUwSWNBBhXD82KdRLUnEaNKFPVMyakoRjQbdY8Mp8zt
+FL-experiment | INFO flwr 2024-03-11 22:43:45,141 | server.py:83 | Done setting weights to the blockchain
+FL-experiment | INFO flwr 2024-03-11 22:43:45,160 | server.py:90 | Start saving aggregated model to storage (round=2)
+FL-experiment | DEBUG flwr 2024-03-11 22:43:45,196 | server.py:99 | File: storage/aggregated_model_8fb9cb89-53e7-4a3a-8cbf-0d5cf25c94c0.pkl IPFS file hash: QmPwPsiTK7KJtrYTrWBU8mZN5vBr2xhNPHHrjgfbn2bA6s
+FL-experiment | INFO flwr 2024-03-11 22:43:45,196 | server.py:102 | Done saving aggregated model to storage (round=2)
+FL-experiment | DEBUG flwr 2024-03-11 22:43:45,196 | server.py:173 | evaluate_round 2: strategy sampled 10 clients (out of 10)
+FL-experiment | DEBUG flwr 2024-03-11 22:43:49,237 | server.py:187 | evaluate_round 2 received 10 results and 0 failures
+FL-experiment | INFO flwr 2024-03-11 22:43:49,238 | server.py:109 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-03-11 22:43:49,238 | server.py:111 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-03-11 22:43:49,238 | server.py:112 | Round: 2, Aggregated accuracy: {'accuracy': 0.30176}, Aggregated loss: 605.7316101074218, IPFS hash: QmPwPsiTK7KJtrYTrWBU8mZN5vBr2xhNPHHrjgfbn2bA6s
+FL-experiment | INFO flwr 2024-03-11 22:43:49,238 | server.py:128 | Start setting aggregated model to the blockchain round=2
+FL-experiment | INFO flwr 2024-03-11 22:44:35,199 | server.py:131 | Done setting aggregated model to the blockchain round=2
+FL-experiment | INFO flwr 2024-03-11 22:44:35,199 | server.py:133 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-03-11 22:44:35,199 | server.py:134 | Done Round=2
+FL-experiment | INFO flwr 2024-03-11 22:44:35,199 | server.py:153 | FL finished in 292.951109084
+FL-experiment | INFO flwr 2024-03-11 22:44:35,200 | app.py:226 | app_fit: losses_distributed [(1, 717.3737731933594), (2, 605.7316101074218)]
+FL-experiment | INFO flwr 2024-03-11 22:44:35,200 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-03-11 22:44:35,200 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.14642), (2, 0.30176)]}
+FL-experiment | INFO flwr 2024-03-11 22:44:35,200 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-03-11 22:44:35,200 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-03-11 22:44:35,210 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-03-11 22:44:35,210 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-03-11 22:44:35,210 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-03-11 22:44:35,210 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-03-11 22:44:35,210 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-03-11 22:44:35,210 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-03-11 22:44:35,210 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-03-11 22:44:35,210 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-03-11 22:44:35,210 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-03-11 22:44:35,210 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-03-11 22:44:35,211 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-03-11 22:44:35,211 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-03-11 22:44:35,211 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-03-11 22:44:35,211 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-03-11 22:44:35,211 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-03-11 22:44:35,211 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-03-11 22:44:35,211 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-03-11 22:44:35,211 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-03-11 22:44:35,211 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-03-11 22:44:35,211 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-03-11 22:44:36,041 | main.py:61 | Done Experiment

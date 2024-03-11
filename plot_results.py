@@ -56,17 +56,19 @@ def get_mean_time(data, event):
     return labels, mean_times
 
 
-def plot_mean_time_diff(data_FL, data_FLChan, event, title):
+def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
 
     labels, mean_times_FL = get_mean_time(data_FL, event)
     labels, mean_times_FLChan = get_mean_time(data_FLChan, event)
+    labels, mean_times_BCFL = get_mean_time(data_BCFL, event)
 
     plt.figure(figsize=(12, 6))
-    width = 0.35
+    width = 0.25
     x = np.arange(len(labels))
 
-    plt.bar(x - width/2, mean_times_FL, width, label='Mean Times FL', color='blue')
-    plt.bar(x + width/2, mean_times_FLChan, width, label='Mean Times FLChan', color='orange')
+    plt.bar(x - width, mean_times_FL, width, label='Mean Times FL', color='gray')
+    plt.bar(x, mean_times_BCFL, width, label='Mean Times BCFL', color='orange')
+    plt.bar(x + width, mean_times_FLChan, width, label='Mean Times FLChan', color='blue')
 
     plt.title(title)
     plt.xlabel('Configuration (NUM_CLIENTS, ROUNDS)')
@@ -99,11 +101,12 @@ def plot_mean_time(data, event, title):
 
 log_data_FL = parse_log("logs/res_plot/results_FL.txt")
 log_data_FLChan = parse_log("logs/res_plot/results_chanFL.txt")
+log_data_BCFL = parse_log("logs/res_plot/results_BCFL.txt")
 
-plot_mean_time_diff(log_data_FL, log_data_FLChan, "Training", 'Mean Training Time FL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_FLChan, "Aggregating", 'Mean Aggregation Time FL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_FLChan, "Round", 'Mean Round Time FL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_FLChan, "Experiment", 'Mean E2E Time FL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Training", 'Mean Training Time FL vs BCFL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 'Mean Aggregation Time FL vs BCFL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Mean Round Time FL vs BCFL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Experiment", 'Mean E2E Time FL vs BCFL vs FLChan')
 
 
 plot_mean_time(log_data_FLChan, "opening channels", 'Mean Time to Open Channels')

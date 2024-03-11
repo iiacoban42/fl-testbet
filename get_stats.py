@@ -68,3 +68,4 @@ def get_stats(path, output_path=None):
 
 get_stats("logs/logs_fl/", "logs/results_FL.txt")
 get_stats("logs/logs_flchan/", "logs/results_chanFL.txt")
+get_stats("logs/logs_bcfl/", "logs/results_BCFL.txt")

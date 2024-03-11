@@ -75,6 +75,17 @@ def set_aggregated_model(web3, contract, server_account, private_key, client_add
     t_receipt = web3.eth.wait_for_transaction_receipt(t_hash)
     # print(f"aggregate model set successfully: {t_receipt}")
 
+    # Client payout
+    amount_to_transfer = web3.to_wei(1, "ether")
+    t = web3.eth.send_transaction({
+        "from": server_account,
+        "to": client_address,
+        "value": amount_to_transfer,
+    })
+    t_receipt = web3.eth.wait_for_transaction_receipt(t)
+    # print(f"client payout successful: {t_receipt}")
+
+
 
 def test():
     web3 = Web3(Web3.HTTPProvider(GANACHE_URL))

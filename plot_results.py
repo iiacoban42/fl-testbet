@@ -54,7 +54,6 @@ def get_number_of_requests(data):
         config_data[config]['rounds_clients'] = rounds_clients
         config_data[config]['ipfs_req'] = values["ipfs_req"]
         config_data[config]['perun_req'] = values["perun_req"]
-    print(config_data)
 
     labels = ['({}, {})'.format(*values['rounds_clients']) for values in config_data.values()]
     ipfs_req = [values['ipfs_req'] for values in config_data.values()]
@@ -120,21 +119,22 @@ def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
     # plt.show()
 
 
-def plot_mean_time(data, event, title):
+def plot_channel_time(data, title):
 
-    labels, mean_times = get_mean_time(data, event)
+    labels, opening_times = get_mean_time(data, "opening channels")
+    labels, settling_times = get_mean_time(data, "settling channels")
 
     plt.figure(figsize=(12, 6))
     width = 0.35
     x = np.arange(len(labels))
-
-    plt.figure(figsize=(12, 6))
-    plt.bar(range(len(labels)), mean_times, tick_label=labels, color='blue')
+    plt.bar(x - width/2, opening_times, width, label='Open channel', color='orange')
+    plt.bar(x + width/2, settling_times, width, label='Settle channel', color='blue')
     plt.title(title)
     plt.xlabel('(ROUNDS, NUM_CLIENTS)')
-    plt.ylabel('Mean Time (seconds)')
-    plt.xticks(rotation=45, ha='right')
+    plt.ylabel('Mean Channel Handling Time (seconds)')
+    plt.xticks(x, labels, rotation=45, ha='right')
     plt.tight_layout()
+    plt.legend()
     plt.savefig(plot_path + title + '.png')
     # plt.show()
 
@@ -146,8 +146,6 @@ def plot_number_of_requests(data, event, title):
         requests = ipfs_req
     elif event == 'perun':
         requests = perun_req
-
-    print(requests)
 
     plt.figure(figsize=(12, 6))
     width = 0.35
@@ -179,5 +177,4 @@ plot_number_of_requests(log_data_FLChan, "perun", 'Perun Requests')
 
 
 
-plot_mean_time(log_data_FLChan, "opening channels", 'Mean Time to Open Channels')
-plot_mean_time(log_data_FLChan, "settling channels", 'Mean Time to Settle Channels')
+plot_channel_time(log_data_FLChan, 'Mean Time to Handle Channel Opening and Closing')

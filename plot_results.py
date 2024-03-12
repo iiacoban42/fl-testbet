@@ -8,11 +8,18 @@ def parse_log(file_path):
     current_config = None
 
     with open(file_path, 'r') as file:
+        ipfs_req = 0
+        perun_req = 0
+
         for line in file:
             line = line.strip()
 
             if line.startswith('Config'):
                 current_config = line
+            if line.startswith('NET'):
+                parts = line.split('|')
+                ipfs_req = int(parts[1].strip().split(':')[1])
+                perun_req = int(parts[2].strip().split(':')[1])
             elif line:
                 parts = line.split('|')
                 if len(parts) > 2:
@@ -25,10 +32,37 @@ def parse_log(file_path):
                     data.append({
                         'config': current_config,
                         'time_seconds': time_seconds,
-                        'event_type': event_type
+                        'event_type': event_type,
+                        'ipfs_req': ipfs_req,
+                        'perun_req': perun_req
                     })
 
     return data
+
+
+def get_number_of_requests(data):
+    config_data = {}
+
+    for entry in data:
+        config = entry['config']
+        if config not in config_data:
+            config_data[config] = {'ipfs_req': entry['ipfs_req'], "perun_req": entry['perun_req'], 'rounds_clients': ''}
+
+    for config, values in config_data.items():
+        rounds_clients = tuple(map(int, [s.split('=')[1] for s in config.split(',') if 'ROUNDS' in s or 'NUM_CLIENTS' in s]))
+
+        config_data[config]['rounds_clients'] = rounds_clients
+        config_data[config]['ipfs_req'] = values["ipfs_req"]
+        config_data[config]['perun_req'] = values["perun_req"]
+    print(config_data)
+
+    labels = ['({}, {})'.format(*values['rounds_clients']) for values in config_data.values()]
+    ipfs_req = [values['ipfs_req'] for values in config_data.values()]
+    perun_req = [values['perun_req'] for values in config_data.values()]
+
+
+    return labels, ipfs_req, perun_req
+
 
 
 def get_mean_time(data, event):
@@ -53,8 +87,8 @@ def get_mean_time(data, event):
     labels = ['({}, {})'.format(*values['rounds_clients']) for values in config_data.values()]
     mean_times = [values['mean_time'] for values in config_data.values()]
 
-    return labels, mean_times
 
+    return labels, mean_times
 
 def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
 
@@ -104,16 +138,45 @@ def plot_mean_time(data, event, title):
     plt.savefig(plot_path + title + '.png')
     # plt.show()
 
+def plot_number_of_requests(data, event, title):
+
+    requests = None
+    labels, ipfs_req, perun_req = get_number_of_requests(data)
+    if event == 'ipfs':
+        requests = ipfs_req
+    elif event == 'perun':
+        requests = perun_req
+
+    print(requests)
+
+    plt.figure(figsize=(12, 6))
+    width = 0.35
+    x = np.arange(len(labels))
+
+    plt.figure(figsize=(12, 6))
+    plt.bar(range(len(labels)), requests, tick_label=labels, color='blue')
+    plt.title(title)
+    plt.xlabel('(ROUNDS, NUM_CLIENTS)')
+    plt.ylabel('# requests')
+    plt.xticks(rotation=45, ha='right')
+    plt.tight_layout()
+    plt.savefig(plot_path + title + '.png')
+    # plt.show()
+
 
 log_data_FL = parse_log("logs/res_plot/results_FL.txt")
 log_data_FLChan = parse_log("logs/res_plot/results_chanFL.txt")
 log_data_BCFL = parse_log("logs/res_plot/results_BCFL.txt")
 
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Training", 'Mean Training Time FL vs BCFL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 'Mean Aggregation Time FL vs BCFL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Mean Round Time FL vs BCFL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "FL", 'FL Time FL vs BCFL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Experiment", 'Mean E2E Time FL vs BCFL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Training", 'Mean Client Training Time: FL vs BCFL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 'Mean Aggregation Time: FL vs BCFL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Mean Round Time: FL vs BCFL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "FL", 'Federated Learning Time: FL vs BCFL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Experiment", 'E2E Time: FL vs BCFL vs FLChan')
+
+plot_number_of_requests(log_data_FLChan, "ipfs", 'IPFS Requests')
+plot_number_of_requests(log_data_FLChan, "perun", 'Perun Requests')
+
 
 
 plot_mean_time(log_data_FLChan, "opening channels", 'Mean Time to Open Channels')

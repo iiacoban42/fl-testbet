@@ -1,4 +1,5 @@
 Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=1
+NET | IPFS Requests: 4 | PERUN Requests: 6
 2024-03-07 03:22:25.981000 | time: 122.102 seconds | Experiment
 2024-03-07 03:22:25.981000 | time: 25.861 seconds | opening channels
 2024-03-07 03:22:54.660000 | time: 29.155 seconds | Round=1
@@ -14,6 +15,7 @@ Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=1
 2024-03-07 03:23:29.644000 | time: 58.438 seconds | settling channels
 
 Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=2
+NET | IPFS Requests: 7 | PERUN Requests: 10
 2024-03-07 03:25:32.341000 | time: 146.037 seconds | Experiment
 2024-03-07 03:25:32.341000 | time: 29.832 seconds | opening channels
 2024-03-07 03:26:03.043000 | time: 28.058 seconds | Round=1
@@ -37,6 +39,7 @@ Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=2
 2024-03-07 03:26:58.596000 | time: 59.782 seconds | settling channels
 
 Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=3
+NET | IPFS Requests: 10 | PERUN Requests: 14
 2024-03-07 03:28:16.320000 | time: 157.27 seconds | Experiment
 2024-03-07 03:28:16.320000 | time: 26.079 seconds | opening channels
 2024-03-07 03:28:43.230000 | time: 28.861 seconds | Round=1
@@ -68,6 +71,7 @@ Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=3
 2024-03-07 03:29:55.660000 | time: 57.929 seconds | settling channels
 
 Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=1
+NET | IPFS Requests: 7 | PERUN Requests: 15
 2024-03-07 03:36:36.383000 | time: 262.999 seconds | Experiment
 2024-03-07 03:36:36.383000 | time: 71.563 seconds | opening channels
 2024-03-07 03:37:48.796000 | time: 38.457 seconds | Round=1
@@ -89,6 +93,7 @@ Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=1
 2024-03-07 03:38:32.301000 | time: 147.08 seconds | settling channels
 
 Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=2
+NET | IPFS Requests: 13 | PERUN Requests: 25
 2024-03-07 03:41:13.761000 | time: 306.177 seconds | Experiment
 2024-03-07 03:41:13.761000 | time: 74.74 seconds | opening channels
 2024-03-07 03:42:29.366000 | time: 42.41 seconds | Round=1
@@ -124,6 +129,7 @@ Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=2
 2024-03-07 03:43:49.651000 | time: 150.286 seconds | settling channels
 
 Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=3
+NET | IPFS Requests: 19 | PERUN Requests: 35
 2024-03-07 03:51:50.362000 | time: 335.424 seconds | Experiment
 2024-03-07 03:51:50.362000 | time: 73.967 seconds | opening channels
 2024-03-07 03:53:05.313000 | time: 37.962 seconds | Round=1
@@ -173,6 +179,7 @@ Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=3
 2024-03-07 03:54:55.298000 | time: 150.487 seconds | settling channels
 
 Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=1
+NET | IPFS Requests: 12 | PERUN Requests: 30
 2024-03-07 03:57:36.438000 | time: 520.446 seconds | Experiment
 2024-03-07 03:57:36.438000 | time: 148.609 seconds | opening channels
 2024-03-07 04:00:05.885000 | time: 63.546 seconds | Round=1
@@ -204,6 +211,7 @@ Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=1
 2024-03-07 04:01:15.389000 | time: 301.494 seconds | settling channels
 
 Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=2
+NET | IPFS Requests: 23 | PERUN Requests: 50
 2024-03-07 15:21:55.341000 | time: 598.831 seconds | Experiment
 2024-03-07 15:21:55.341000 | time: 146.964 seconds | opening channels
 2024-03-07 15:24:25.220000 | time: 66.252 seconds | Round=1
@@ -259,6 +267,7 @@ Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=2
 2024-03-07 15:26:53.973000 | time: 300.198 seconds | settling channels
 
 Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=3
+NET | IPFS Requests: 34 | PERUN Requests: 70
 2024-03-07 15:57:08.607000 | time: 634.005 seconds | Experiment
 2024-03-07 15:57:08.607000 | time: 147.063 seconds | opening channels
 2024-03-07 15:59:38.480000 | time: 66.425 seconds | Round=1
@@ -338,6 +347,7 @@ Config: INCENTIVES_ON=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=3
 2024-03-07 16:02:41.774000 | time: 300.837 seconds | settling channels
 
 Config: INCENTIVES_ON=True, BCFL=False, IPFS_ON=True, NUM_CLIENTS=25, NUM_ROUNDS=1,
+NET | IPFS Requests: 27 | PERUN Requests: 75
 2024-03-12 11:30:14.109000 | time: 1299.132 seconds | Experiment
 2024-03-12 11:30:14.109000 | time: 375.868 seconds | opening channels
 2024-03-12 11:36:31.730000 | time: 160.605 seconds | Round=1
@@ -399,6 +409,7 @@ Config: INCENTIVES_ON=True, BCFL=False, IPFS_ON=True, NUM_CLIENTS=25, NUM_ROUNDS
 2024-03-12 11:39:21.768000 | time: 751.473 seconds | settling channels
 
 Config: INCENTIVES_ON=True, BCFL=False, IPFS_ON=True, NUM_CLIENTS=25, NUM_ROUNDS=2,
+NET | IPFS Requests: 54 | PERUN Requests: 150
 2024-03-12 11:52:48.987000 | time: 2238.461 seconds | Experiment
 2024-03-12 11:52:48.987000 | time: 373.959 seconds | opening channels
 2024-03-12 11:59:04.393000 | time: 896.571 seconds | Round=1
@@ -518,6 +529,7 @@ Config: INCENTIVES_ON=True, BCFL=False, IPFS_ON=True, NUM_CLIENTS=25, NUM_ROUNDS
 2024-03-12 12:17:36.874000 | time: 750.573 seconds | settling channels
 
 Config: INCENTIVES_ON=True, BCFL=False, IPFS_ON=True, NUM_CLIENTS=25, NUM_ROUNDS=3,
+NET | IPFS Requests: 79 | PERUN Requests: 175
 2024-03-12 12:42:54.328000 | time: 1594.508 seconds | Experiment
 2024-03-12 12:42:54.328000 | time: 371.193 seconds | opening channels
 2024-03-12 12:49:06.975000 | time: 164.513 seconds | Round=1

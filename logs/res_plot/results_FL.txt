@@ -1,4 +1,5 @@
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=1
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-04 13:17:40.324000 | time: 32.478 seconds | Experiment
 2024-03-04 13:17:41.810000 | time: 30.523 seconds | Round=1
 2024-03-04 13:17:51.325000 | time: 19.19 seconds | Training client=0
@@ -7,6 +8,7 @@ Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=1
 2024-03-04 13:18:12.333000 | time: 21.026829125000003 seconds| FL finished in 21.026829125000003
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=2
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-04 13:18:20.927000 | time: 49.408 seconds | Experiment
 2024-03-04 13:18:21.866000 | time: 28.036 seconds | Round=1
 2024-03-04 13:18:29.762000 | time: 17.578 seconds | Training client=1
@@ -19,6 +21,7 @@ Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=2
 2024-03-04 13:19:09.823000 | time: 40.173237667 seconds| FL finished in 40.173237667
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=3
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-04 13:19:30.182000 | time: 69.614 seconds | Experiment
 2024-03-04 13:19:31.096000 | time: 27.981 seconds | Round=1
 2024-03-04 13:19:38.901000 | time: 18.419 seconds | Training client=1
@@ -35,6 +38,7 @@ Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=3
 2024-03-04 13:20:39.335000 | time: 60.675537915999996 seconds| FL finished in 60.675537915999996
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=1
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-04 13:21:25.823000 | time: 40.537 seconds | Experiment
 2024-03-04 13:21:26.678000 | time: 39.123 seconds | Round=1
 2024-03-04 13:21:35.691000 | time: 27.873 seconds | Training client=0
@@ -46,6 +50,7 @@ Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=1
 2024-03-04 13:22:05.801000 | time: 30.737986582999998 seconds| FL finished in 30.737986582999998
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=2
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-04 13:22:42.526000 | time: 70.581 seconds | Experiment
 2024-03-04 13:22:43.443000 | time: 38.794 seconds | Round=1
 2024-03-04 13:22:51.768000 | time: 28.287 seconds | Training client=3
@@ -64,6 +69,7 @@ Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=2
 2024-03-04 13:23:52.367000 | time: 61.087301624999995 seconds| FL finished in 61.087301624999995
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=3
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-04 13:24:16.379000 | time: 99.983 seconds | Experiment
 2024-03-04 13:24:17.434000 | time: 38.299 seconds | Round=1
 2024-03-04 13:24:25.651000 | time: 28.038 seconds | Training client=0
@@ -89,6 +95,7 @@ Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=3
 2024-03-04 13:25:55.792000 | time: 90.61029662499999 seconds| FL finished in 90.61029662499999
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=1
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-04 13:26:06.412000 | time: 64.675 seconds | Experiment
 2024-03-04 13:26:07.300000 | time: 62.984 seconds | Round=1
 2024-03-04 13:26:16.894000 | time: 49.53 seconds | Training client=5
@@ -105,6 +112,7 @@ Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=1
 2024-03-04 13:27:10.284000 | time: 53.982510459 seconds| FL finished in 53.982510459
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=2
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-04 13:28:21.255000 | time: 119.645 seconds | Experiment
 2024-03-04 13:28:22.366000 | time: 64.156 seconds | Round=1
 2024-03-04 13:28:31.572000 | time: 51.069 seconds | Training client=0
@@ -133,6 +141,7 @@ Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=2
 2024-03-04 13:30:20.067000 | time: 108.719635625 seconds| FL finished in 108.719635625
 
 Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=3
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-04 13:30:28.481000 | time: 173.14 seconds | Experiment
 2024-03-04 13:30:29.496000 | time: 62.845 seconds | Round=1
 2024-03-04 13:30:39.361000 | time: 49.162 seconds | Training client=7
@@ -173,6 +182,7 @@ Config: INCENTIVES_ON=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=3
 2024-03-04 13:33:20.828000 | time: 162.8448065 seconds| FL finished in 162.8448065
 
 Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=25, NUM_ROUNDS=1,
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-12 00:14:03.615000 | time: 181.029 seconds | Experiment
 2024-03-12 00:14:09.959000 | time: 172.899 seconds | Round=1
 2024-03-12 00:14:22.262000 | time: 92.138 seconds | Training client=13
@@ -204,6 +214,7 @@ Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=25, NUM_ROUN
 2024-03-12 00:17:02.858000 | time: 163.118891792 seconds| FL finished in 163.118891792
 
 Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=25, NUM_ROUNDS=2,
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-12 00:17:47.848000 | time: 307.892 seconds | Experiment
 2024-03-12 00:17:49.318000 | time: 163.387 seconds | Round=1
 2024-03-12 00:18:03.139000 | time: 80.686 seconds | Training client=17
@@ -262,6 +273,7 @@ Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=25, NUM_ROUN
 2024-03-12 00:22:54.019000 | time: 292.508149958 seconds| FL finished in 292.508149958
 
 Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=25, NUM_ROUNDS=3,
+NET | IPFS Requests: 0 | PERUN Requests: 0
 2024-03-12 00:35:22.338000 | time: 441.636 seconds | Experiment
 2024-03-12 00:35:23.600000 | time: 162.126 seconds | Round=1
 2024-03-12 00:35:37.934000 | time: 78.642 seconds | Training client=18

@@ -6,6 +6,8 @@ import re
 def parse_log_file(log_file_path):
     logs = []
     print_config = False
+    ipfs_req = 0
+    perun_req = 0
     with open(log_file_path, 'r') as file:
         for line in file:
             # print(line)
@@ -22,7 +24,14 @@ def parse_log_file(log_file_path):
             if log_text.startswith("Start") or log_text.startswith("Done") or log_text.startswith("FL finished"):
                 logs.append((timestamp, log_text))
 
-    return logs
+            if log_text.startswith("File"):
+                ipfs_req += 1
+
+            if log_text.startswith("PERUN REQUEST"):
+                perun_req += 1
+
+    return logs, ipfs_req, perun_req
+
 
 def calculate_elapsed_time(start_time, end_time):
     if start_time and end_time:
@@ -44,11 +53,13 @@ def get_stats(path, output_path=None):
     for file in natsorted(os.listdir(path)):
         if file.endswith(".log"):
             log_file_path = path + file
-            timestamps = parse_log_file(log_file_path)
+            timestamps, ipfs_rec, perun_reg = parse_log_file(log_file_path)
 
             for i, (timestamp, log_text) in enumerate(timestamps):
                 if log_text.startswith("Config"):
                     res += log_text + "\n"
+                    res += f"NET | IPFS Requests: {ipfs_rec} | PERUN Requests: {perun_reg}\n"
+
                     print(log_text)
 
                 if log_text.startswith("FL finished"):

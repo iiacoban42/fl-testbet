@@ -56,7 +56,7 @@ def get_stats(path, output_path=None):
                     if match:
                         fl_time = float(match.group())
                         line = f"{timestamp} | time: {fl_time} seconds| {log_text}".replace("\n", "")
-                        res += log_text + "\n"
+                        res += line + "\n"
                         print(line)
 
                 if log_text.startswith("Start"):

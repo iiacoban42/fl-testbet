@@ -62,13 +62,19 @@ def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
     labels, mean_times_FLChan = get_mean_time(data_FLChan, event)
     labels, mean_times_BCFL = get_mean_time(data_BCFL, event)
 
+    min_len = min(len(mean_times_FL), len(mean_times_FLChan), len(mean_times_BCFL))
+    mean_times_FL = mean_times_FL[:min_len]
+    mean_times_FLChan = mean_times_FLChan[:min_len]
+    mean_times_BCFL = mean_times_BCFL[:min_len]
+    labels = labels[:min_len]
+
     plt.figure(figsize=(12, 6))
     width = 0.25
     x = np.arange(len(labels))
 
-    plt.bar(x - width, mean_times_FL, width, label='Mean Times FL', color='gray')
-    plt.bar(x, mean_times_BCFL, width, label='Mean Times BCFL', color='orange')
-    plt.bar(x + width, mean_times_FLChan, width, label='Mean Times FLChan', color='blue')
+    plt.bar(x - width, mean_times_BCFL, width, label='Mean Times BCFL', color='orange')
+    plt.bar(x, mean_times_FLChan, width, label='Mean Times FLChan', color='blue')
+    plt.bar(x + width, mean_times_FL, width, label='Mean Times FL', color='gray')
 
     plt.title(title)
     plt.xlabel('Configuration (NUM_CLIENTS, ROUNDS)')
@@ -106,6 +112,7 @@ log_data_BCFL = parse_log("logs/res_plot/results_BCFL.txt")
 plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Training", 'Mean Training Time FL vs BCFL vs FLChan')
 plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 'Mean Aggregation Time FL vs BCFL vs FLChan')
 plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Mean Round Time FL vs BCFL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "FL", 'FL Time FL vs BCFL vs FLChan')
 plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Experiment", 'Mean E2E Time FL vs BCFL vs FLChan')
 
 

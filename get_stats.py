@@ -1,6 +1,7 @@
 from datetime import datetime
 import os
 from natsort import natsorted
+import re
 
 def parse_log_file(log_file_path):
     logs = []
@@ -18,7 +19,7 @@ def parse_log_file(log_file_path):
             timestamp = tokenized_line[1].split(" ")[2] + " " + tokenized_line[1].split(" ")[3]
             timestamp = datetime.strptime(timestamp, '%Y-%m-%d %H:%M:%S,%f')
             log_text = tokenized_line[3]
-            if log_text.startswith("Start") or log_text.startswith("Done"):
+            if log_text.startswith("Start") or log_text.startswith("Done") or log_text.startswith("FL finished"):
                 logs.append((timestamp, log_text))
 
     return logs
@@ -49,6 +50,14 @@ def get_stats(path, output_path=None):
                 if log_text.startswith("Config"):
                     res += log_text + "\n"
                     print(log_text)
+
+                if log_text.startswith("FL finished"):
+                    match = re.search(r'\d+\.\d+', log_text)
+                    if match:
+                        fl_time = float(match.group())
+                        line = f"{timestamp} | time: {fl_time} seconds| {log_text}".replace("\n", "")
+                        res += log_text + "\n"
+                        print(line)
 
                 if log_text.startswith("Start"):
                     match_str = log_text.split(" ")

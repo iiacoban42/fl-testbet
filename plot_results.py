@@ -3,6 +3,8 @@ import numpy as np
 
 plot_path = "plots/"
 
+plt.rcParams.update({'font.size': 16})
+
 def parse_log(file_path):
     data = []
     current_config = None
@@ -106,7 +108,7 @@ def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
     x = np.arange(len(labels))
 
     plt.bar(x - width, mean_times_BCFL, width, label='Mean Times BCFL', color='orange')
-    plt.bar(x, mean_times_FLChan, width, label='Mean Times FLChan', color='blue')
+    plt.bar(x, mean_times_FLChan, width, label='Mean Times StateFL', color='blue')
     plt.bar(x + width, mean_times_FL, width, label='Mean Times FL', color='gray')
 
     plt.title(title)
@@ -131,7 +133,7 @@ def plot_channel_time(data, title):
     plt.bar(x + width/2, settling_times, width, label='Settle channel', color='blue')
     plt.title(title)
     plt.xlabel('(ROUNDS, NUM_CLIENTS)')
-    plt.ylabel('Mean Channel Handling Time (seconds)')
+    plt.ylabel('Time (seconds)')
     plt.xticks(x, labels, rotation=45, ha='right')
     plt.tight_layout()
     plt.legend()
@@ -166,15 +168,15 @@ log_data_FL = parse_log("logs/res_plot/results_FL.txt")
 log_data_FLChan = parse_log("logs/res_plot/results_chanFL.txt")
 log_data_BCFL = parse_log("logs/res_plot/results_BCFL.txt")
 
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Training", 'Mean Client Training Time: FL vs BCFL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 'Mean Aggregation Time: FL vs BCFL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Mean Round Time: FL vs BCFL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "FL", 'Federated Learning Time: FL vs BCFL vs FLChan')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Experiment", 'E2E Time: FL vs BCFL vs FLChan')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Training", 'Mean Client Training Time: FL vs BCFL vs StateFL')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 'Mean Aggregation Time: FL vs BCFL vs StateFL')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Mean Round Time: FL vs BCFL vs StateFL')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "FL", 'Federated Learning Time: FL vs BCFL vs StateFL')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Experiment", 'E2E Time: FL vs BCFL vs StateFL')
 
 plot_number_of_requests(log_data_FLChan, "ipfs", 'IPFS Requests')
 plot_number_of_requests(log_data_FLChan, "perun", 'Perun Requests')
 
 
 
-plot_channel_time(log_data_FLChan, 'Mean Time to Handle Channel Opening and Closing')
+plot_channel_time(log_data_FLChan, 'Time to Handle Channel Opening and Closing')

@@ -66,6 +66,31 @@ def get_number_of_requests(data):
 
 
 
+def get_cumulative_time(data, event):
+    config_data = {}
+    for entry in data:
+        if event in entry['event_type']:
+            config = entry['config']
+            time_seconds = entry['time_seconds']
+
+            if config not in config_data:
+                config_data[config] = {'times': [], 'rounds_clients': ''}
+
+            config_data[config]['times'].append(time_seconds)
+
+    for config, values in config_data.items():
+        rounds_clients = tuple(map(int, [s.split('=')[1] for s in config.split(',') if 'ROUNDS' in s or 'NUM_CLIENTS' in s]))
+        cummulative_time = np.sum(values['times'])
+
+        config_data[config]['rounds_clients'] = rounds_clients
+        config_data[config]['cummulative_time'] = cummulative_time
+
+    labels = ['({}, {})'.format(*values['rounds_clients']) for values in config_data.values()]
+    cummulative = [values['cummulative_time'] for values in config_data.values()]
+
+    return labels, cummulative
+
+
 def get_mean_time(data, event):
     config_data = {}
     for entry in data:
@@ -121,6 +146,37 @@ def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
     # plt.show()
 
 
+def plot_cumulative_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
+
+    labels, times_FL = get_cumulative_time(data_FL, event)
+    labels, times_FLChan = get_cumulative_time(data_FLChan, event)
+    labels, times_BCFL = get_cumulative_time(data_BCFL, event)
+
+    min_len = min(len(times_FL), len(times_FLChan), len(times_BCFL))
+    times_FL = times_FL[:min_len]
+    times_FLChan = times_FLChan[:min_len]
+    times_BCFL = times_BCFL[:min_len]
+    labels = labels[:min_len]
+
+    plt.figure(figsize=(12, 6))
+    width = 0.25
+    x = np.arange(len(labels))
+
+    plt.bar(x - width, times_BCFL, width, label='Cumulative Times BCFL', color='orange')
+    plt.bar(x, times_FLChan, width, label='Cumulative Times StateFL', color='blue')
+    plt.bar(x + width, times_FL, width, label='Cumulative Times FL', color='gray')
+
+    plt.title(title)
+    plt.xlabel('Configuration (NUM_CLIENTS, ROUNDS)')
+    plt.ylabel('Cumulative Time (seconds)')
+    plt.xticks(x, labels, rotation=45, ha='right')
+    plt.tight_layout()
+    plt.legend()
+    plt.savefig(plot_path + title + '.png')
+    # plt.show()
+
+
+
 def plot_channel_time(data, title):
 
     labels, opening_times = get_mean_time(data, "opening channels")
@@ -173,6 +229,9 @@ plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 
 plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Mean Round Time: FL vs BCFL vs StateFL')
 plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "FL", 'Federated Learning Time: FL vs BCFL vs StateFL')
 plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Experiment", 'E2E Time: FL vs BCFL vs StateFL')
+
+plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Cumulative Round Time: FL vs BCFL vs StateFL')
+
 
 plot_number_of_requests(log_data_FLChan, "ipfs", 'IPFS Requests')
 plot_number_of_requests(log_data_FLChan, "perun", 'Perun Requests')

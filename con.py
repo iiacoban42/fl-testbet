@@ -1,8 +1,41 @@
 """Communicate with the perun node using websockets."""
+import ipfshttpclient
 import socket
 import time
+import numpy as np
+from config import IPFS_ON, NUM_CLIENTS
 
-def send_command(host: str, port: int, request: bytes, caller: str="") -> str:
+# Load network latencies from planet lab dataset https://github.com/uofa-rzhu3/NetLatency-Data
+NETWORK_LATENCIES_DATASET = np.loadtxt('planet_lab_latencies_dataset.csv')
+# Sample random latencies from the dateset to simulate network latencies
+fl_conn = NUM_CLIENTS
+perun_conn = NUM_CLIENTS + 1
+ipfs_conn = NUM_CLIENTS + 1
+
+total_num_connections = fl_conn + ipfs_conn + perun_conn
+LINK_LATENCIES = np.random.choice(NETWORK_LATENCIES_DATASET, size=total_num_connections, replace=False)
+
+
+FL_LINK_LATENCIES = LINK_LATENCIES[:fl_conn]
+PERUN_LINK_LATENCIES = LINK_LATENCIES[len(FL_LINK_LATENCIES)+1:len(FL_LINK_LATENCIES)+1+perun_conn]
+IPFS_LINK_LATENCIES = LINK_LATENCIES[len(PERUN_LINK_LATENCIES)+1:len(PERUN_LINK_LATENCIES)+1+ipfs_conn]
+
+
+ipfs_client = None
+if IPFS_ON:
+    ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
+
+
+def post_to_ipfs(file_name: str, cid) -> str:
+    if not IPFS_ON:
+        return "IPFS is off"
+
+    res = ipfs_client.add(file_name)
+    # Simulate network latency
+    time.sleep(IPFS_LINK_LATENCIES[cid] / 1000)
+    return res
+
+def send_command(host: str, port: int, request: bytes, caller: str="", cid: int=0) -> str:
     """Sent a command to the perun node using websockets and return the response."""
     # Connect to the server
 
@@ -33,6 +66,10 @@ def send_command(host: str, port: int, request: bytes, caller: str="") -> str:
 
     # Close the connection
     conn.close()
+
+
+    # Simulate network latency
+    time.sleep(PERUN_LINK_LATENCIES[cid] / 1000)
     return message
 
 

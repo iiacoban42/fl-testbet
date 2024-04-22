@@ -1,7 +1,8 @@
 from flwr.common import Metrics
 from model import Net
-from main import NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON, LOG_FILE, SOLO_BLOCKCHAIN_ON
-from con import send_command
+from config import NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON, SOLO_BLOCKCHAIN_ON
+from main import LOG_FILE
+from con import send_command, post_to_ipfs
 from typing import List, Tuple
 from logging import INFO, DEBUG
 from flwr.common.logger import log
@@ -10,7 +11,6 @@ from fl_contract import deploy_contract, set_weight, set_aggregated_model, GANAC
 import flwr as fl
 import pickle
 import uuid
-import ipfshttpclient
 from web3 import Web3
 import json
 
@@ -19,10 +19,6 @@ web3 = Web3(Web3.HTTPProvider(GANACHE_URL))
 
 fl.common.logger.configure(identifier="FL-experiment", filename=LOG_FILE)
 
-
-ipfs_client = None
-if IPFS_ON:
-    ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
 
 # Define metric aggregation function
 def weighted_average(metrics: List[Tuple[int, Metrics]]) -> Metrics:
@@ -52,10 +48,9 @@ class CustomFedAvg(fl.server.strategy.FedAvg):
         if INCENTIVES_ON:
             log(INFO, "Start sharing model with perun nodes")
             for i in range(NUM_CLIENTS):
-                request = f"set,peer_{i},1,{NUM_ROUNDS},0,0,0"
+                request = f"set,peer_{i},{self.ipfs_hash},{NUM_ROUNDS},0,0,0"
                 log(INFO, "PERUN REQUEST: Sharing model with peer_%s, REQ=%s", i, request)
-                # send_command(self.perun_node_host, self.perun_node_port, f"open,peer_{i},10,10".encode(), "server")
-                send_command(self.perun_node_host, self.perun_node_port, request.encode(), "server")
+                send_command(self.perun_node_host, self.perun_node_port, request.encode(), "server", NUM_CLIENTS)
             log(INFO, "Done sharing model with perun nodes")
 
         elif SOLO_BLOCKCHAIN_ON:
@@ -76,7 +71,8 @@ class CustomFedAvg(fl.server.strategy.FedAvg):
                 file_path = f'storage/updated_weights_{i}_{uuid.uuid4()}.pkl'
                 with open(file_path, 'wb') as file:
                     pickle.dump(fit_res, file)
-                res = ipfs_client.add(file_name)
+
+                res = post_to_ipfs(file_path, NUM_CLIENTS)
                 log(DEBUG, "File: %s IPFS file hash: %s", file_name, res['Hash'])
 
                 set_weight(web3, self.contracts[i][0], self.address, self.secret_key, self.client_addresses[i], res['Hash'])
@@ -95,7 +91,7 @@ class CustomFedAvg(fl.server.strategy.FedAvg):
         self.ipfs_hash = file_path
 
         if IPFS_ON:
-            res = ipfs_client.add(file_path)
+            res = post_to_ipfs(file_path, NUM_CLIENTS)
             log(DEBUG, "File: %s IPFS file hash: %s", file_path, res['Hash'])
 
             self.ipfs_hash = res['Hash']
@@ -114,13 +110,15 @@ class CustomFedAvg(fl.server.strategy.FedAvg):
         if INCENTIVES_ON:
             log(INFO, "Start sending aggregated model to perun nodes round=%s", rnd)
             for i in range(NUM_CLIENTS):
-                request = f"set,peer_{i},1,{NUM_ROUNDS},0,{int(aggregated_accuracy['accuracy'])},{int((100 - aggregated_accuracy['accuracy']))}"
+                request = f"set,peer_{i},{self.ipfs_hash},{NUM_ROUNDS},0,{int(aggregated_accuracy['accuracy'])},{int((100 - aggregated_accuracy['accuracy']))}"
                 log(INFO, "PERUN REQUEST: Setting model with peer_%s, REQ=%s", i, request)
 
                 send_command(self.perun_node_host,
                             self.perun_node_port,
                             request.encode(),
-                            "server")
+                            "server",
+                            NUM_CLIENTS,
+                            )
 
             log(INFO, "Done sending aggregated model to perun nodes round=%s", rnd)
 
@@ -145,7 +143,7 @@ with open(file_name, 'wb') as f:
 
 init_model_hash = ""
 if IPFS_ON:
-    init_model_hash = ipfs_client.add(file_name)['Hash']
+    init_model_hash = post_to_ipfs(file_name, NUM_CLIENTS)['Hash']
     log(DEBUG, "File: %s IPFS file hash: %s", file_name, init_model_hash)
 
 

@@ -1,9 +1,10 @@
 import argparse
 import warnings
 import pickle
+import time
 import uuid
-from collections import OrderedDict
 
+from collections import OrderedDict
 import flwr as fl
 from flwr_datasets import FederatedDataset
 import torch
@@ -15,14 +16,10 @@ from logging import INFO, DEBUG
 from flwr.common.logger import log
 
 from model import Net
-from main import NUM_CLIENTS, NUM_ROUNDS, IPFS_ON, INCENTIVES_ON, LOG_FILE
-from con import send_command
+from config import NUM_CLIENTS, NUM_ROUNDS, INCENTIVES_ON
+from main import LOG_FILE
+from con import send_command, post_to_ipfs, FL_LINK_LATENCIES
 
-import ipfshttpclient
-
-ipfs_client = None
-if IPFS_ON:
-    ipfs_client = ipfshttpclient.connect('/ip4/127.0.0.1/tcp/5001')
 
 
 # #############################################################################
@@ -119,8 +116,13 @@ class FlowerClient(fl.client.NumPyClient):
 
     def set_parameters(self, parameters):
         params_dict = zip(net.state_dict().keys(), parameters)
+
+        # Simulate network latency
+        time.sleep(FL_LINK_LATENCIES[int(self.cid)] / 1000)
+
         state_dict = OrderedDict({k: torch.tensor(v) for k, v in params_dict})
         net.load_state_dict(state_dict, strict=True)
+
 
     def fit(self, parameters, config):
         log(INFO, "Start Training client=%s", self.cid)
@@ -129,18 +131,18 @@ class FlowerClient(fl.client.NumPyClient):
         params = self.get_parameters(config={})
         # Save the updated parameters to a file
 
-        if IPFS_ON and INCENTIVES_ON:
+        if INCENTIVES_ON:
             file_name = f'storage/updated_weights_{self.cid}_{uuid.uuid4()}.pkl'
             with open(file_name, 'wb') as f:
                 pickle.dump(params, f)
-            res = ipfs_client.add(file_name)
+            res = post_to_ipfs(file_name, self.cid)
             log(DEBUG, "File: %s IPFS file hash: %s", file_name, res['Hash'])
 
-        log(INFO, "Start sending updated weights to the perun node (client=%s)", self.cid)
-        if INCENTIVES_ON:
-            request = f"set,peer_{NUM_CLIENTS},1,{NUM_ROUNDS},10,0,0"
+            log(INFO, "Start sending updated weights to the perun node (client=%s)", self.cid)
+
+            request = f"set,peer_{NUM_CLIENTS},1,{NUM_ROUNDS},{res['Hash']},0,0"
             log(INFO, "PERUN REQUEST: Setting weight client=%s, REQ=%s", self.cid, request)
-            send_command(self.perun_node_host, self.perun_node_port, request.encode(), "client")
+            send_command(self.perun_node_host, self.perun_node_port, request.encode(), "client", self.cid)
             log(INFO, "Done sending updated weights to the perun node (client=%s)", self.cid)
 
 

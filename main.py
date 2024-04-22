@@ -1,17 +1,18 @@
 """Run payment channel fl experiments."""
 import subprocess
 import time
+import numpy as np
+import uuid
+
 from con import send_command
 
 import flwr as fl
 from logging import INFO
 from flwr.common.logger import log
 
-NUM_CLIENTS = 10
-NUM_ROUNDS = 1
-IPFS_ON = True
-INCENTIVES_ON = False
-SOLO_BLOCKCHAIN_ON = True
+from config import INCENTIVES_ON, SOLO_BLOCKCHAIN_ON, NUM_CLIENTS, NUM_ROUNDS, IPFS_ON
+
+
 LOG_FILE = ""
 
 if INCENTIVES_ON:
@@ -26,6 +27,7 @@ def setup_channels():
     for i in range(NUM_CLIENTS):
         server_port = 8081 + NUM_CLIENTS
         send_command("127.0.0.1", server_port, f"open,peer_{i},10,10".encode())
+
 
 def settle_channels():
     for i in range(NUM_CLIENTS):
@@ -43,7 +45,7 @@ def main():
     server_sleep_time = 3
 
     if SOLO_BLOCKCHAIN_ON:
-            server_sleep_time = 5 * NUM_CLIENTS
+        server_sleep_time = 5 * NUM_CLIENTS
 
     if not INCENTIVES_ON:
         subprocess.call(f"/Users/pi/Desktop/fl-testbet/run.sh {NUM_CLIENTS-1} {server_sleep_time}", shell=True)

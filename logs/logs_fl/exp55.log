@@ -1,0 +1,1508 @@
+FL-experiment | INFO flwr 2024-04-23 01:56:31,928 | main.py:43 | Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+FL-experiment | INFO flwr 2024-04-23 01:56:31,928 | main.py:44 | Start Experiment
+FL-experiment | INFO flwr 2024-04-23 01:56:33,757 | server.py:38 | Start Round=1
+FL-experiment | INFO flwr 2024-04-23 01:56:33,757 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+FL-experiment | INFO flwr 2024-04-23 01:56:33,777 | app.py:176 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-04-23 01:56:33,777 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-04-23 01:56:33,777 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 01:56:41,743 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 01:56:41,745 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 01:56:41,746 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 01:56:41,747 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 01:56:41,752 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 01:56:41,753 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-04-23 01:56:41,753 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-04-23 01:56:41,788 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 01:56:41,788 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 01:56:41,790 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 01:56:41,790 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 01:56:42,110 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 01:56:42,111 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 01:56:42,112 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 01:56:42,117 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 01:56:42,602 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 01:56:42,615 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 01:56:42,616 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 01:56:42,618 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 01:56:42,628 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 01:56:42,629 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 01:56:42,630 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 01:56:42,630 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-04-23 01:56:42,630 | server.py:222 | fit_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 01:56:42,634 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:56:42,634 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 01:56:42,636 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:56:42,639 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:56:42,641 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:57:08,107 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:57:09,466 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:57:11,189 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:57:11,534 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:57:11,588 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 01:57:11,590 | server.py:236 | fit_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:57:11,590 | server.py:65 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-04-23 01:57:11,595 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | DEBUG flwr 2024-04-23 01:57:11,595 | server.py:173 | evaluate_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 01:57:14,036 | server.py:187 | evaluate_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:57:14,036 | server.py:105 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-04-23 01:57:14,037 | server.py:107 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-04-23 01:57:14,037 | server.py:108 | Round: 1, Aggregated accuracy: {'accuracy': 0.25558}, Aggregated loss: 652.2386474609375, IPFS hash: storage/aggregated_model_0d2e0123-ba07-4d55-9ad2-cc9a5cf8e8f3.pkl
+FL-experiment | INFO flwr 2024-04-23 01:57:14,037 | server.py:131 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-04-23 01:57:14,037 | server.py:132 | Done Round=1
+FL-experiment | INFO flwr 2024-04-23 01:57:14,037 | server.py:134 | Start Round=2
+FL-experiment | DEBUG flwr 2024-04-23 01:57:14,037 | server.py:222 | fit_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 01:57:14,039 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:57:14,040 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 01:57:14,040 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:57:14,040 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:57:14,041 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:57:38,406 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:57:38,690 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:57:42,012 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:57:42,103 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 01:57:42,357 | client.py:149 | Done Training client=3
+FL-experiment | DEBUG flwr 2024-04-23 01:57:42,358 | server.py:236 | fit_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:57:42,358 | server.py:65 | Start Aggregating round=2
+FL-experiment | DEBUG flwr 2024-04-23 01:57:42,364 | server.py:173 | evaluate_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 01:57:44,829 | server.py:187 | evaluate_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:57:44,829 | server.py:105 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-04-23 01:57:44,829 | server.py:107 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-04-23 01:57:44,829 | server.py:108 | Round: 2, Aggregated accuracy: {'accuracy': 0.34342}, Aggregated loss: 574.1783813476562, IPFS hash: storage/aggregated_model_8b7fc080-8ee9-46dd-b28c-7a914fd905b6.pkl
+FL-experiment | INFO flwr 2024-04-23 01:57:44,829 | server.py:131 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-04-23 01:57:44,829 | server.py:132 | Done Round=2
+FL-experiment | INFO flwr 2024-04-23 01:57:44,829 | server.py:134 | Start Round=3
+FL-experiment | DEBUG flwr 2024-04-23 01:57:44,829 | server.py:222 | fit_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 01:57:44,831 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:57:44,832 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 01:57:44,832 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:57:44,833 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:57:44,834 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:58:10,286 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:58:10,299 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:58:13,792 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:58:13,969 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:58:14,063 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 01:58:14,064 | server.py:236 | fit_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:58:14,064 | server.py:65 | Start Aggregating round=3
+FL-experiment | DEBUG flwr 2024-04-23 01:58:14,069 | server.py:173 | evaluate_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 01:58:16,426 | server.py:187 | evaluate_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:58:16,426 | server.py:105 | Start evaluating fit round=3
+FL-experiment | INFO flwr 2024-04-23 01:58:16,426 | server.py:107 | Done Evaluating fit round=3
+FL-experiment | DEBUG flwr 2024-04-23 01:58:16,426 | server.py:108 | Round: 3, Aggregated accuracy: {'accuracy': 0.41158}, Aggregated loss: 502.9629638671875, IPFS hash: storage/aggregated_model_45170ee1-3ce9-440d-b5fd-c275ee06cd0e.pkl
+FL-experiment | INFO flwr 2024-04-23 01:58:16,426 | server.py:131 | Done Aggregating round=3
+FL-experiment | INFO flwr 2024-04-23 01:58:16,426 | server.py:132 | Done Round=3
+FL-experiment | INFO flwr 2024-04-23 01:58:16,426 | server.py:134 | Start Round=4
+FL-experiment | DEBUG flwr 2024-04-23 01:58:16,426 | server.py:222 | fit_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 01:58:16,428 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:58:16,429 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:58:16,429 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 01:58:16,430 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:58:16,431 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:58:40,801 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:58:40,891 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:58:40,954 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:58:41,034 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:58:44,939 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 01:58:44,941 | server.py:236 | fit_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:58:44,941 | server.py:65 | Start Aggregating round=4
+FL-experiment | DEBUG flwr 2024-04-23 01:58:44,946 | server.py:173 | evaluate_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 01:58:47,269 | server.py:187 | evaluate_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:58:47,269 | server.py:105 | Start evaluating fit round=4
+FL-experiment | INFO flwr 2024-04-23 01:58:47,269 | server.py:107 | Done Evaluating fit round=4
+FL-experiment | DEBUG flwr 2024-04-23 01:58:47,270 | server.py:108 | Round: 4, Aggregated accuracy: {'accuracy': 0.4532}, Aggregated loss: 469.78052978515626, IPFS hash: storage/aggregated_model_caed8463-42f8-4df7-a351-3eff2d41b849.pkl
+FL-experiment | INFO flwr 2024-04-23 01:58:47,270 | server.py:131 | Done Aggregating round=4
+FL-experiment | INFO flwr 2024-04-23 01:58:47,270 | server.py:132 | Done Round=4
+FL-experiment | INFO flwr 2024-04-23 01:58:47,270 | server.py:134 | Start Round=5
+FL-experiment | DEBUG flwr 2024-04-23 01:58:47,270 | server.py:222 | fit_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 01:58:47,272 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 01:58:47,273 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:58:47,273 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:58:47,274 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:58:47,274 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:59:11,420 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:59:11,467 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:59:11,586 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:59:11,783 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:59:15,849 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 01:59:15,850 | server.py:236 | fit_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:59:15,850 | server.py:65 | Start Aggregating round=5
+FL-experiment | DEBUG flwr 2024-04-23 01:59:15,855 | server.py:173 | evaluate_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 01:59:18,260 | server.py:187 | evaluate_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:59:18,260 | server.py:105 | Start evaluating fit round=5
+FL-experiment | INFO flwr 2024-04-23 01:59:18,260 | server.py:107 | Done Evaluating fit round=5
+FL-experiment | DEBUG flwr 2024-04-23 01:59:18,260 | server.py:108 | Round: 5, Aggregated accuracy: {'accuracy': 0.48754}, Aggregated loss: 447.2798156738281, IPFS hash: storage/aggregated_model_6d66b686-8b27-4e72-a702-2e6697452024.pkl
+FL-experiment | INFO flwr 2024-04-23 01:59:18,260 | server.py:131 | Done Aggregating round=5
+FL-experiment | INFO flwr 2024-04-23 01:59:18,260 | server.py:132 | Done Round=5
+FL-experiment | INFO flwr 2024-04-23 01:59:18,260 | server.py:153 | FL finished in 156.509468917
+FL-experiment | INFO flwr 2024-04-23 01:59:18,261 | app.py:226 | app_fit: losses_distributed [(1, 652.2386474609375), (2, 574.1783813476562), (3, 502.9629638671875), (4, 469.78052978515626), (5, 447.2798156738281)]
+FL-experiment | INFO flwr 2024-04-23 01:59:18,261 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-04-23 01:59:18,261 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.25558), (2, 0.34342), (3, 0.41158), (4, 0.4532), (5, 0.48754)]}
+FL-experiment | INFO flwr 2024-04-23 01:59:18,261 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-04-23 01:59:18,261 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-04-23 01:59:18,264 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 01:59:18,264 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 01:59:18,264 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-04-23 01:59:18,264 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 01:59:18,264 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-04-23 01:59:18,264 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 01:59:18,265 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-04-23 01:59:18,264 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 01:59:18,265 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 01:59:18,265 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 01:59:18,982 | main.py:64 | Done Experiment
+FL-experiment | INFO flwr 2024-04-23 01:59:19,456 | main.py:43 | Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+FL-experiment | INFO flwr 2024-04-23 01:59:19,456 | main.py:44 | Start Experiment
+FL-experiment | INFO flwr 2024-04-23 01:59:21,079 | server.py:38 | Start Round=1
+FL-experiment | INFO flwr 2024-04-23 01:59:21,080 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+FL-experiment | INFO flwr 2024-04-23 01:59:21,097 | app.py:176 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-04-23 01:59:21,098 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-04-23 01:59:21,098 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 01:59:28,768 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 01:59:28,769 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | INFO flwr 2024-04-23 01:59:28,769 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 01:59:28,769 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 01:59:28,769 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-04-23 01:59:28,769 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 01:59:28,770 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 01:59:28,771 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 01:59:28,772 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 01:59:28,772 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-04-23 01:59:28,772 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-04-23 01:59:28,954 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 01:59:28,984 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 01:59:28,991 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 01:59:29,052 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 01:59:29,054 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 01:59:29,060 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 01:59:29,060 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 01:59:29,230 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 01:59:29,231 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 01:59:29,231 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 01:59:29,232 | server.py:222 | fit_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 01:59:29,232 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 01:59:29,235 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:59:29,235 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:59:29,235 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:59:29,236 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:59:29,241 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 01:59:57,573 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 01:59:57,749 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 01:59:57,765 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 01:59:57,843 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 01:59:58,033 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 01:59:58,034 | server.py:236 | fit_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 01:59:58,034 | server.py:65 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-04-23 01:59:58,039 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | DEBUG flwr 2024-04-23 01:59:58,040 | server.py:173 | evaluate_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:00:00,317 | server.py:187 | evaluate_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:00:00,318 | server.py:105 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-04-23 02:00:00,318 | server.py:107 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-04-23 02:00:00,318 | server.py:108 | Round: 1, Aggregated accuracy: {'accuracy': 0.24738}, Aggregated loss: 659.7999267578125, IPFS hash: storage/aggregated_model_7490f9ed-75a7-4263-aa1e-421ee83bb07a.pkl
+FL-experiment | INFO flwr 2024-04-23 02:00:00,318 | server.py:131 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-04-23 02:00:00,318 | server.py:132 | Done Round=1
+FL-experiment | INFO flwr 2024-04-23 02:00:00,318 | server.py:134 | Start Round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:00:00,318 | server.py:222 | fit_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:00:00,320 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:00:00,320 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:00:00,321 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:00:00,321 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:00:00,322 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:00:25,204 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:00:25,326 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:00:28,182 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:00:28,498 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:00:28,625 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:00:28,626 | server.py:236 | fit_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:00:28,626 | server.py:65 | Start Aggregating round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:00:28,631 | server.py:173 | evaluate_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:00:30,901 | server.py:187 | evaluate_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:00:30,901 | server.py:105 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-04-23 02:00:30,901 | server.py:107 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:00:30,901 | server.py:108 | Round: 2, Aggregated accuracy: {'accuracy': 0.3699}, Aggregated loss: 549.8543334960938, IPFS hash: storage/aggregated_model_a8f473d0-9c2e-42b5-8138-03a5a3653e44.pkl
+FL-experiment | INFO flwr 2024-04-23 02:00:30,901 | server.py:131 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-04-23 02:00:30,901 | server.py:132 | Done Round=2
+FL-experiment | INFO flwr 2024-04-23 02:00:30,901 | server.py:134 | Start Round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:00:30,901 | server.py:222 | fit_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:00:30,903 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:00:30,904 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:00:30,905 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:00:30,905 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:00:30,905 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:00:55,380 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:00:55,505 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:00:56,604 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:00:59,022 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:00:59,111 | client.py:149 | Done Training client=3
+FL-experiment | DEBUG flwr 2024-04-23 02:00:59,112 | server.py:236 | fit_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:00:59,112 | server.py:65 | Start Aggregating round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:00:59,117 | server.py:173 | evaluate_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:01:01,361 | server.py:187 | evaluate_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:01:01,361 | server.py:105 | Start evaluating fit round=3
+FL-experiment | INFO flwr 2024-04-23 02:01:01,361 | server.py:107 | Done Evaluating fit round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:01:01,361 | server.py:108 | Round: 3, Aggregated accuracy: {'accuracy': 0.43662}, Aggregated loss: 482.9522644042969, IPFS hash: storage/aggregated_model_89427654-d383-4404-9ac0-2eadfed7182c.pkl
+FL-experiment | INFO flwr 2024-04-23 02:01:01,361 | server.py:131 | Done Aggregating round=3
+FL-experiment | INFO flwr 2024-04-23 02:01:01,361 | server.py:132 | Done Round=3
+FL-experiment | INFO flwr 2024-04-23 02:01:01,361 | server.py:134 | Start Round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:01:01,361 | server.py:222 | fit_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:01:01,363 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:01:01,364 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:01:01,364 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:01:01,365 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:01:01,365 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:01:25,702 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:01:25,876 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:01:26,183 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:01:28,992 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:01:29,233 | client.py:149 | Done Training client=3
+FL-experiment | DEBUG flwr 2024-04-23 02:01:29,234 | server.py:236 | fit_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:01:29,234 | server.py:65 | Start Aggregating round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:01:29,239 | server.py:173 | evaluate_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:01:31,438 | server.py:187 | evaluate_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:01:31,438 | server.py:105 | Start evaluating fit round=4
+FL-experiment | INFO flwr 2024-04-23 02:01:31,438 | server.py:107 | Done Evaluating fit round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:01:31,438 | server.py:108 | Round: 4, Aggregated accuracy: {'accuracy': 0.47492}, Aggregated loss: 451.2561340332031, IPFS hash: storage/aggregated_model_c8666c0f-1f0e-4ad0-9138-495e294e43e2.pkl
+FL-experiment | INFO flwr 2024-04-23 02:01:31,438 | server.py:131 | Done Aggregating round=4
+FL-experiment | INFO flwr 2024-04-23 02:01:31,438 | server.py:132 | Done Round=4
+FL-experiment | INFO flwr 2024-04-23 02:01:31,438 | server.py:134 | Start Round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:01:31,438 | server.py:222 | fit_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:01:31,441 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:01:31,441 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:01:31,442 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:01:31,443 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:01:31,443 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:01:56,740 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:01:57,021 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:01:57,141 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:02:00,016 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:02:00,354 | client.py:149 | Done Training client=3
+FL-experiment | DEBUG flwr 2024-04-23 02:02:00,355 | server.py:236 | fit_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:02:00,355 | server.py:65 | Start Aggregating round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:02:00,360 | server.py:173 | evaluate_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:02:02,622 | server.py:187 | evaluate_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:02:02,622 | server.py:105 | Start evaluating fit round=5
+FL-experiment | INFO flwr 2024-04-23 02:02:02,622 | server.py:107 | Done Evaluating fit round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:02:02,622 | server.py:108 | Round: 5, Aggregated accuracy: {'accuracy': 0.50004}, Aggregated loss: 428.9713989257813, IPFS hash: storage/aggregated_model_023f1dc6-31e3-4d9b-83a8-22189f295a48.pkl
+FL-experiment | INFO flwr 2024-04-23 02:02:02,622 | server.py:131 | Done Aggregating round=5
+FL-experiment | INFO flwr 2024-04-23 02:02:02,622 | server.py:132 | Done Round=5
+FL-experiment | INFO flwr 2024-04-23 02:02:02,622 | server.py:153 | FL finished in 153.851841708
+FL-experiment | INFO flwr 2024-04-23 02:02:02,623 | app.py:226 | app_fit: losses_distributed [(1, 659.7999267578125), (2, 549.8543334960938), (3, 482.9522644042969), (4, 451.2561340332031), (5, 428.9713989257813)]
+FL-experiment | INFO flwr 2024-04-23 02:02:02,623 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-04-23 02:02:02,623 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.24738), (2, 0.3699), (3, 0.43662), (4, 0.47492), (5, 0.50004)]}
+FL-experiment | INFO flwr 2024-04-23 02:02:02,623 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-04-23 02:02:02,623 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-04-23 02:02:02,626 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:02:02,626 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:02:02,626 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:02:02,626 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:02:02,626 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-04-23 02:02:02,626 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:02:02,626 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:02:02,626 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:02:02,626 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:02:02,626 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:02:03,340 | main.py:64 | Done Experiment
+FL-experiment | INFO flwr 2024-04-23 02:02:03,760 | main.py:43 | Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+FL-experiment | INFO flwr 2024-04-23 02:02:03,760 | main.py:44 | Start Experiment
+FL-experiment | INFO flwr 2024-04-23 02:02:05,421 | server.py:38 | Start Round=1
+FL-experiment | INFO flwr 2024-04-23 02:02:05,421 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+FL-experiment | INFO flwr 2024-04-23 02:02:05,440 | app.py:176 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-04-23 02:02:05,440 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-04-23 02:02:05,440 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:02:13,479 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,479 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,480 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,481 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:02:13,488 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:02:13,488 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-04-23 02:02:13,488 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-04-23 02:02:13,579 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,579 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,579 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,580 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:02:13,676 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,678 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,679 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,680 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:02:13,810 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,811 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,812 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,812 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:02:13,822 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,823 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,823 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,824 | server.py:222 | fit_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:02:13,823 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:02:13,826 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:02:13,827 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:02:13,828 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:02:13,828 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:02:13,833 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:02:42,699 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:02:42,708 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:02:42,715 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:02:42,763 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:02:43,069 | client.py:149 | Done Training client=4
+FL-experiment | DEBUG flwr 2024-04-23 02:02:43,071 | server.py:236 | fit_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:02:43,071 | server.py:65 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-04-23 02:02:43,075 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | DEBUG flwr 2024-04-23 02:02:43,076 | server.py:173 | evaluate_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:02:45,601 | server.py:187 | evaluate_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:02:45,602 | server.py:105 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-04-23 02:02:45,602 | server.py:107 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-04-23 02:02:45,602 | server.py:108 | Round: 1, Aggregated accuracy: {'accuracy': 0.24026}, Aggregated loss: 654.9047241210938, IPFS hash: storage/aggregated_model_7429ccb6-1a23-4d4c-af11-63bbefb0f4d0.pkl
+FL-experiment | INFO flwr 2024-04-23 02:02:45,602 | server.py:131 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-04-23 02:02:45,602 | server.py:132 | Done Round=1
+FL-experiment | INFO flwr 2024-04-23 02:02:45,602 | server.py:134 | Start Round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:02:45,602 | server.py:222 | fit_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:02:45,604 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:02:45,605 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:02:45,605 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:02:45,606 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:02:45,607 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:03:13,689 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:03:13,836 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:03:14,090 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:03:14,105 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:03:14,330 | client.py:149 | Done Training client=4
+FL-experiment | DEBUG flwr 2024-04-23 02:03:14,331 | server.py:236 | fit_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:03:14,331 | server.py:65 | Start Aggregating round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:03:14,336 | server.py:173 | evaluate_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:03:17,026 | server.py:187 | evaluate_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:03:17,026 | server.py:105 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-04-23 02:03:17,026 | server.py:107 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:03:17,026 | server.py:108 | Round: 2, Aggregated accuracy: {'accuracy': 0.3457}, Aggregated loss: 561.7895629882812, IPFS hash: storage/aggregated_model_d649a623-e8f8-44f3-8abb-fc943f6f68e9.pkl
+FL-experiment | INFO flwr 2024-04-23 02:03:17,026 | server.py:131 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-04-23 02:03:17,026 | server.py:132 | Done Round=2
+FL-experiment | INFO flwr 2024-04-23 02:03:17,026 | server.py:134 | Start Round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:03:17,026 | server.py:222 | fit_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:03:17,029 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:03:17,029 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:03:17,029 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:03:17,030 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:03:17,031 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:03:44,891 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:03:44,899 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:03:45,134 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:03:45,228 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:03:45,464 | client.py:149 | Done Training client=4
+FL-experiment | DEBUG flwr 2024-04-23 02:03:45,465 | server.py:236 | fit_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:03:45,465 | server.py:65 | Start Aggregating round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:03:45,470 | server.py:173 | evaluate_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:03:48,069 | server.py:187 | evaluate_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:03:48,069 | server.py:105 | Start evaluating fit round=3
+FL-experiment | INFO flwr 2024-04-23 02:03:48,069 | server.py:107 | Done Evaluating fit round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:03:48,069 | server.py:108 | Round: 3, Aggregated accuracy: {'accuracy': 0.41198}, Aggregated loss: 505.04429321289064, IPFS hash: storage/aggregated_model_d30df756-02cb-4dfa-b91f-0c73f36fbfc9.pkl
+FL-experiment | INFO flwr 2024-04-23 02:03:48,069 | server.py:131 | Done Aggregating round=3
+FL-experiment | INFO flwr 2024-04-23 02:03:48,069 | server.py:132 | Done Round=3
+FL-experiment | INFO flwr 2024-04-23 02:03:48,069 | server.py:134 | Start Round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:03:48,069 | server.py:222 | fit_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:03:48,071 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:03:48,072 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:03:48,073 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:03:48,073 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:03:48,073 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:04:16,641 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:04:16,888 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:04:17,164 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:04:17,265 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:04:17,292 | client.py:149 | Done Training client=4
+FL-experiment | DEBUG flwr 2024-04-23 02:04:17,293 | server.py:236 | fit_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:04:17,293 | server.py:65 | Start Aggregating round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:04:17,298 | server.py:173 | evaluate_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:04:19,833 | server.py:187 | evaluate_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:04:19,833 | server.py:105 | Start evaluating fit round=4
+FL-experiment | INFO flwr 2024-04-23 02:04:19,833 | server.py:107 | Done Evaluating fit round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:04:19,833 | server.py:108 | Round: 4, Aggregated accuracy: {'accuracy': 0.4599}, Aggregated loss: 467.528369140625, IPFS hash: storage/aggregated_model_4d7ea83f-e292-4390-a114-15e509494d84.pkl
+FL-experiment | INFO flwr 2024-04-23 02:04:19,833 | server.py:131 | Done Aggregating round=4
+FL-experiment | INFO flwr 2024-04-23 02:04:19,833 | server.py:132 | Done Round=4
+FL-experiment | INFO flwr 2024-04-23 02:04:19,833 | server.py:134 | Start Round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:04:19,833 | server.py:222 | fit_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:04:19,836 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:04:19,836 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:04:19,837 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:04:19,837 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:04:19,838 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:04:47,931 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:04:47,938 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:04:48,092 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:04:48,145 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:04:48,677 | client.py:149 | Done Training client=4
+FL-experiment | DEBUG flwr 2024-04-23 02:04:48,678 | server.py:236 | fit_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:04:48,678 | server.py:65 | Start Aggregating round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:04:48,683 | server.py:173 | evaluate_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:04:51,181 | server.py:187 | evaluate_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:04:51,181 | server.py:105 | Start evaluating fit round=5
+FL-experiment | INFO flwr 2024-04-23 02:04:51,182 | server.py:107 | Done Evaluating fit round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:04:51,182 | server.py:108 | Round: 5, Aggregated accuracy: {'accuracy': 0.4932}, Aggregated loss: 440.82680053710936, IPFS hash: storage/aggregated_model_638e05dd-301f-47e5-9d63-0c05851d1979.pkl
+FL-experiment | INFO flwr 2024-04-23 02:04:51,182 | server.py:131 | Done Aggregating round=5
+FL-experiment | INFO flwr 2024-04-23 02:04:51,182 | server.py:132 | Done Round=5
+FL-experiment | INFO flwr 2024-04-23 02:04:51,182 | server.py:153 | FL finished in 157.66330033300002
+FL-experiment | INFO flwr 2024-04-23 02:04:51,182 | app.py:226 | app_fit: losses_distributed [(1, 654.9047241210938), (2, 561.7895629882812), (3, 505.04429321289064), (4, 467.528369140625), (5, 440.82680053710936)]
+FL-experiment | INFO flwr 2024-04-23 02:04:51,182 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-04-23 02:04:51,182 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.24026), (2, 0.3457), (3, 0.41198), (4, 0.4599), (5, 0.4932)]}
+FL-experiment | INFO flwr 2024-04-23 02:04:51,182 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-04-23 02:04:51,182 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-04-23 02:04:51,185 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:04:51,185 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:04:51,185 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:04:51,185 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:04:51,186 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:04:51,186 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:04:51,186 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:04:51,186 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:04:51,186 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:04:51,186 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:04:51,997 | main.py:64 | Done Experiment
+FL-experiment | INFO flwr 2024-04-23 02:04:52,409 | main.py:43 | Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+FL-experiment | INFO flwr 2024-04-23 02:04:52,409 | main.py:44 | Start Experiment
+FL-experiment | INFO flwr 2024-04-23 02:04:53,990 | server.py:38 | Start Round=1
+FL-experiment | INFO flwr 2024-04-23 02:04:53,990 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+FL-experiment | INFO flwr 2024-04-23 02:04:54,008 | app.py:176 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-04-23 02:04:54,008 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-04-23 02:04:54,008 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:05:01,852 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | INFO flwr 2024-04-23 02:05:01,853 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:05:01,854 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:05:01,854 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:05:01,855 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-04-23 02:05:01,855 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:05:01,860 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:05:01,860 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-04-23 02:05:01,860 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-04-23 02:05:01,909 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:05:01,910 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:05:01,910 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:05:01,911 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:05:02,347 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:05:02,348 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:05:02,353 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:05:02,354 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:05:02,738 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:05:02,746 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:05:02,747 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:05:02,747 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-04-23 02:05:02,748 | server.py:222 | fit_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:05:02,751 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:05:02,751 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:05:02,752 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:05:02,752 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:05:02,753 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:05:27,377 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:05:28,039 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:05:28,890 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:05:30,649 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:05:30,767 | client.py:149 | Done Training client=2
+FL-experiment | DEBUG flwr 2024-04-23 02:05:30,768 | server.py:236 | fit_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:05:30,768 | server.py:65 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-04-23 02:05:30,773 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | DEBUG flwr 2024-04-23 02:05:30,774 | server.py:173 | evaluate_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:05:32,891 | server.py:187 | evaluate_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:05:32,891 | server.py:105 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-04-23 02:05:32,891 | server.py:107 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-04-23 02:05:32,891 | server.py:108 | Round: 1, Aggregated accuracy: {'accuracy': 0.19572}, Aggregated loss: 692.051171875, IPFS hash: storage/aggregated_model_8f37514e-5dfa-4d76-b6cc-1247ffc794da.pkl
+FL-experiment | INFO flwr 2024-04-23 02:05:32,891 | server.py:131 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-04-23 02:05:32,891 | server.py:132 | Done Round=1
+FL-experiment | INFO flwr 2024-04-23 02:05:32,891 | server.py:134 | Start Round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:05:32,891 | server.py:222 | fit_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:05:32,894 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:05:32,894 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:05:32,895 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:05:32,895 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:05:32,896 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:05:56,752 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:05:57,381 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:05:57,541 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:06:01,183 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:06:01,249 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:06:01,250 | server.py:236 | fit_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:06:01,250 | server.py:65 | Start Aggregating round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:06:01,255 | server.py:173 | evaluate_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:06:03,457 | server.py:187 | evaluate_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:06:03,457 | server.py:105 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-04-23 02:06:03,457 | server.py:107 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:06:03,458 | server.py:108 | Round: 2, Aggregated accuracy: {'accuracy': 0.34088}, Aggregated loss: 574.8331909179688, IPFS hash: storage/aggregated_model_4a248b77-5db9-4cee-9e7b-66d64e5360e8.pkl
+FL-experiment | INFO flwr 2024-04-23 02:06:03,458 | server.py:131 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-04-23 02:06:03,458 | server.py:132 | Done Round=2
+FL-experiment | INFO flwr 2024-04-23 02:06:03,458 | server.py:134 | Start Round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:06:03,458 | server.py:222 | fit_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:06:03,460 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:06:03,461 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:06:03,461 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:06:03,462 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:06:03,462 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:06:27,481 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:06:27,857 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:06:28,302 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:06:31,615 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:06:31,655 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:06:31,656 | server.py:236 | fit_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:06:31,657 | server.py:65 | Start Aggregating round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:06:31,661 | server.py:173 | evaluate_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:06:33,845 | server.py:187 | evaluate_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:06:33,845 | server.py:105 | Start evaluating fit round=3
+FL-experiment | INFO flwr 2024-04-23 02:06:33,845 | server.py:107 | Done Evaluating fit round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:06:33,845 | server.py:108 | Round: 3, Aggregated accuracy: {'accuracy': 0.43374}, Aggregated loss: 487.5709594726562, IPFS hash: storage/aggregated_model_b066da61-0b95-4929-8af0-4aac574df63e.pkl
+FL-experiment | INFO flwr 2024-04-23 02:06:33,845 | server.py:131 | Done Aggregating round=3
+FL-experiment | INFO flwr 2024-04-23 02:06:33,845 | server.py:132 | Done Round=3
+FL-experiment | INFO flwr 2024-04-23 02:06:33,845 | server.py:134 | Start Round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:06:33,845 | server.py:222 | fit_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:06:33,848 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:06:33,848 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:06:33,849 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:06:33,849 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:06:33,849 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:06:57,685 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:06:58,068 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:06:58,484 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:07:01,472 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:07:01,656 | client.py:149 | Done Training client=2
+FL-experiment | DEBUG flwr 2024-04-23 02:07:01,657 | server.py:236 | fit_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:07:01,657 | server.py:65 | Start Aggregating round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:07:01,662 | server.py:173 | evaluate_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:07:03,805 | server.py:187 | evaluate_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:07:03,805 | server.py:105 | Start evaluating fit round=4
+FL-experiment | INFO flwr 2024-04-23 02:07:03,805 | server.py:107 | Done Evaluating fit round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:07:03,805 | server.py:108 | Round: 4, Aggregated accuracy: {'accuracy': 0.47554}, Aggregated loss: 453.40785522460936, IPFS hash: storage/aggregated_model_fece2f19-c4b6-46d7-9dda-26c38b0c7630.pkl
+FL-experiment | INFO flwr 2024-04-23 02:07:03,805 | server.py:131 | Done Aggregating round=4
+FL-experiment | INFO flwr 2024-04-23 02:07:03,805 | server.py:132 | Done Round=4
+FL-experiment | INFO flwr 2024-04-23 02:07:03,805 | server.py:134 | Start Round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:07:03,805 | server.py:222 | fit_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:07:03,807 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:07:03,808 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:07:03,808 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:07:03,809 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:07:03,809 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:07:27,932 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:07:28,845 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:07:28,911 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:07:32,015 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:07:32,165 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:07:32,166 | server.py:236 | fit_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:07:32,166 | server.py:65 | Start Aggregating round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:07:32,171 | server.py:173 | evaluate_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:07:34,391 | server.py:187 | evaluate_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:07:34,391 | server.py:105 | Start evaluating fit round=5
+FL-experiment | INFO flwr 2024-04-23 02:07:34,391 | server.py:107 | Done Evaluating fit round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:07:34,391 | server.py:108 | Round: 5, Aggregated accuracy: {'accuracy': 0.50418}, Aggregated loss: 429.1027465820313, IPFS hash: storage/aggregated_model_b4f2e09a-eaba-4fcd-af20-79fd7dcab460.pkl
+FL-experiment | INFO flwr 2024-04-23 02:07:34,391 | server.py:131 | Done Aggregating round=5
+FL-experiment | INFO flwr 2024-04-23 02:07:34,391 | server.py:132 | Done Round=5
+FL-experiment | INFO flwr 2024-04-23 02:07:34,391 | server.py:153 | FL finished in 152.528913209
+FL-experiment | INFO flwr 2024-04-23 02:07:34,392 | app.py:226 | app_fit: losses_distributed [(1, 692.051171875), (2, 574.8331909179688), (3, 487.5709594726562), (4, 453.40785522460936), (5, 429.1027465820313)]
+FL-experiment | INFO flwr 2024-04-23 02:07:34,392 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-04-23 02:07:34,392 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.19572), (2, 0.34088), (3, 0.43374), (4, 0.47554), (5, 0.50418)]}
+FL-experiment | INFO flwr 2024-04-23 02:07:34,392 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-04-23 02:07:34,392 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-04-23 02:07:34,395 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:07:34,395 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:07:34,395 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:07:34,395 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:07:34,395 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-04-23 02:07:34,395 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:07:34,395 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:07:34,395 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:07:34,395 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:07:34,395 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:07:35,096 | main.py:64 | Done Experiment
+FL-experiment | INFO flwr 2024-04-23 02:07:35,518 | main.py:43 | Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+FL-experiment | INFO flwr 2024-04-23 02:07:35,518 | main.py:44 | Start Experiment
+FL-experiment | INFO flwr 2024-04-23 02:07:37,094 | server.py:38 | Start Round=1
+FL-experiment | INFO flwr 2024-04-23 02:07:37,094 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+FL-experiment | INFO flwr 2024-04-23 02:07:37,113 | app.py:176 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-04-23 02:07:37,113 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-04-23 02:07:37,113 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:07:45,175 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,177 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,184 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,185 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:07:45,178 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | INFO flwr 2024-04-23 02:07:45,193 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:07:45,193 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-04-23 02:07:45,193 | server.py:104 | FL starting
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,193 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,193 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,194 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:07:45,208 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,209 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,210 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,210 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:07:45,330 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,338 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,339 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,339 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:07:45,443 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,444 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,444 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,445 | server.py:222 | fit_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:07:45,444 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:07:45,448 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:07:45,448 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:07:45,448 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:07:45,449 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:07:45,454 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:08:14,153 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:08:14,326 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:08:14,353 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:08:14,398 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:08:14,439 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:08:14,441 | server.py:236 | fit_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:08:14,441 | server.py:65 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-04-23 02:08:14,446 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | DEBUG flwr 2024-04-23 02:08:14,447 | server.py:173 | evaluate_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:08:16,795 | server.py:187 | evaluate_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:08:16,795 | server.py:105 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-04-23 02:08:16,796 | server.py:107 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-04-23 02:08:16,796 | server.py:108 | Round: 1, Aggregated accuracy: {'accuracy': 0.22918}, Aggregated loss: 698.9648681640625, IPFS hash: storage/aggregated_model_2cad2622-2297-4c43-a71c-91b785c362d0.pkl
+FL-experiment | INFO flwr 2024-04-23 02:08:16,796 | server.py:131 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-04-23 02:08:16,796 | server.py:132 | Done Round=1
+FL-experiment | INFO flwr 2024-04-23 02:08:16,796 | server.py:134 | Start Round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:08:16,796 | server.py:222 | fit_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:08:16,798 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:08:16,798 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:08:16,799 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:08:16,800 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:08:16,800 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:08:45,124 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:08:45,164 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:08:45,226 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:08:45,294 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:08:45,385 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:08:45,386 | server.py:236 | fit_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:08:45,386 | server.py:65 | Start Aggregating round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:08:45,391 | server.py:173 | evaluate_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:08:47,803 | server.py:187 | evaluate_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:08:47,803 | server.py:105 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-04-23 02:08:47,803 | server.py:107 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:08:47,803 | server.py:108 | Round: 2, Aggregated accuracy: {'accuracy': 0.34952}, Aggregated loss: 567.2067016601562, IPFS hash: storage/aggregated_model_bb6f04ae-6322-4b11-a6e3-e5a07877e456.pkl
+FL-experiment | INFO flwr 2024-04-23 02:08:47,803 | server.py:131 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-04-23 02:08:47,803 | server.py:132 | Done Round=2
+FL-experiment | INFO flwr 2024-04-23 02:08:47,803 | server.py:134 | Start Round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:08:47,803 | server.py:222 | fit_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:08:47,806 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:08:47,806 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:08:47,807 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:08:47,808 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:08:47,808 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:09:15,836 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:09:16,184 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:09:16,277 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:09:16,311 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:09:16,587 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:09:16,588 | server.py:236 | fit_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:09:16,588 | server.py:65 | Start Aggregating round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:09:16,593 | server.py:173 | evaluate_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:09:19,010 | server.py:187 | evaluate_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:09:19,010 | server.py:105 | Start evaluating fit round=3
+FL-experiment | INFO flwr 2024-04-23 02:09:19,010 | server.py:107 | Done Evaluating fit round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:09:19,010 | server.py:108 | Round: 3, Aggregated accuracy: {'accuracy': 0.41616}, Aggregated loss: 503.2937805175781, IPFS hash: storage/aggregated_model_e7c684f4-65ab-4389-aa69-0b2350bb6053.pkl
+FL-experiment | INFO flwr 2024-04-23 02:09:19,010 | server.py:131 | Done Aggregating round=3
+FL-experiment | INFO flwr 2024-04-23 02:09:19,010 | server.py:132 | Done Round=3
+FL-experiment | INFO flwr 2024-04-23 02:09:19,011 | server.py:134 | Start Round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:09:19,011 | server.py:222 | fit_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:09:19,013 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:09:19,013 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:09:19,014 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:09:19,015 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:09:19,015 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:09:47,445 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:09:47,496 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:09:47,623 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:09:47,638 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:09:47,689 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:09:47,690 | server.py:236 | fit_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:09:47,690 | server.py:65 | Start Aggregating round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:09:47,695 | server.py:173 | evaluate_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:09:50,066 | server.py:187 | evaluate_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:09:50,066 | server.py:105 | Start evaluating fit round=4
+FL-experiment | INFO flwr 2024-04-23 02:09:50,066 | server.py:107 | Done Evaluating fit round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:09:50,066 | server.py:108 | Round: 4, Aggregated accuracy: {'accuracy': 0.46112}, Aggregated loss: 467.7847473144531, IPFS hash: storage/aggregated_model_d589db49-d575-4d0f-9bb9-f8aa8f7ba504.pkl
+FL-experiment | INFO flwr 2024-04-23 02:09:50,066 | server.py:131 | Done Aggregating round=4
+FL-experiment | INFO flwr 2024-04-23 02:09:50,066 | server.py:132 | Done Round=4
+FL-experiment | INFO flwr 2024-04-23 02:09:50,066 | server.py:134 | Start Round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:09:50,066 | server.py:222 | fit_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:09:50,069 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:09:50,069 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:09:50,070 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:09:50,071 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:09:50,071 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:10:15,085 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:10:15,998 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:10:18,618 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:10:18,715 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:10:18,844 | client.py:149 | Done Training client=0
+FL-experiment | DEBUG flwr 2024-04-23 02:10:18,845 | server.py:236 | fit_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:10:18,845 | server.py:65 | Start Aggregating round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:10:18,850 | server.py:173 | evaluate_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:10:21,166 | server.py:187 | evaluate_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:10:21,166 | server.py:105 | Start evaluating fit round=5
+FL-experiment | INFO flwr 2024-04-23 02:10:21,166 | server.py:107 | Done Evaluating fit round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:10:21,166 | server.py:108 | Round: 5, Aggregated accuracy: {'accuracy': 0.49304}, Aggregated loss: 440.702685546875, IPFS hash: storage/aggregated_model_70de6bf0-8632-4f41-b4a9-1d7cceea6fa6.pkl
+FL-experiment | INFO flwr 2024-04-23 02:10:21,166 | server.py:131 | Done Aggregating round=5
+FL-experiment | INFO flwr 2024-04-23 02:10:21,166 | server.py:132 | Done Round=5
+FL-experiment | INFO flwr 2024-04-23 02:10:21,166 | server.py:153 | FL finished in 155.97363629100002
+FL-experiment | INFO flwr 2024-04-23 02:10:21,166 | app.py:226 | app_fit: losses_distributed [(1, 698.9648681640625), (2, 567.2067016601562), (3, 503.2937805175781), (4, 467.7847473144531), (5, 440.702685546875)]
+FL-experiment | INFO flwr 2024-04-23 02:10:21,166 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-04-23 02:10:21,166 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.22918), (2, 0.34952), (3, 0.41616), (4, 0.46112), (5, 0.49304)]}
+FL-experiment | INFO flwr 2024-04-23 02:10:21,167 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-04-23 02:10:21,167 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-04-23 02:10:21,170 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:10:21,170 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:10:21,170 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:10:21,170 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:10:21,170 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-04-23 02:10:21,170 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:10:21,170 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:10:21,170 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:10:21,170 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:10:21,170 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:10:22,784 | main.py:64 | Done Experiment
+FL-experiment | INFO flwr 2024-04-23 02:10:23,238 | main.py:43 | Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+FL-experiment | INFO flwr 2024-04-23 02:10:23,239 | main.py:44 | Start Experiment
+FL-experiment | INFO flwr 2024-04-23 02:10:24,853 | server.py:38 | Start Round=1
+FL-experiment | INFO flwr 2024-04-23 02:10:24,853 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+FL-experiment | INFO flwr 2024-04-23 02:10:24,872 | app.py:176 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-04-23 02:10:24,872 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-04-23 02:10:24,872 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:10:32,673 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,674 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,675 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,676 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:10:32,682 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:10:32,682 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-04-23 02:10:32,682 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-04-23 02:10:32,807 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,809 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,810 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,810 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:10:32,841 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | INFO flwr 2024-04-23 02:10:32,876 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,904 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,906 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,907 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,911 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,912 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:10:32,915 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,916 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,918 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-04-23 02:10:32,918 | server.py:222 | fit_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:10:32,923 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:10:32,923 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:10:32,925 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:10:32,926 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:10:32,928 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:11:01,242 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:11:01,637 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:11:01,653 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:11:01,674 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:11:01,696 | client.py:149 | Done Training client=0
+FL-experiment | DEBUG flwr 2024-04-23 02:11:01,698 | server.py:236 | fit_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:11:01,698 | server.py:65 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-04-23 02:11:01,703 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | DEBUG flwr 2024-04-23 02:11:01,704 | server.py:173 | evaluate_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:11:03,949 | server.py:187 | evaluate_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:11:03,949 | server.py:105 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-04-23 02:11:03,949 | server.py:107 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-04-23 02:11:03,949 | server.py:108 | Round: 1, Aggregated accuracy: {'accuracy': 0.25308}, Aggregated loss: 659.2130249023437, IPFS hash: storage/aggregated_model_584f4168-edcd-4ca2-9fb1-48e2f1b99a77.pkl
+FL-experiment | INFO flwr 2024-04-23 02:11:03,949 | server.py:131 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-04-23 02:11:03,949 | server.py:132 | Done Round=1
+FL-experiment | INFO flwr 2024-04-23 02:11:03,949 | server.py:134 | Start Round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:11:03,949 | server.py:222 | fit_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:11:03,951 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:11:03,952 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:11:03,952 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:11:03,953 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:11:03,953 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:11:28,441 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:11:28,463 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:11:32,170 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:11:32,262 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:11:32,327 | client.py:149 | Done Training client=0
+FL-experiment | DEBUG flwr 2024-04-23 02:11:32,328 | server.py:236 | fit_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:11:32,328 | server.py:65 | Start Aggregating round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:11:32,333 | server.py:173 | evaluate_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:11:34,580 | server.py:187 | evaluate_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:11:34,580 | server.py:105 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-04-23 02:11:34,580 | server.py:107 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:11:34,580 | server.py:108 | Round: 2, Aggregated accuracy: {'accuracy': 0.34318}, Aggregated loss: 569.5081787109375, IPFS hash: storage/aggregated_model_a7ab7e92-c369-4da1-83d1-a5294280b4e7.pkl
+FL-experiment | INFO flwr 2024-04-23 02:11:34,580 | server.py:131 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-04-23 02:11:34,580 | server.py:132 | Done Round=2
+FL-experiment | INFO flwr 2024-04-23 02:11:34,580 | server.py:134 | Start Round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:11:34,581 | server.py:222 | fit_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:11:34,583 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:11:34,584 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:11:34,584 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:11:34,585 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:11:34,585 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:11:59,084 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:11:59,150 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:12:02,442 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:12:02,676 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:12:02,834 | client.py:149 | Done Training client=2
+FL-experiment | DEBUG flwr 2024-04-23 02:12:02,835 | server.py:236 | fit_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:12:02,835 | server.py:65 | Start Aggregating round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:12:02,841 | server.py:173 | evaluate_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:12:05,609 | server.py:187 | evaluate_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:12:05,609 | server.py:105 | Start evaluating fit round=3
+FL-experiment | INFO flwr 2024-04-23 02:12:05,609 | server.py:107 | Done Evaluating fit round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:12:05,609 | server.py:108 | Round: 3, Aggregated accuracy: {'accuracy': 0.4291}, Aggregated loss: 492.89763793945315, IPFS hash: storage/aggregated_model_71ad80c8-196d-4436-8218-14d42ba6bc08.pkl
+FL-experiment | INFO flwr 2024-04-23 02:12:05,610 | server.py:131 | Done Aggregating round=3
+FL-experiment | INFO flwr 2024-04-23 02:12:05,610 | server.py:132 | Done Round=3
+FL-experiment | INFO flwr 2024-04-23 02:12:05,610 | server.py:134 | Start Round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:12:05,610 | server.py:222 | fit_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:12:05,613 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:12:05,613 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:12:05,615 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:12:05,616 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:12:05,617 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:12:30,962 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:12:31,350 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:12:34,037 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:12:34,330 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:12:34,731 | client.py:149 | Done Training client=2
+FL-experiment | DEBUG flwr 2024-04-23 02:12:34,733 | server.py:236 | fit_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:12:34,733 | server.py:65 | Start Aggregating round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:12:34,739 | server.py:173 | evaluate_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:12:37,156 | server.py:187 | evaluate_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:12:37,156 | server.py:105 | Start evaluating fit round=4
+FL-experiment | INFO flwr 2024-04-23 02:12:37,156 | server.py:107 | Done Evaluating fit round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:12:37,156 | server.py:108 | Round: 4, Aggregated accuracy: {'accuracy': 0.46756}, Aggregated loss: 457.6290344238281, IPFS hash: storage/aggregated_model_35755f07-e456-4243-8f3f-3592a3c46834.pkl
+FL-experiment | INFO flwr 2024-04-23 02:12:37,156 | server.py:131 | Done Aggregating round=4
+FL-experiment | INFO flwr 2024-04-23 02:12:37,156 | server.py:132 | Done Round=4
+FL-experiment | INFO flwr 2024-04-23 02:12:37,156 | server.py:134 | Start Round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:12:37,156 | server.py:222 | fit_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:12:37,160 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:12:37,160 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:12:37,161 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:12:37,162 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:12:37,163 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:13:03,519 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:13:04,141 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:13:05,128 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:13:07,257 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:13:07,284 | client.py:149 | Done Training client=0
+FL-experiment | DEBUG flwr 2024-04-23 02:13:07,286 | server.py:236 | fit_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:13:07,286 | server.py:65 | Start Aggregating round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:13:07,291 | server.py:173 | evaluate_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:13:09,703 | server.py:187 | evaluate_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:13:09,704 | server.py:105 | Start evaluating fit round=5
+FL-experiment | INFO flwr 2024-04-23 02:13:09,704 | server.py:107 | Done Evaluating fit round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:13:09,704 | server.py:108 | Round: 5, Aggregated accuracy: {'accuracy': 0.49644}, Aggregated loss: 435.62322387695315, IPFS hash: storage/aggregated_model_9cb9fdc0-547c-4cc7-a68d-d0b864808a42.pkl
+FL-experiment | INFO flwr 2024-04-23 02:13:09,704 | server.py:131 | Done Aggregating round=5
+FL-experiment | INFO flwr 2024-04-23 02:13:09,704 | server.py:132 | Done Round=5
+FL-experiment | INFO flwr 2024-04-23 02:13:09,704 | server.py:153 | FL finished in 157.021991959
+FL-experiment | INFO flwr 2024-04-23 02:13:09,704 | app.py:226 | app_fit: losses_distributed [(1, 659.2130249023437), (2, 569.5081787109375), (3, 492.89763793945315), (4, 457.6290344238281), (5, 435.62322387695315)]
+FL-experiment | INFO flwr 2024-04-23 02:13:09,704 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-04-23 02:13:09,704 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.25308), (2, 0.34318), (3, 0.4291), (4, 0.46756), (5, 0.49644)]}
+FL-experiment | INFO flwr 2024-04-23 02:13:09,704 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-04-23 02:13:09,704 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-04-23 02:13:09,709 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:13:09,709 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:13:09,709 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:13:09,709 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:13:09,709 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:13:09,709 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:13:09,709 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:13:09,709 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-04-23 02:13:09,709 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:13:09,710 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:13:10,539 | main.py:64 | Done Experiment
+FL-experiment | INFO flwr 2024-04-23 02:13:11,032 | main.py:43 | Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+FL-experiment | INFO flwr 2024-04-23 02:13:11,032 | main.py:44 | Start Experiment
+FL-experiment | INFO flwr 2024-04-23 02:13:12,712 | server.py:38 | Start Round=1
+FL-experiment | INFO flwr 2024-04-23 02:13:12,713 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+FL-experiment | INFO flwr 2024-04-23 02:13:12,731 | app.py:176 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-04-23 02:13:12,731 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-04-23 02:13:12,731 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:13:20,454 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,457 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,466 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:13:20,470 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:13:20,470 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-04-23 02:13:20,470 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-04-23 02:13:20,486 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,487 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,487 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,488 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:13:20,807 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,808 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | INFO flwr 2024-04-23 02:13:20,813 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,814 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,814 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,814 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,815 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:13:20,815 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:13:21,056 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:13:21,057 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:13:21,058 | server.py:222 | fit_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:13:21,060 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:13:21,061 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:13:21,061 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:13:21,061 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:13:21,066 | client.py:128 | Start Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:13:21,067 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:13:48,927 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:13:49,099 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:13:49,147 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:13:49,207 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:13:49,283 | client.py:149 | Done Training client=2
+FL-experiment | DEBUG flwr 2024-04-23 02:13:49,284 | server.py:236 | fit_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:13:49,284 | server.py:65 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-04-23 02:13:49,289 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | DEBUG flwr 2024-04-23 02:13:49,289 | server.py:173 | evaluate_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:13:51,466 | server.py:187 | evaluate_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:13:51,466 | server.py:105 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-04-23 02:13:51,466 | server.py:107 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-04-23 02:13:51,466 | server.py:108 | Round: 1, Aggregated accuracy: {'accuracy': 0.19808}, Aggregated loss: 676.6873291015625, IPFS hash: storage/aggregated_model_9e893c41-0c6d-4496-8753-2c3c9ae182da.pkl
+FL-experiment | INFO flwr 2024-04-23 02:13:51,466 | server.py:131 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-04-23 02:13:51,466 | server.py:132 | Done Round=1
+FL-experiment | INFO flwr 2024-04-23 02:13:51,466 | server.py:134 | Start Round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:13:51,466 | server.py:222 | fit_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:13:51,469 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:13:51,469 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:13:51,470 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:13:51,470 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:13:51,471 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:14:16,870 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:14:20,036 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:14:20,069 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:14:20,167 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:14:20,169 | client.py:149 | Done Training client=3
+FL-experiment | DEBUG flwr 2024-04-23 02:14:20,171 | server.py:236 | fit_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:14:20,171 | server.py:65 | Start Aggregating round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:14:20,177 | server.py:173 | evaluate_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:14:22,395 | server.py:187 | evaluate_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:14:22,396 | server.py:105 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-04-23 02:14:22,396 | server.py:107 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:14:22,396 | server.py:108 | Round: 2, Aggregated accuracy: {'accuracy': 0.32246}, Aggregated loss: 588.6027465820313, IPFS hash: storage/aggregated_model_ea6a51cd-602f-428e-b60c-4e704e22d701.pkl
+FL-experiment | INFO flwr 2024-04-23 02:14:22,396 | server.py:131 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-04-23 02:14:22,396 | server.py:132 | Done Round=2
+FL-experiment | INFO flwr 2024-04-23 02:14:22,396 | server.py:134 | Start Round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:14:22,396 | server.py:222 | fit_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:14:22,398 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:14:22,399 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:14:22,399 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:14:22,400 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:14:22,400 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:14:47,237 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:14:50,637 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:14:50,681 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:14:50,855 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:14:50,945 | client.py:149 | Done Training client=4
+FL-experiment | DEBUG flwr 2024-04-23 02:14:50,947 | server.py:236 | fit_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:14:50,947 | server.py:65 | Start Aggregating round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:14:50,953 | server.py:173 | evaluate_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:14:53,268 | server.py:187 | evaluate_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:14:53,269 | server.py:105 | Start evaluating fit round=3
+FL-experiment | INFO flwr 2024-04-23 02:14:53,269 | server.py:107 | Done Evaluating fit round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:14:53,269 | server.py:108 | Round: 3, Aggregated accuracy: {'accuracy': 0.41592}, Aggregated loss: 500.3823303222656, IPFS hash: storage/aggregated_model_7a7206b3-ccff-4095-88bf-c01c20cf30e4.pkl
+FL-experiment | INFO flwr 2024-04-23 02:14:53,269 | server.py:131 | Done Aggregating round=3
+FL-experiment | INFO flwr 2024-04-23 02:14:53,269 | server.py:132 | Done Round=3
+FL-experiment | INFO flwr 2024-04-23 02:14:53,269 | server.py:134 | Start Round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:14:53,269 | server.py:222 | fit_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:14:53,271 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:14:53,272 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:14:53,272 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:14:53,272 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:14:53,273 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:15:17,936 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:15:21,529 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:15:21,570 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:15:21,605 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:15:21,670 | client.py:149 | Done Training client=3
+FL-experiment | DEBUG flwr 2024-04-23 02:15:21,671 | server.py:236 | fit_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:15:21,671 | server.py:65 | Start Aggregating round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:15:21,676 | server.py:173 | evaluate_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:15:23,879 | server.py:187 | evaluate_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:15:23,879 | server.py:105 | Start evaluating fit round=4
+FL-experiment | INFO flwr 2024-04-23 02:15:23,879 | server.py:107 | Done Evaluating fit round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:15:23,879 | server.py:108 | Round: 4, Aggregated accuracy: {'accuracy': 0.46224}, Aggregated loss: 464.4805908203125, IPFS hash: storage/aggregated_model_399e625e-149d-4ecf-bd49-3e1e30d62960.pkl
+FL-experiment | INFO flwr 2024-04-23 02:15:23,879 | server.py:131 | Done Aggregating round=4
+FL-experiment | INFO flwr 2024-04-23 02:15:23,879 | server.py:132 | Done Round=4
+FL-experiment | INFO flwr 2024-04-23 02:15:23,879 | server.py:134 | Start Round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:15:23,879 | server.py:222 | fit_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:15:23,881 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:15:23,882 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:15:23,883 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:15:23,883 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:15:23,883 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:15:48,251 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:15:51,829 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:15:51,865 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:15:51,959 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:15:52,075 | client.py:149 | Done Training client=4
+FL-experiment | DEBUG flwr 2024-04-23 02:15:52,076 | server.py:236 | fit_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:15:52,077 | server.py:65 | Start Aggregating round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:15:52,081 | server.py:173 | evaluate_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:15:54,299 | server.py:187 | evaluate_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:15:54,300 | server.py:105 | Start evaluating fit round=5
+FL-experiment | INFO flwr 2024-04-23 02:15:54,300 | server.py:107 | Done Evaluating fit round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:15:54,300 | server.py:108 | Round: 5, Aggregated accuracy: {'accuracy': 0.49342}, Aggregated loss: 439.69647216796875, IPFS hash: storage/aggregated_model_e4f89b97-d23c-49d9-b8f7-2b53acd0681e.pkl
+FL-experiment | INFO flwr 2024-04-23 02:15:54,300 | server.py:131 | Done Aggregating round=5
+FL-experiment | INFO flwr 2024-04-23 02:15:54,300 | server.py:132 | Done Round=5
+FL-experiment | INFO flwr 2024-04-23 02:15:54,300 | server.py:153 | FL finished in 153.8297315
+FL-experiment | INFO flwr 2024-04-23 02:15:54,300 | app.py:226 | app_fit: losses_distributed [(1, 676.6873291015625), (2, 588.6027465820313), (3, 500.3823303222656), (4, 464.4805908203125), (5, 439.69647216796875)]
+FL-experiment | INFO flwr 2024-04-23 02:15:54,300 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-04-23 02:15:54,300 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.19808), (2, 0.32246), (3, 0.41592), (4, 0.46224), (5, 0.49342)]}
+FL-experiment | INFO flwr 2024-04-23 02:15:54,300 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-04-23 02:15:54,300 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-04-23 02:15:54,304 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:15:54,304 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:15:54,304 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:15:54,304 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:15:54,304 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:15:54,304 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:15:54,304 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:15:54,304 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:15:54,304 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:15:54,304 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:15:54,911 | main.py:64 | Done Experiment
+FL-experiment | INFO flwr 2024-04-23 02:15:55,330 | main.py:43 | Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+FL-experiment | INFO flwr 2024-04-23 02:15:55,330 | main.py:44 | Start Experiment
+FL-experiment | INFO flwr 2024-04-23 02:15:56,854 | server.py:38 | Start Round=1
+FL-experiment | INFO flwr 2024-04-23 02:15:56,854 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+FL-experiment | INFO flwr 2024-04-23 02:15:56,872 | app.py:176 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-04-23 02:15:56,872 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-04-23 02:15:56,872 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:16:05,510 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,511 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,512 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,512 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:16:05,530 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:16:05,531 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-04-23 02:16:05,531 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-04-23 02:16:05,538 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,539 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,540 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,540 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:16:05,663 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,664 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,665 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,665 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:16:05,684 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,684 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,686 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,686 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:16:05,869 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,870 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,870 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,870 | server.py:222 | fit_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:16:05,871 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:16:05,873 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:16:05,874 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:16:05,875 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:16:05,875 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:16:05,880 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:16:34,778 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:16:34,793 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:16:34,945 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:16:34,960 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:16:35,061 | client.py:149 | Done Training client=4
+FL-experiment | DEBUG flwr 2024-04-23 02:16:35,062 | server.py:236 | fit_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:16:35,063 | server.py:65 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-04-23 02:16:35,067 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | DEBUG flwr 2024-04-23 02:16:35,068 | server.py:173 | evaluate_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:16:37,371 | server.py:187 | evaluate_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:16:37,371 | server.py:105 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-04-23 02:16:37,371 | server.py:107 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-04-23 02:16:37,371 | server.py:108 | Round: 1, Aggregated accuracy: {'accuracy': 0.17718}, Aggregated loss: 695.1065795898437, IPFS hash: storage/aggregated_model_4a848ac1-5a4d-4152-9e1c-79b6156f7c79.pkl
+FL-experiment | INFO flwr 2024-04-23 02:16:37,371 | server.py:131 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-04-23 02:16:37,371 | server.py:132 | Done Round=1
+FL-experiment | INFO flwr 2024-04-23 02:16:37,371 | server.py:134 | Start Round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:16:37,371 | server.py:222 | fit_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:16:37,374 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:16:37,374 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:16:37,375 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:16:37,375 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:16:37,376 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:17:05,613 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:17:05,717 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:17:05,793 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:17:05,952 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:17:05,965 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:17:05,967 | server.py:236 | fit_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:17:05,967 | server.py:65 | Start Aggregating round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:17:05,971 | server.py:173 | evaluate_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:17:08,253 | server.py:187 | evaluate_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:17:08,253 | server.py:105 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-04-23 02:17:08,253 | server.py:107 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:17:08,253 | server.py:108 | Round: 2, Aggregated accuracy: {'accuracy': 0.33146}, Aggregated loss: 581.9170166015625, IPFS hash: storage/aggregated_model_dfe3f28d-a10b-4e4a-a729-bb4c380d48b7.pkl
+FL-experiment | INFO flwr 2024-04-23 02:17:08,253 | server.py:131 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-04-23 02:17:08,253 | server.py:132 | Done Round=2
+FL-experiment | INFO flwr 2024-04-23 02:17:08,253 | server.py:134 | Start Round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:17:08,253 | server.py:222 | fit_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:17:08,256 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:17:08,256 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:17:08,257 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:17:08,257 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:17:08,258 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:17:34,784 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:17:36,711 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:17:36,853 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:17:36,886 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:17:37,027 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:17:37,028 | server.py:236 | fit_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:17:37,028 | server.py:65 | Start Aggregating round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:17:37,033 | server.py:173 | evaluate_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:17:39,321 | server.py:187 | evaluate_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:17:39,321 | server.py:105 | Start evaluating fit round=3
+FL-experiment | INFO flwr 2024-04-23 02:17:39,321 | server.py:107 | Done Evaluating fit round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:17:39,321 | server.py:108 | Round: 3, Aggregated accuracy: {'accuracy': 0.40604}, Aggregated loss: 513.7488342285156, IPFS hash: storage/aggregated_model_b7239d0c-e9a3-4e2a-a51d-414a48ae3f5f.pkl
+FL-experiment | INFO flwr 2024-04-23 02:17:39,321 | server.py:131 | Done Aggregating round=3
+FL-experiment | INFO flwr 2024-04-23 02:17:39,321 | server.py:132 | Done Round=3
+FL-experiment | INFO flwr 2024-04-23 02:17:39,321 | server.py:134 | Start Round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:17:39,321 | server.py:222 | fit_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:17:39,323 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:17:39,324 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:17:39,324 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:17:39,325 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:17:39,325 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:18:03,979 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:18:05,304 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:18:07,221 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:18:07,427 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:18:07,491 | client.py:149 | Done Training client=2
+FL-experiment | DEBUG flwr 2024-04-23 02:18:07,493 | server.py:236 | fit_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:18:07,493 | server.py:65 | Start Aggregating round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:18:07,498 | server.py:173 | evaluate_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:18:09,700 | server.py:187 | evaluate_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:18:09,700 | server.py:105 | Start evaluating fit round=4
+FL-experiment | INFO flwr 2024-04-23 02:18:09,700 | server.py:107 | Done Evaluating fit round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:18:09,700 | server.py:108 | Round: 4, Aggregated accuracy: {'accuracy': 0.45292}, Aggregated loss: 471.857373046875, IPFS hash: storage/aggregated_model_9d4253af-4aea-4c7b-8838-3569aea1d188.pkl
+FL-experiment | INFO flwr 2024-04-23 02:18:09,700 | server.py:131 | Done Aggregating round=4
+FL-experiment | INFO flwr 2024-04-23 02:18:09,700 | server.py:132 | Done Round=4
+FL-experiment | INFO flwr 2024-04-23 02:18:09,700 | server.py:134 | Start Round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:18:09,700 | server.py:222 | fit_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:18:09,703 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:18:09,703 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:18:09,704 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:18:09,705 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:18:09,705 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:18:35,124 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:18:35,280 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:18:38,389 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:18:38,389 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:18:38,468 | client.py:149 | Done Training client=2
+FL-experiment | DEBUG flwr 2024-04-23 02:18:38,469 | server.py:236 | fit_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:18:38,469 | server.py:65 | Start Aggregating round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:18:38,474 | server.py:173 | evaluate_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:18:40,656 | server.py:187 | evaluate_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:18:40,656 | server.py:105 | Start evaluating fit round=5
+FL-experiment | INFO flwr 2024-04-23 02:18:40,656 | server.py:107 | Done Evaluating fit round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:18:40,656 | server.py:108 | Round: 5, Aggregated accuracy: {'accuracy': 0.47906}, Aggregated loss: 449.22906494140625, IPFS hash: storage/aggregated_model_b0b36751-07b8-4d96-8162-9926186145b5.pkl
+FL-experiment | INFO flwr 2024-04-23 02:18:40,656 | server.py:131 | Done Aggregating round=5
+FL-experiment | INFO flwr 2024-04-23 02:18:40,656 | server.py:132 | Done Round=5
+FL-experiment | INFO flwr 2024-04-23 02:18:40,656 | server.py:153 | FL finished in 155.12567991699999
+FL-experiment | INFO flwr 2024-04-23 02:18:40,657 | app.py:226 | app_fit: losses_distributed [(1, 695.1065795898437), (2, 581.9170166015625), (3, 513.7488342285156), (4, 471.857373046875), (5, 449.22906494140625)]
+FL-experiment | INFO flwr 2024-04-23 02:18:40,657 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-04-23 02:18:40,657 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.17718), (2, 0.33146), (3, 0.40604), (4, 0.45292), (5, 0.47906)]}
+FL-experiment | INFO flwr 2024-04-23 02:18:40,657 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-04-23 02:18:40,657 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-04-23 02:18:40,661 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:18:40,661 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:18:40,661 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:18:40,661 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:18:40,661 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:18:40,661 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:18:40,661 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:18:40,661 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:18:40,661 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:18:40,661 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:18:41,251 | main.py:64 | Done Experiment
+FL-experiment | INFO flwr 2024-04-23 02:18:41,731 | main.py:43 | Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+FL-experiment | INFO flwr 2024-04-23 02:18:41,731 | main.py:44 | Start Experiment
+FL-experiment | INFO flwr 2024-04-23 02:18:43,391 | server.py:38 | Start Round=1
+FL-experiment | INFO flwr 2024-04-23 02:18:43,391 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+FL-experiment | INFO flwr 2024-04-23 02:18:43,410 | app.py:176 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-04-23 02:18:43,411 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-04-23 02:18:43,411 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:18:51,325 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:18:51,326 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:18:51,327 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:18:51,333 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:18:51,339 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:18:51,341 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-04-23 02:18:51,341 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-04-23 02:18:51,513 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:18:51,515 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:18:51,515 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:18:51,531 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:18:51,534 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:18:51,540 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:18:51,994 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:18:51,994 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:18:52,000 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:18:52,001 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:18:56,018 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:18:56,020 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:18:56,020 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-04-23 02:18:56,021 | server.py:222 | fit_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:18:56,024 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:18:56,024 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:18:56,025 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:18:56,025 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:18:56,030 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:19:23,965 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:19:24,248 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:19:24,592 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:19:24,699 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:19:24,730 | client.py:149 | Done Training client=3
+FL-experiment | DEBUG flwr 2024-04-23 02:19:24,732 | server.py:236 | fit_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:19:24,732 | server.py:65 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-04-23 02:19:24,736 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | DEBUG flwr 2024-04-23 02:19:24,737 | server.py:173 | evaluate_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:19:26,999 | server.py:187 | evaluate_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:19:26,999 | server.py:105 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-04-23 02:19:26,999 | server.py:107 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-04-23 02:19:26,999 | server.py:108 | Round: 1, Aggregated accuracy: {'accuracy': 0.17452}, Aggregated loss: 695.9991088867188, IPFS hash: storage/aggregated_model_93aa04a3-ef19-4a02-a903-fe2c52587d39.pkl
+FL-experiment | INFO flwr 2024-04-23 02:19:26,999 | server.py:131 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-04-23 02:19:26,999 | server.py:132 | Done Round=1
+FL-experiment | INFO flwr 2024-04-23 02:19:26,999 | server.py:134 | Start Round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:19:26,999 | server.py:222 | fit_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:19:27,002 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:19:27,002 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:19:27,002 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:19:27,003 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:19:27,003 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:19:53,898 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:19:55,077 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:19:55,114 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:19:55,221 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:19:55,234 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:19:55,236 | server.py:236 | fit_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:19:55,236 | server.py:65 | Start Aggregating round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:19:55,241 | server.py:173 | evaluate_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:19:57,507 | server.py:187 | evaluate_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:19:57,508 | server.py:105 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-04-23 02:19:57,508 | server.py:107 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:19:57,508 | server.py:108 | Round: 2, Aggregated accuracy: {'accuracy': 0.31996}, Aggregated loss: 574.1026489257813, IPFS hash: storage/aggregated_model_eda1625e-42a2-443e-9468-a14d0c5beeef.pkl
+FL-experiment | INFO flwr 2024-04-23 02:19:57,508 | server.py:131 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-04-23 02:19:57,508 | server.py:132 | Done Round=2
+FL-experiment | INFO flwr 2024-04-23 02:19:57,508 | server.py:134 | Start Round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:19:57,508 | server.py:222 | fit_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:19:57,510 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:19:57,511 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:19:57,511 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:19:57,512 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:19:57,512 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:20:25,734 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:20:25,981 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:20:26,376 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:20:26,520 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:20:26,542 | client.py:149 | Done Training client=3
+FL-experiment | DEBUG flwr 2024-04-23 02:20:26,543 | server.py:236 | fit_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:20:26,543 | server.py:65 | Start Aggregating round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:20:26,549 | server.py:173 | evaluate_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:20:28,854 | server.py:187 | evaluate_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:20:28,854 | server.py:105 | Start evaluating fit round=3
+FL-experiment | INFO flwr 2024-04-23 02:20:28,855 | server.py:107 | Done Evaluating fit round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:20:28,855 | server.py:108 | Round: 3, Aggregated accuracy: {'accuracy': 0.42322}, Aggregated loss: 495.62282104492186, IPFS hash: storage/aggregated_model_fe930c0f-a7cb-4a77-96c6-aa8c3c91fb0e.pkl
+FL-experiment | INFO flwr 2024-04-23 02:20:28,855 | server.py:131 | Done Aggregating round=3
+FL-experiment | INFO flwr 2024-04-23 02:20:28,855 | server.py:132 | Done Round=3
+FL-experiment | INFO flwr 2024-04-23 02:20:28,855 | server.py:134 | Start Round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:20:28,855 | server.py:222 | fit_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:20:28,858 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:20:28,858 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:20:28,858 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:20:28,859 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:20:28,859 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:20:56,439 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:20:56,508 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:20:57,589 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:20:57,635 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:20:57,773 | client.py:149 | Done Training client=2
+FL-experiment | DEBUG flwr 2024-04-23 02:20:57,774 | server.py:236 | fit_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:20:57,774 | server.py:65 | Start Aggregating round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:20:57,779 | server.py:173 | evaluate_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:21:00,085 | server.py:187 | evaluate_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:21:00,085 | server.py:105 | Start evaluating fit round=4
+FL-experiment | INFO flwr 2024-04-23 02:21:00,085 | server.py:107 | Done Evaluating fit round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:21:00,085 | server.py:108 | Round: 4, Aggregated accuracy: {'accuracy': 0.4759}, Aggregated loss: 455.49395141601565, IPFS hash: storage/aggregated_model_c53b9d95-f79a-447b-8cc6-ef459e358c12.pkl
+FL-experiment | INFO flwr 2024-04-23 02:21:00,085 | server.py:131 | Done Aggregating round=4
+FL-experiment | INFO flwr 2024-04-23 02:21:00,085 | server.py:132 | Done Round=4
+FL-experiment | INFO flwr 2024-04-23 02:21:00,085 | server.py:134 | Start Round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:21:00,085 | server.py:222 | fit_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:21:00,088 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:21:00,088 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:21:00,089 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:21:00,089 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:21:00,090 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:21:25,305 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:21:27,554 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:21:28,275 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:21:28,382 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:21:28,533 | client.py:149 | Done Training client=2
+FL-experiment | DEBUG flwr 2024-04-23 02:21:28,534 | server.py:236 | fit_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:21:28,534 | server.py:65 | Start Aggregating round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:21:28,539 | server.py:173 | evaluate_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:21:30,856 | server.py:187 | evaluate_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:21:30,857 | server.py:105 | Start evaluating fit round=5
+FL-experiment | INFO flwr 2024-04-23 02:21:30,857 | server.py:107 | Done Evaluating fit round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:21:30,857 | server.py:108 | Round: 5, Aggregated accuracy: {'accuracy': 0.50308}, Aggregated loss: 431.88177490234375, IPFS hash: storage/aggregated_model_72c175d1-adfb-432c-a67b-bc4960fab35a.pkl
+FL-experiment | INFO flwr 2024-04-23 02:21:30,857 | server.py:131 | Done Aggregating round=5
+FL-experiment | INFO flwr 2024-04-23 02:21:30,857 | server.py:132 | Done Round=5
+FL-experiment | INFO flwr 2024-04-23 02:21:30,857 | server.py:153 | FL finished in 159.51637200000002
+FL-experiment | INFO flwr 2024-04-23 02:21:30,857 | app.py:226 | app_fit: losses_distributed [(1, 695.9991088867188), (2, 574.1026489257813), (3, 495.62282104492186), (4, 455.49395141601565), (5, 431.88177490234375)]
+FL-experiment | INFO flwr 2024-04-23 02:21:30,857 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-04-23 02:21:30,857 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.17452), (2, 0.31996), (3, 0.42322), (4, 0.4759), (5, 0.50308)]}
+FL-experiment | INFO flwr 2024-04-23 02:21:30,857 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-04-23 02:21:30,857 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-04-23 02:21:30,860 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:21:30,860 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:21:30,860 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:21:30,860 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:21:30,861 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:21:30,861 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:21:30,861 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:21:30,861 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-04-23 02:21:30,861 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:21:30,861 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:21:31,521 | main.py:64 | Done Experiment
+FL-experiment | INFO flwr 2024-04-23 02:21:31,966 | main.py:43 | Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+FL-experiment | INFO flwr 2024-04-23 02:21:31,966 | main.py:44 | Start Experiment
+FL-experiment | INFO flwr 2024-04-23 02:21:33,622 | server.py:38 | Start Round=1
+FL-experiment | INFO flwr 2024-04-23 02:21:33,622 | app.py:163 | Starting Flower server, config: ServerConfig(num_rounds=5, round_timeout=None)
+FL-experiment | INFO flwr 2024-04-23 02:21:33,641 | app.py:176 | Flower ECE: gRPC server running (5 rounds), SSL is disabled
+FL-experiment | INFO flwr 2024-04-23 02:21:33,641 | server.py:89 | Initializing global parameters
+FL-experiment | INFO flwr 2024-04-23 02:21:33,641 | server.py:276 | Requesting initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:21:41,301 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:21:41,301 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:21:41,301 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:21:41,303 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:21:41,305 | server.py:280 | Received initial parameters from one random client
+FL-experiment | INFO flwr 2024-04-23 02:21:41,305 | server.py:91 | Evaluating initial parameters
+FL-experiment | INFO flwr 2024-04-23 02:21:41,305 | server.py:104 | FL starting
+FL-experiment | INFO flwr 2024-04-23 02:21:41,677 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | INFO flwr 2024-04-23 02:21:41,680 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:21:41,681 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:21:41,682 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | DEBUG flwr 2024-04-23 02:21:41,743 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:21:41,743 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:21:41,752 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:21:41,754 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:21:41,755 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:21:41,760 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:21:42,115 | grpc.py:52 | Opened insecure gRPC connection (no certificates were passed)
+FL-experiment | DEBUG flwr 2024-04-23 02:21:42,116 | connection.py:42 | ChannelConnectivity.IDLE
+FL-experiment | DEBUG flwr 2024-04-23 02:21:42,116 | connection.py:42 | ChannelConnectivity.CONNECTING
+FL-experiment | DEBUG flwr 2024-04-23 02:21:42,116 | server.py:222 | fit_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:21:42,117 | connection.py:42 | ChannelConnectivity.READY
+FL-experiment | INFO flwr 2024-04-23 02:21:42,119 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:21:42,119 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:21:42,120 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:21:42,120 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:21:42,128 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:22:09,958 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:22:09,997 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:22:10,057 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:22:10,091 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:22:10,126 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:22:10,127 | server.py:236 | fit_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:22:10,127 | server.py:65 | Start Aggregating round=1
+FL-experiment | WARNING flwr 2024-04-23 02:22:10,132 | fedavg.py:242 | No fit_metrics_aggregation_fn provided
+FL-experiment | DEBUG flwr 2024-04-23 02:22:10,132 | server.py:173 | evaluate_round 1: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:22:12,406 | server.py:187 | evaluate_round 1 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:22:12,406 | server.py:105 | Start evaluating fit round=1
+FL-experiment | INFO flwr 2024-04-23 02:22:12,406 | server.py:107 | Done Evaluating fit round=1
+FL-experiment | DEBUG flwr 2024-04-23 02:22:12,406 | server.py:108 | Round: 1, Aggregated accuracy: {'accuracy': 0.27456}, Aggregated loss: 632.7743530273438, IPFS hash: storage/aggregated_model_a19a22a4-aaf3-465c-b320-2cbeb12e5ce5.pkl
+FL-experiment | INFO flwr 2024-04-23 02:22:12,406 | server.py:131 | Done Aggregating round=1
+FL-experiment | INFO flwr 2024-04-23 02:22:12,406 | server.py:132 | Done Round=1
+FL-experiment | INFO flwr 2024-04-23 02:22:12,406 | server.py:134 | Start Round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:22:12,406 | server.py:222 | fit_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:22:12,409 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:22:12,410 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:22:12,411 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:22:12,411 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:22:12,411 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:22:41,150 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:22:41,231 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:22:41,323 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:22:41,418 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:22:41,445 | client.py:149 | Done Training client=0
+FL-experiment | DEBUG flwr 2024-04-23 02:22:41,447 | server.py:236 | fit_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:22:41,447 | server.py:65 | Start Aggregating round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:22:41,453 | server.py:173 | evaluate_round 2: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:22:43,794 | server.py:187 | evaluate_round 2 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:22:43,794 | server.py:105 | Start evaluating fit round=2
+FL-experiment | INFO flwr 2024-04-23 02:22:43,794 | server.py:107 | Done Evaluating fit round=2
+FL-experiment | DEBUG flwr 2024-04-23 02:22:43,794 | server.py:108 | Round: 2, Aggregated accuracy: {'accuracy': 0.37062}, Aggregated loss: 540.2827270507812, IPFS hash: storage/aggregated_model_fc228baa-1d6e-45fd-bfb4-c51e38243104.pkl
+FL-experiment | INFO flwr 2024-04-23 02:22:43,794 | server.py:131 | Done Aggregating round=2
+FL-experiment | INFO flwr 2024-04-23 02:22:43,794 | server.py:132 | Done Round=2
+FL-experiment | INFO flwr 2024-04-23 02:22:43,794 | server.py:134 | Start Round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:22:43,794 | server.py:222 | fit_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:22:43,797 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:22:43,797 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:22:43,798 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:22:43,798 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:22:43,798 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:23:11,265 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:23:11,443 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:23:11,476 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:23:11,523 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:23:11,759 | client.py:149 | Done Training client=0
+FL-experiment | DEBUG flwr 2024-04-23 02:23:11,760 | server.py:236 | fit_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:23:11,760 | server.py:65 | Start Aggregating round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:23:11,766 | server.py:173 | evaluate_round 3: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:23:14,098 | server.py:187 | evaluate_round 3 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:23:14,098 | server.py:105 | Start evaluating fit round=3
+FL-experiment | INFO flwr 2024-04-23 02:23:14,098 | server.py:107 | Done Evaluating fit round=3
+FL-experiment | DEBUG flwr 2024-04-23 02:23:14,099 | server.py:108 | Round: 3, Aggregated accuracy: {'accuracy': 0.4455}, Aggregated loss: 479.39158935546874, IPFS hash: storage/aggregated_model_87872fb2-8baf-4f96-a7be-c2d2012b49c1.pkl
+FL-experiment | INFO flwr 2024-04-23 02:23:14,099 | server.py:131 | Done Aggregating round=3
+FL-experiment | INFO flwr 2024-04-23 02:23:14,099 | server.py:132 | Done Round=3
+FL-experiment | INFO flwr 2024-04-23 02:23:14,099 | server.py:134 | Start Round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:23:14,099 | server.py:222 | fit_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:23:14,101 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:23:14,101 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:23:14,102 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:23:14,102 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:23:14,103 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:23:40,862 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:23:41,030 | client.py:149 | Done Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:23:41,471 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:23:41,730 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:23:41,730 | client.py:149 | Done Training client=4
+FL-experiment | DEBUG flwr 2024-04-23 02:23:41,731 | server.py:236 | fit_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:23:41,731 | server.py:65 | Start Aggregating round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:23:41,736 | server.py:173 | evaluate_round 4: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:23:44,054 | server.py:187 | evaluate_round 4 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:23:44,054 | server.py:105 | Start evaluating fit round=4
+FL-experiment | INFO flwr 2024-04-23 02:23:44,054 | server.py:107 | Done Evaluating fit round=4
+FL-experiment | DEBUG flwr 2024-04-23 02:23:44,054 | server.py:108 | Round: 4, Aggregated accuracy: {'accuracy': 0.48442}, Aggregated loss: 446.76207275390624, IPFS hash: storage/aggregated_model_03c54ee5-58a6-4eeb-b533-b46f54fc3b41.pkl
+FL-experiment | INFO flwr 2024-04-23 02:23:44,054 | server.py:131 | Done Aggregating round=4
+FL-experiment | INFO flwr 2024-04-23 02:23:44,054 | server.py:132 | Done Round=4
+FL-experiment | INFO flwr 2024-04-23 02:23:44,054 | server.py:134 | Start Round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:23:44,055 | server.py:222 | fit_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | INFO flwr 2024-04-23 02:23:44,057 | client.py:128 | Start Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:23:44,057 | client.py:128 | Start Training client=1
+FL-experiment | INFO flwr 2024-04-23 02:23:44,058 | client.py:128 | Start Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:23:44,059 | client.py:128 | Start Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:23:44,059 | client.py:128 | Start Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:24:10,293 | client.py:149 | Done Training client=2
+FL-experiment | INFO flwr 2024-04-23 02:24:10,451 | client.py:149 | Done Training client=0
+FL-experiment | INFO flwr 2024-04-23 02:24:10,662 | client.py:149 | Done Training client=4
+FL-experiment | INFO flwr 2024-04-23 02:24:11,107 | client.py:149 | Done Training client=3
+FL-experiment | INFO flwr 2024-04-23 02:24:11,295 | client.py:149 | Done Training client=1
+FL-experiment | DEBUG flwr 2024-04-23 02:24:11,297 | server.py:236 | fit_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:24:11,297 | server.py:65 | Start Aggregating round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:24:11,302 | server.py:173 | evaluate_round 5: strategy sampled 5 clients (out of 5)
+FL-experiment | DEBUG flwr 2024-04-23 02:24:13,548 | server.py:187 | evaluate_round 5 received 5 results and 0 failures
+FL-experiment | INFO flwr 2024-04-23 02:24:13,548 | server.py:105 | Start evaluating fit round=5
+FL-experiment | INFO flwr 2024-04-23 02:24:13,548 | server.py:107 | Done Evaluating fit round=5
+FL-experiment | DEBUG flwr 2024-04-23 02:24:13,548 | server.py:108 | Round: 5, Aggregated accuracy: {'accuracy': 0.51366}, Aggregated loss: 424.52581787109375, IPFS hash: storage/aggregated_model_d768b94b-447e-449e-9ac2-ea3102586220.pkl
+FL-experiment | INFO flwr 2024-04-23 02:24:13,548 | server.py:131 | Done Aggregating round=5
+FL-experiment | INFO flwr 2024-04-23 02:24:13,548 | server.py:132 | Done Round=5
+FL-experiment | INFO flwr 2024-04-23 02:24:13,548 | server.py:153 | FL finished in 152.24347924999998
+FL-experiment | INFO flwr 2024-04-23 02:24:13,548 | app.py:226 | app_fit: losses_distributed [(1, 632.7743530273438), (2, 540.2827270507812), (3, 479.39158935546874), (4, 446.76207275390624), (5, 424.52581787109375)]
+FL-experiment | INFO flwr 2024-04-23 02:24:13,548 | app.py:227 | app_fit: metrics_distributed_fit {}
+FL-experiment | INFO flwr 2024-04-23 02:24:13,548 | app.py:228 | app_fit: metrics_distributed {'accuracy': [(1, 0.27456), (2, 0.37062), (3, 0.4455), (4, 0.48442), (5, 0.51366)]}
+FL-experiment | INFO flwr 2024-04-23 02:24:13,548 | app.py:229 | app_fit: losses_centralized []
+FL-experiment | INFO flwr 2024-04-23 02:24:13,548 | app.py:230 | app_fit: metrics_centralized {}
+FL-experiment | DEBUG flwr 2024-04-23 02:24:13,552 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:24:13,552 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:24:13,552 | connection.py:141 | gRPC channel closed
+FL-experiment | DEBUG flwr 2024-04-23 02:24:13,552 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:24:13,552 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:24:13,552 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:24:13,552 | app.py:304 | Disconnect and shut down
+FL-experiment | DEBUG flwr 2024-04-23 02:24:13,552 | connection.py:141 | gRPC channel closed
+FL-experiment | INFO flwr 2024-04-23 02:24:13,552 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:24:13,552 | app.py:304 | Disconnect and shut down
+FL-experiment | INFO flwr 2024-04-23 02:25:13,990 | main.py:64 | Done Experiment

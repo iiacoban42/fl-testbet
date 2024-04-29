@@ -2,12 +2,16 @@ from datetime import datetime
 import os
 from natsort import natsorted
 import re
+import numpy as np
+from pathlib import Path
 
 def parse_log_file(log_file_path):
     logs = []
     print_config = False
+
     ipfs_req = 0
     perun_req = 0
+
     with open(log_file_path, 'r') as file:
         for line in file:
             # print(line)
@@ -45,47 +49,82 @@ def calculate_elapsed_time(start_time, end_time):
 # then calculate the time between the start and done logs
 # and print the time and the parameters
 
-def get_stats(path, output_path=None):
+
+def dump_mean_timing(logs_per_config, output_path):
+
+    for config, events in logs_per_config.items():
+        res = f"{config}\n"
+        for event, timings in events.items():
+            mean_time = np.mean(timings)
+            res += f"time: {mean_time} seconds | {event}\n"
+        res += "\n"
+        with open(output_path, 'a') as file:
+            file.write(res)
+
+
+def get_event_timing(path, output_path=None):
 
     # open output file in append mode and write the results to it
-    res = ""
+    logs_per_config = {}
 
-    for file in natsorted(os.listdir(path)):
-        if file.endswith(".log"):
-            log_file_path = path + file
-            timestamps, ipfs_rec, perun_reg = parse_log_file(log_file_path)
+#     lst = os.listdir(whatever_directory)
+# lst.sort()
+
+    for file in sorted(Path(path).iterdir(), key=os.path.getmtime):
+        if file.suffix == ".log":
+            timestamps, ipfs_rec, perun_reg = parse_log_file(file)
+
+            current_config = ""
 
             for i, (timestamp, log_text) in enumerate(timestamps):
                 if log_text.startswith("Config"):
-                    res += log_text + "\n"
-                    res += f"NET | IPFS Requests: {ipfs_rec} | PERUN Requests: {perun_reg}\n"
+                    current_config = log_text.replace("\n", "")
+                    if current_config not in logs_per_config:
+                        logs_per_config[current_config] = {}
 
-                    print(log_text)
+                    # res += log_text + "\n"
+                    # res += f"NET | IPFS Requests: {ipfs_rec} | PERUN Requests: {perun_reg}\n"
+
+                    # print(log_text)
 
                 if log_text.startswith("FL finished"):
                     match = re.search(r'\d+\.\d+', log_text)
                     if match:
                         fl_time = float(match.group())
-                        line = f"{timestamp} | time: {fl_time} seconds| {log_text}".replace("\n", "")
-                        res += line + "\n"
-                        print(line)
+                        event = "FL"
+                        line = f"time: {fl_time} seconds | FL"
+                        if event not in logs_per_config[current_config]:
+                            logs_per_config[current_config][event] = []
+                        logs_per_config[current_config][event].append(fl_time)
+
+                        # res += line + "\n"
+                        # print(line)
 
                 if log_text.startswith("Start"):
                     match_str = log_text.split(" ")
                     for timestamp_second, log_text_second in timestamps[i+1:]:  # timestamps[i+1:] is the list of logs after the current log
                         if log_text_second.startswith("Done") and log_text_second.split(" ")[1:] == match_str[1:]:
                             elapsed_time = calculate_elapsed_time(timestamp, timestamp_second)
-                            line = f"{timestamp} | time: {elapsed_time} seconds | {log_text.replace('Start ', '')}".replace("\n", "")
-                            res += line + "\n"
-                            print(line)
+                            line = f"time: {elapsed_time} seconds | {log_text.replace('Start ', '')}".replace("\n", "")
+
+                            event = log_text.replace('Start ', '').replace("\n", "")
+
+                            if event not in logs_per_config[current_config]:
+                                logs_per_config[current_config][event] = []
+                            logs_per_config[current_config][event].append(elapsed_time)
                             break
-            res += "\n"
-            print("\n")
+
+                            # res += line + "\n"
+                            # print(line)
+
+            # res += "\n"
+            # print("\n")
 
     if output_path:
-        with open(output_path, 'a') as file:
-            file.write(res)
+        dump_mean_timing(logs_per_config, output_path)
+        with open("logs.txt", 'a') as file:
+            file.write(str(logs_per_config))
 
-get_stats("logs/logs_fl/", "logs/results_FL.txt")
-get_stats("logs/logs_flchan/", "logs/results_chanFL.txt")
-get_stats("logs/logs_bcfl/", "logs/results_BCFL.txt")
+get_event_timing("logs/logs_fl/", "logs/results_FL.txt")
+get_event_timing("logs/logs_flchan/", "logs/results_chanFL.txt")
+get_event_timing("logs/logs_bcfl/", "logs/results_BCFL.txt")

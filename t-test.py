@@ -54,12 +54,12 @@ def run_test_for_event(sampleFLChan, sampleBCFL, event, caption=""):
         else:
             sig.append(False)
 
-    d = {'(#C, #R)': labels, 'p-value': p_values, 't-statistic': t_stats, 'critical_value': critical_values, 'significant': sig}
+    d = {'(#C, #R)': labels, 'p-value': p_values, 't-value': t_stats, 'significant': sig}
     df = pd.DataFrame(data=d)
     print(df)
 
     # Convert DataFrame to LaTeX table
-    latex_table = df.to_latex(index=False, caption=caption, label=f'tab:t-test{event}', column_format='|c|c|c|c|c|')
+    latex_table = df.to_latex(index=False, caption=caption, label=f'tab:t-test{event}', column_format='|c|c|c|c|', position='h')
 
 
     # Write LaTeX code to a file

@@ -4,7 +4,6 @@ import numpy as np
 plot_path = "plots/"
 
 plt.rcParams.update({'font.size': 16})
-
 def parse_log(file_path):
     data = []
     current_config = None
@@ -13,9 +12,10 @@ def parse_log(file_path):
         ipfs_req = 0
         perun_req = 0
 
+
         for line in file:
             line = line.strip()
-
+            print(line)
             if line.startswith('Config'):
                 current_config = line
             if line.startswith('NET'):
@@ -24,11 +24,10 @@ def parse_log(file_path):
                 perun_req = int(parts[2].strip().split(':')[1])
             elif line:
                 parts = line.split('|')
-                if len(parts) > 2:
-                    timestamp_str = parts[0].strip()
-                    time_str = parts[1].strip().split(':')[1].strip()
-                    event_type = parts[2].strip()
-
+                if len(parts) > 1:
+                    time_str = parts[0].strip().split(':')[1].strip()
+                    event_type = parts[1].strip()
+                    print(time_str)
                     time_seconds = float(time_str.split()[0])
 
                     data.append({
@@ -38,6 +37,8 @@ def parse_log(file_path):
                         'ipfs_req': ipfs_req,
                         'perun_req': perun_req
                     })
+
+    print(data)
 
     return data
 
@@ -231,6 +232,7 @@ plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "FL", 'Federate
 plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Experiment", 'E2E Time: FL vs BCFL vs StateFL')
 
 plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Cumulative Round Time: FL vs BCFL vs StateFL')
+plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 'Cumulative Aggregation Time: FL vs BCFL vs StateFL')
 
 
 plot_number_of_requests(log_data_FLChan, "ipfs", 'IPFS Requests')

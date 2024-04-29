@@ -150,7 +150,7 @@ if IPFS_ON:
 
 if SOLO_BLOCKCHAIN_ON:
     #  Read the keys and the addresses from the keys.json file
-    with open('keys.json', 'r') as f:
+    with open('contracts/keys.json', 'r') as f:
         keys_data = json.load(f)
 
     keys = keys_data['private_keys']

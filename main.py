@@ -2,7 +2,7 @@
 import subprocess
 import time
 import numpy as np
-import uuid
+
 
 from con import send_command
 
@@ -37,6 +37,7 @@ def settle_channels():
 
 
 def main():
+
     fl.common.logger.configure(identifier="FL-experiment", filename=LOG_FILE)
 
     log(INFO, "Config: INCENTIVES_ON=%s, BCFL=%s, IPFS_ON=%s, NUM_CLIENTS=%s, NUM_ROUNDS=%s,", INCENTIVES_ON, SOLO_BLOCKCHAIN_ON, IPFS_ON, NUM_CLIENTS, NUM_ROUNDS)

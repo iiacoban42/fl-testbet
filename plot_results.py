@@ -15,7 +15,6 @@ def parse_log(file_path):
 
         for line in file:
             line = line.strip()
-            print(line)
             if line.startswith('Config'):
                 current_config = line
             if line.startswith('NET'):
@@ -27,7 +26,6 @@ def parse_log(file_path):
                 if len(parts) > 1:
                     time_str = parts[0].strip().split(':')[1].strip()
                     event_type = parts[1].strip()
-                    print(time_str)
                     time_seconds = float(time_str.split()[0])
 
                     data.append({
@@ -37,8 +35,6 @@ def parse_log(file_path):
                         'ipfs_req': ipfs_req,
                         'perun_req': perun_req
                     })
-
-    print(data)
 
     return data
 
@@ -81,15 +77,15 @@ def get_cumulative_time(data, event):
 
     for config, values in config_data.items():
         rounds_clients = tuple(map(int, [s.split('=')[1] for s in config.split(',') if 'ROUNDS' in s or 'NUM_CLIENTS' in s]))
-        cummulative_time = np.sum(values['times'])
+        cumulative_time = np.sum(values['times'])
 
         config_data[config]['rounds_clients'] = rounds_clients
-        config_data[config]['cummulative_time'] = cummulative_time
+        config_data[config]['cumulative_time'] = cumulative_time
 
     labels = ['({}, {})'.format(*values['rounds_clients']) for values in config_data.values()]
-    cummulative = [values['cummulative_time'] for values in config_data.values()]
+    cumulative = [values['cumulative_time'] for values in config_data.values()]
 
-    return labels, cummulative
+    return labels, cumulative
 
 
 def get_mean_time(data, event):
@@ -117,11 +113,63 @@ def get_mean_time(data, event):
 
     return labels, mean_times
 
+
+def plot_stacked_bar(data, title, channel=False):
+
+    labels, aggr_time = get_cumulative_time(data, "Aggregating")
+    labels, round_time = get_cumulative_time(data, "Round")
+
+    training_time = np.subtract(round_time, aggr_time).tolist()
+
+    if channel:
+        labels, opening_times = get_mean_time(data, "opening channels")
+        labels, settling_times = get_mean_time(data, "settling channels")
+
+
+    plt.figure(figsize=(16, 8))
+    # create a stacked bar plot to show the time spent on training and aggregation and settling channels
+    if channel:
+        opening_and_training = np.add(opening_times, training_time).tolist()
+        total_times = np.add(opening_and_training, aggr_time).tolist()
+
+        plt.bar(labels, opening_times, tick_label=labels, color='green', label='Opening Channel')
+        plt.bar(labels, training_time, tick_label=labels, color='blue', label='Training', bottom=opening_times)
+        plt.bar(labels, aggr_time, tick_label=labels, color='orange', label='Aggregating', bottom=opening_and_training)
+        plt.bar(labels, settling_times, tick_label=labels, color='red', label='Settling Channel', bottom=total_times)
+
+    else:
+        plt.bar(labels, training_time, tick_label=labels, color='blue', label='Training')
+        plt.bar(labels, aggr_time, tick_label=labels, color='orange', label='Aggregating', bottom=training_time)
+
+
+    plt.title(title)
+    plt.xlabel('(ROUNDS, NUM_CLIENTS)')
+    plt.ylabel('Time (seconds)')
+    # plt.xticks(x, labels, rotation=45, ha='right')
+    plt.tight_layout()
+    plt.legend()
+    plt.savefig(plot_path + title + '.png')
+    # plt.show()
+
+
+
 def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
 
-    labels, mean_times_FL = get_mean_time(data_FL, event)
-    labels, mean_times_FLChan = get_mean_time(data_FLChan, event)
-    labels, mean_times_BCFL = get_mean_time(data_BCFL, event)
+    if event == 'Experiment':
+        labels, mean_times_FL = get_mean_time(data_FL, "FL")
+        labels, mean_times_FLChan_fl_time = get_mean_time(data_FLChan, "FL")
+        labels, opening_times = get_mean_time(data_FLChan, "opening channels")
+        labels, settling_times = get_mean_time(data_FLChan, "settling channels")
+        channel_times = np.add(opening_times, settling_times).tolist()
+        mean_times_FLChan = np.add(mean_times_FLChan_fl_time, channel_times).tolist()
+
+        labels, mean_times_BCFL = get_mean_time(data_BCFL, 'FL')
+
+    else:
+
+        labels, mean_times_FL = get_mean_time(data_FL, event)
+        labels, mean_times_FLChan = get_mean_time(data_FLChan, event)
+        labels, mean_times_BCFL = get_mean_time(data_BCFL, event)
 
     min_len = min(len(mean_times_FL), len(mean_times_FLChan), len(mean_times_BCFL))
     mean_times_FL = mean_times_FL[:min_len]
@@ -129,7 +177,7 @@ def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
     mean_times_BCFL = mean_times_BCFL[:min_len]
     labels = labels[:min_len]
 
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(16, 8))
     width = 0.25
     x = np.arange(len(labels))
 
@@ -149,6 +197,7 @@ def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
 
 def plot_cumulative_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
 
+
     labels, times_FL = get_cumulative_time(data_FL, event)
     labels, times_FLChan = get_cumulative_time(data_FLChan, event)
     labels, times_BCFL = get_cumulative_time(data_BCFL, event)
@@ -159,7 +208,7 @@ def plot_cumulative_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
     times_BCFL = times_BCFL[:min_len]
     labels = labels[:min_len]
 
-    plt.figure(figsize=(12, 6))
+    plt.figure(figsize=(16, 8))
     width = 0.25
     x = np.arange(len(labels))
 
@@ -197,6 +246,7 @@ def plot_channel_time(data, title):
     plt.savefig(plot_path + title + '.png')
     # plt.show()
 
+
 def plot_number_of_requests(data, event, title):
 
     requests = None
@@ -233,6 +283,7 @@ plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Experiment", '
 
 plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Cumulative Round Time: FL vs BCFL vs StateFL')
 plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 'Cumulative Aggregation Time: FL vs BCFL vs StateFL')
+plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Training", 'Cumulative training Time: FL vs BCFL vs StateFL')
 
 
 plot_number_of_requests(log_data_FLChan, "ipfs", 'IPFS Requests')
@@ -241,3 +292,8 @@ plot_number_of_requests(log_data_FLChan, "perun", 'Perun Requests')
 
 
 plot_channel_time(log_data_FLChan, 'Time to Handle Channel Opening and Closing')
+
+
+plot_stacked_bar(log_data_FLChan, 'StateFL Events', channel=True)
+plot_stacked_bar(log_data_FL, 'FL Events', channel=False)
+plot_stacked_bar(log_data_BCFL, 'BCFL Events', channel=False)

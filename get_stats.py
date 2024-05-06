@@ -1,6 +1,5 @@
 from datetime import datetime
 import os
-from natsort import natsorted
 import re
 import numpy as np
 from pathlib import Path

@@ -1,0 +1,496 @@
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=1,
+time: 31.2177 seconds | Experiment
+time: 29.1709 seconds | Round=1
+time: 19.3615 seconds | Training client=1
+time: 19.4152 seconds | Training client=0
+time: 1.9260000000000002 seconds | Aggregating round=1
+time: 21.704622204099998 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=5,
+time: 116.43160000000003 seconds | Experiment
+time: 29.266900000000003 seconds | Round=1
+time: 19.22362 seconds | Training client=1
+time: 19.28376 seconds | Training client=0
+time: 1.9307999999999996 seconds | Aggregating round=1
+time: 21.0264 seconds | Round=2
+time: 1.9393 seconds | Aggregating round=2
+time: 21.1747 seconds | Round=3
+time: 1.9403 seconds | Aggregating round=3
+time: 21.435200000000002 seconds | Round=4
+time: 1.9456 seconds | Aggregating round=4
+time: 21.329500000000003 seconds | Round=5
+time: 1.9545000000000001 seconds | Aggregating round=5
+time: 106.64515586680002 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=2, NUM_ROUNDS=10,
+time: 222.10039999999998 seconds | Experiment
+time: 29.268300000000004 seconds | Round=1
+time: 19.10673 seconds | Training client=1
+time: 19.168989999999997 seconds | Training client=0
+time: 1.9792999999999996 seconds | Aggregating round=1
+time: 21.128 seconds | Round=2
+time: 1.9707000000000001 seconds | Aggregating round=2
+time: 21.134999999999998 seconds | Round=3
+time: 1.9807 seconds | Aggregating round=3
+time: 21.1745 seconds | Round=4
+time: 1.9829999999999999 seconds | Aggregating round=4
+time: 21.1108 seconds | Round=5
+time: 1.9801000000000002 seconds | Aggregating round=5
+time: 21.3039 seconds | Round=6
+time: 1.9904 seconds | Aggregating round=6
+time: 21.3261 seconds | Round=7
+time: 1.9927 seconds | Aggregating round=7
+time: 21.2142 seconds | Round=8
+time: 1.9769999999999999 seconds | Aggregating round=8
+time: 21.2003 seconds | Round=9
+time: 1.9681000000000002 seconds | Aggregating round=9
+time: 21.0922 seconds | Round=10
+time: 1.9815999999999998 seconds | Aggregating round=10
+time: 212.1769546627 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=1,
+time: 41.8563 seconds | Experiment
+time: 39.6111 seconds | Round=1
+time: 27.8976 seconds | Training client=3
+time: 28.2603 seconds | Training client=0
+time: 28.083900000000007 seconds | Training client=2
+time: 28.313499999999998 seconds | Training client=4
+time: 27.8685 seconds | Training client=1
+time: 2.3115 seconds | Aggregating round=1
+time: 31.489966383300004 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=5,
+time: 171.80419999999998 seconds | Experiment
+time: 39.9062 seconds | Round=1
+time: 27.689559999999997 seconds | Training client=2
+time: 27.91572 seconds | Training client=1
+time: 27.41974 seconds | Training client=3
+time: 27.184540000000002 seconds | Training client=4
+time: 27.510099999999998 seconds | Training client=0
+time: 2.3027 seconds | Aggregating round=1
+time: 30.871299999999998 seconds | Round=2
+time: 2.3448 seconds | Aggregating round=2
+time: 30.9317 seconds | Round=3
+time: 2.3866000000000005 seconds | Aggregating round=3
+time: 30.742 seconds | Round=4
+time: 2.3068999999999997 seconds | Aggregating round=4
+time: 30.939999999999998 seconds | Round=5
+time: 2.3129 seconds | Aggregating round=5
+time: 155.42644150840002 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=5, NUM_ROUNDS=10,
+time: 313.4586 seconds | Experiment
+time: 38.6653 seconds | Round=1
+time: 26.840700000000002 seconds | Training client=4
+time: 27.05372000000001 seconds | Training client=2
+time: 26.857979999999998 seconds | Training client=0
+time: 26.93045 seconds | Training client=1
+time: 27.25728 seconds | Training client=3
+time: 2.3302 seconds | Aggregating round=1
+time: 30.5161 seconds | Round=2
+time: 2.3387000000000002 seconds | Aggregating round=2
+time: 30.623 seconds | Round=3
+time: 2.3402000000000003 seconds | Aggregating round=3
+time: 30.354300000000002 seconds | Round=4
+time: 2.3193999999999995 seconds | Aggregating round=4
+time: 30.583199999999998 seconds | Round=5
+time: 2.3172 seconds | Aggregating round=5
+time: 30.415499999999998 seconds | Round=6
+time: 2.3189 seconds | Aggregating round=6
+time: 30.2491 seconds | Round=7
+time: 2.3097000000000003 seconds | Aggregating round=7
+time: 29.875699999999995 seconds | Round=8
+time: 2.2953 seconds | Aggregating round=8
+time: 30.076500000000003 seconds | Round=9
+time: 2.3039 seconds | Aggregating round=9
+time: 29.852700000000006 seconds | Round=10
+time: 2.2807000000000004 seconds | Aggregating round=10
+time: 303.88395322910003 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=1,
+time: 66.54870000000001 seconds | Experiment
+time: 64.35589999999999 seconds | Round=1
+time: 48.701100000000004 seconds | Training client=7
+time: 50.545399999999994 seconds | Training client=8
+time: 47.3734 seconds | Training client=6
+time: 49.2063 seconds | Training client=1
+time: 47.1293 seconds | Training client=9
+time: 50.5141 seconds | Training client=5
+time: 48.6768 seconds | Training client=3
+time: 48.9512 seconds | Training client=2
+time: 50.4964 seconds | Training client=0
+time: 50.366400000000006 seconds | Training client=4
+time: 3.8537 seconds | Aggregating round=1
+time: 55.8435609666 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=5,
+time: 366.7973 seconds | Experiment
+time: 63.341300000000004 seconds | Round=1
+time: 48.44893999999999 seconds | Training client=0
+time: 61.641980000000004 seconds | Training client=1
+time: 59.53098 seconds | Training client=2
+time: 48.13732 seconds | Training client=6
+time: 60.3697 seconds | Training client=9
+time: 46.20947999999999 seconds | Training client=5
+time: 59.46732 seconds | Training client=4
+time: 44.93306 seconds | Training client=3
+time: 62.81574 seconds | Training client=7
+time: 63.031279999999995 seconds | Training client=8
+time: 3.7516 seconds | Aggregating round=1
+time: 53.66949999999999 seconds | Round=2
+time: 3.7056999999999993 seconds | Aggregating round=2
+time: 125.4395 seconds | Round=3
+time: 3.8201 seconds | Aggregating round=3
+time: 67.6507 seconds | Round=4
+time: 7.1928 seconds | Aggregating round=4
+time: 54.2515 seconds | Round=5
+time: 3.8679 seconds | Aggregating round=5
+time: 272.22285948749993 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=10, NUM_ROUNDS=10,
+time: 534.1209000000001 seconds | Experiment
+time: 61.6706 seconds | Round=1
+time: 43.77833 seconds | Training client=1
+time: 41.95761 seconds | Training client=4
+time: 42.74817000000001 seconds | Training client=8
+time: 43.609170000000006 seconds | Training client=5
+time: 43.873760000000004 seconds | Training client=6
+time: 43.19717 seconds | Training client=9
+time: 44.672339999999984 seconds | Training client=3
+time: 42.13589000000001 seconds | Training client=2
+time: 42.55038 seconds | Training client=7
+time: 43.06165000000001 seconds | Training client=0
+time: 3.5214 seconds | Aggregating round=1
+time: 51.4778 seconds | Round=2
+time: 3.4934 seconds | Aggregating round=2
+time: 51.8125 seconds | Round=3
+time: 3.5414000000000003 seconds | Aggregating round=3
+time: 51.7063 seconds | Round=4
+time: 3.5573 seconds | Aggregating round=4
+time: 51.6711 seconds | Round=5
+time: 3.557 seconds | Aggregating round=5
+time: 52.252599999999994 seconds | Round=6
+time: 3.6578000000000004 seconds | Aggregating round=6
+time: 52.2898 seconds | Round=7
+time: 3.7011000000000003 seconds | Aggregating round=7
+time: 52.69 seconds | Round=8
+time: 3.6497 seconds | Aggregating round=8
+time: 52.82529999999999 seconds | Round=9
+time: 3.6699000000000006 seconds | Aggregating round=9
+time: 53.222500000000004 seconds | Round=10
+time: 3.6571 seconds | Aggregating round=10
+time: 523.1818089709002 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=25, NUM_ROUNDS=1,
+time: 154.5102 seconds | Experiment
+time: 151.1426 seconds | Round=1
+time: 68.12950000000001 seconds | Training client=12
+time: 63.8215 seconds | Training client=5
+time: 66.3837 seconds | Training client=4
+time: 62.8091 seconds | Training client=10
+time: 60.979 seconds | Training client=19
+time: 66.82419999999999 seconds | Training client=2
+time: 68.4072 seconds | Training client=24
+time: 70.3029 seconds | Training client=1
+time: 68.61959999999999 seconds | Training client=9
+time: 67.8036 seconds | Training client=13
+time: 65.42580000000001 seconds | Training client=15
+time: 69.8044 seconds | Training client=14
+time: 61.42139999999999 seconds | Training client=17
+time: 58.20949999999999 seconds | Training client=0
+time: 69.21760000000002 seconds | Training client=22
+time: 63.51189999999999 seconds | Training client=3
+time: 71.9999 seconds | Training client=18
+time: 63.704600000000006 seconds | Training client=23
+time: 65.4837 seconds | Training client=11
+time: 64.6087 seconds | Training client=7
+time: 63.351200000000006 seconds | Training client=21
+time: 69.20900000000002 seconds | Training client=8
+time: 61.051300000000005 seconds | Training client=16
+time: 71.2817 seconds | Training client=6
+time: 62.913599999999995 seconds | Training client=20
+time: 8.7364 seconds | Aggregating round=1
+time: 141.89677931249997 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=25, NUM_ROUNDS=5,
+time: 716.9558999999999 seconds | Experiment
+time: 155.6462 seconds | Round=1
+time: 61.82622000000001 seconds | Training client=1
+time: 69.16174 seconds | Training client=6
+time: 56.44392 seconds | Training client=0
+time: 71.45631999999999 seconds | Training client=8
+time: 70.85318 seconds | Training client=15
+time: 66.12108 seconds | Training client=10
+time: 75.45877999999999 seconds | Training client=16
+time: 59.48874 seconds | Training client=24
+time: 68.76982000000001 seconds | Training client=11
+time: 50.76912 seconds | Training client=18
+time: 56.40878 seconds | Training client=14
+time: 64.79916 seconds | Training client=22
+time: 56.402080000000005 seconds | Training client=7
+time: 52.82054 seconds | Training client=12
+time: 65.8602 seconds | Training client=23
+time: 76.11562 seconds | Training client=19
+time: 74.50525999999999 seconds | Training client=3
+time: 69.78036 seconds | Training client=13
+time: 50.34170000000001 seconds | Training client=9
+time: 73.38691999999999 seconds | Training client=21
+time: 58.93432 seconds | Training client=5
+time: 66.5108 seconds | Training client=20
+time: 66.61266 seconds | Training client=17
+time: 58.97096 seconds | Training client=2
+time: 59.33656 seconds | Training client=4
+time: 9.0051 seconds | Aggregating round=1
+time: 140.60959999999997 seconds | Round=2
+time: 9.1185 seconds | Aggregating round=2
+time: 140.4906 seconds | Round=3
+time: 9.248000000000001 seconds | Aggregating round=3
+time: 139.8796 seconds | Round=4
+time: 9.3812 seconds | Aggregating round=4
+time: 136.7384 seconds | Round=5
+time: 9.1346 seconds | Aggregating round=5
+time: 701.0607363416999 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=25, NUM_ROUNDS=10,
+time: 1364.5028 seconds | Experiment
+time: 158.9775 seconds | Round=1
+time: 64.9866 seconds | Training client=14
+time: 58.82181 seconds | Training client=21
+time: 57.803230000000006 seconds | Training client=12
+time: 68.24233 seconds | Training client=10
+time: 69.69587 seconds | Training client=24
+time: 58.03901 seconds | Training client=13
+time: 55.78474 seconds | Training client=15
+time: 67.67505999999999 seconds | Training client=18
+time: 51.73281999999999 seconds | Training client=8
+time: 57.77124 seconds | Training client=3
+time: 60.74116 seconds | Training client=5
+time: 58.14263 seconds | Training client=1
+time: 57.59268 seconds | Training client=2
+time: 57.354479999999995 seconds | Training client=22
+time: 62.62133999999999 seconds | Training client=6
+time: 52.963330000000006 seconds | Training client=9
+time: 57.02808999999999 seconds | Training client=11
+time: 63.468680000000006 seconds | Training client=7
+time: 66.56248 seconds | Training client=19
+time: 61.47218 seconds | Training client=16
+time: 64.38182 seconds | Training client=4
+time: 59.411880000000004 seconds | Training client=0
+time: 68.78233999999999 seconds | Training client=20
+time: 63.25419000000001 seconds | Training client=23
+time: 76.48635999999999 seconds | Training client=17
+time: 9.139 seconds | Aggregating round=1
+time: 142.9565 seconds | Round=2
+time: 9.1196 seconds | Aggregating round=2
+time: 142.9169 seconds | Round=3
+time: 9.2942 seconds | Aggregating round=3
+time: 142.46480000000003 seconds | Round=4
+time: 9.1539 seconds | Aggregating round=4
+time: 139.3146 seconds | Round=5
+time: 8.9295 seconds | Aggregating round=5
+time: 133.5917 seconds | Round=6
+time: 9.243399999999998 seconds | Aggregating round=6
+time: 131.3148 seconds | Round=7
+time: 9.465300000000001 seconds | Aggregating round=7
+time: 127.76199999999999 seconds | Round=8
+time: 9.2807 seconds | Aggregating round=8
+time: 123.67280000000001 seconds | Round=9
+time: 8.759800000000002 seconds | Aggregating round=9
+time: 117.39770000000001 seconds | Round=10
+time: 8.6216 seconds | Aggregating round=10
+time: 1348.1248733748998 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=50, NUM_ROUNDS=1,
+time: 628.7301 seconds | Experiment
+time: 335.43179999999995 seconds | Round=1
+time: 76.28639999999999 seconds | Training client=29
+time: 86.0335 seconds | Training client=18
+time: 74.19839999999999 seconds | Training client=5
+time: 74.715 seconds | Training client=24
+time: 77.0355 seconds | Training client=10
+time: 79.67830000000001 seconds | Training client=7
+time: 77.5154 seconds | Training client=8
+time: 66.5094 seconds | Training client=32
+time: 77.4679 seconds | Training client=17
+time: 79.78739999999999 seconds | Training client=2
+time: 79.25549999999998 seconds | Training client=27
+time: 73.1994 seconds | Training client=43
+time: 69.12809999999999 seconds | Training client=44
+time: 68.9503 seconds | Training client=47
+time: 77.68789999999998 seconds | Training client=38
+time: 81.96940000000001 seconds | Training client=36
+time: 83.7952 seconds | Training client=48
+time: 84.8037 seconds | Training client=15
+time: 70.679 seconds | Training client=19
+time: 77.1886 seconds | Training client=30
+time: 67.8771 seconds | Training client=37
+time: 80.96969999999999 seconds | Training client=1
+time: 79.74440000000001 seconds | Training client=45
+time: 79.55109999999999 seconds | Training client=39
+time: 77.8838 seconds | Training client=6
+time: 73.8553 seconds | Training client=41
+time: 76.32480000000001 seconds | Training client=11
+time: 77.3877 seconds | Training client=23
+time: 85.8092 seconds | Training client=25
+time: 71.946 seconds | Training client=3
+time: 79.2838 seconds | Training client=20
+time: 77.0082 seconds | Training client=35
+time: 86.1916 seconds | Training client=34
+time: 78.4238 seconds | Training client=21
+time: 84.947 seconds | Training client=16
+time: 62.581999999999994 seconds | Training client=40
+time: 79.51240000000001 seconds | Training client=46
+time: 66.33829999999999 seconds | Training client=28
+time: 69.4838 seconds | Training client=22
+time: 72.03649999999999 seconds | Training client=9
+time: 80.8026 seconds | Training client=49
+time: 84.80749999999999 seconds | Training client=31
+time: 72.8723 seconds | Training client=42
+time: 72.42580000000001 seconds | Training client=12
+time: 66.68260000000001 seconds | Training client=4
+time: 79.77950000000001 seconds | Training client=0
+time: 74.98830000000001 seconds | Training client=13
+time: 76.9272 seconds | Training client=26
+time: 69.7184 seconds | Training client=33
+time: 78.39779999999999 seconds | Training client=14
+time: 20.869699999999998 seconds | Aggregating round=1
+time: 317.72085568759996 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=50, NUM_ROUNDS=5,
+time: 1508.2252999999998 seconds | Experiment
+time: 346.94989999999996 seconds | Round=1
+time: 73.57485999999999 seconds | Training client=31
+time: 69.07589999999999 seconds | Training client=1
+time: 78.84602 seconds | Training client=19
+time: 75.27817999999998 seconds | Training client=45
+time: 70.81424 seconds | Training client=28
+time: 72.20972 seconds | Training client=2
+time: 64.00298 seconds | Training client=26
+time: 63.99727999999999 seconds | Training client=33
+time: 70.7672 seconds | Training client=11
+time: 62.65748000000001 seconds | Training client=30
+time: 72.80094000000001 seconds | Training client=0
+time: 70.46688 seconds | Training client=36
+time: 77.31208000000001 seconds | Training client=8
+time: 65.2276 seconds | Training client=17
+time: 65.04178 seconds | Training client=4
+time: 51.85992 seconds | Training client=20
+time: 76.46372 seconds | Training client=21
+time: 68.07 seconds | Training client=7
+time: 76.10826 seconds | Training client=24
+time: 75.0616 seconds | Training client=14
+time: 67.43186 seconds | Training client=27
+time: 71.34101999999999 seconds | Training client=42
+time: 82.53036 seconds | Training client=43
+time: 74.7792 seconds | Training client=49
+time: 55.30726 seconds | Training client=37
+time: 80.91958 seconds | Training client=40
+time: 63.1021 seconds | Training client=5
+time: 81.47594000000001 seconds | Training client=3
+time: 77.74774 seconds | Training client=39
+time: 69.42316 seconds | Training client=48
+time: 73.24995999999999 seconds | Training client=41
+time: 69.00796 seconds | Training client=25
+time: 76.9854 seconds | Training client=22
+time: 77.65857999999999 seconds | Training client=38
+time: 82.49734000000001 seconds | Training client=46
+time: 73.2863 seconds | Training client=12
+time: 78.32664 seconds | Training client=23
+time: 68.01842 seconds | Training client=16
+time: 73.12502 seconds | Training client=35
+time: 83.39535999999998 seconds | Training client=34
+time: 72.5213 seconds | Training client=18
+time: 63.417799999999986 seconds | Training client=6
+time: 68.37511999999998 seconds | Training client=29
+time: 75.71484000000001 seconds | Training client=44
+time: 78.164 seconds | Training client=47
+time: 76.54488 seconds | Training client=10
+time: 86.55854000000001 seconds | Training client=13
+time: 78.285 seconds | Training client=32
+time: 68.50948 seconds | Training client=9
+time: 62.60813999999999 seconds | Training client=15
+time: 20.883 seconds | Aggregating round=1
+time: 310.1975999999999 seconds | Round=2
+time: 20.5964 seconds | Aggregating round=2
+time: 296.0259 seconds | Round=3
+time: 19.721299999999996 seconds | Aggregating round=3
+time: 279.39489999999995 seconds | Round=4
+time: 18.920099999999998 seconds | Aggregating round=4
+time: 268.29620000000006 seconds | Round=5
+time: 18.435 seconds | Aggregating round=5
+time: 1479.2275168625 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=False, IPFS_ON=False, NUM_CLIENTS=50, NUM_ROUNDS=10,
+time: 2557.9139 seconds | Experiment
+time: 327.54740000000004 seconds | Round=1
+time: 69.37715 seconds | Training client=31
+time: 62.57608000000001 seconds | Training client=43
+time: 66.52973 seconds | Training client=27
+time: 61.224970000000006 seconds | Training client=42
+time: 56.02991999999999 seconds | Training client=8
+time: 56.133379999999995 seconds | Training client=38
+time: 53.55671 seconds | Training client=21
+time: 55.99995 seconds | Training client=48
+time: 48.136039999999994 seconds | Training client=30
+time: 49.639619999999994 seconds | Training client=45
+time: 52.81143 seconds | Training client=29
+time: 69.04204 seconds | Training client=2
+time: 76.99192 seconds | Training client=24
+time: 68.68701000000001 seconds | Training client=12
+time: 57.02127 seconds | Training client=17
+time: 68.47430999999999 seconds | Training client=6
+time: 56.85884 seconds | Training client=47
+time: 67.34487 seconds | Training client=3
+time: 66.20306 seconds | Training client=10
+time: 45.54463999999999 seconds | Training client=28
+time: 64.44296 seconds | Training client=26
+time: 64.42218999999999 seconds | Training client=46
+time: 53.62498000000001 seconds | Training client=4
+time: 50.15561 seconds | Training client=35
+time: 58.24264 seconds | Training client=16
+time: 69.16455 seconds | Training client=36
+time: 61.764540000000004 seconds | Training client=0
+time: 50.9094 seconds | Training client=11
+time: 56.432709999999986 seconds | Training client=33
+time: 72.50993999999999 seconds | Training client=14
+time: 74.79148 seconds | Training client=40
+time: 50.84578 seconds | Training client=5
+time: 58.50137000000001 seconds | Training client=37
+time: 74.54628 seconds | Training client=19
+time: 66.63259 seconds | Training client=18
+time: 59.1241 seconds | Training client=7
+time: 68.35965 seconds | Training client=32
+time: 56.49804 seconds | Training client=44
+time: 62.18809 seconds | Training client=23
+time: 52.71669999999999 seconds | Training client=9
+time: 50.75607 seconds | Training client=39
+time: 55.865480000000005 seconds | Training client=22
+time: 51.23386000000001 seconds | Training client=20
+time: 62.78533 seconds | Training client=1
+time: 50.632600000000004 seconds | Training client=13
+time: 67.83658 seconds | Training client=15
+time: 67.32192 seconds | Training client=41
+time: 79.31676999999999 seconds | Training client=49
+time: 75.36705 seconds | Training client=34
+time: 48.193769999999994 seconds | Training client=25
+time: 20.312199999999997 seconds | Aggregating round=1
+time: 297.5704 seconds | Round=2
+time: 19.2154 seconds | Aggregating round=2
+time: 280.3983999999999 seconds | Round=3
+time: 18.8004 seconds | Aggregating round=3
+time: 264.54179999999997 seconds | Round=4
+time: 18.1025 seconds | Aggregating round=4
+time: 257.5322 seconds | Round=5
+time: 18.0837 seconds | Aggregating round=5
+time: 237.3983 seconds | Round=6
+time: 17.8094 seconds | Aggregating round=6
+time: 228.42979999999997 seconds | Round=7
+time: 17.1834 seconds | Aggregating round=7
+time: 226.7953 seconds | Round=8
+time: 17.3786 seconds | Aggregating round=8
+time: 218.9233 seconds | Round=9
+time: 16.8913 seconds | Aggregating round=9
+time: 211.61200000000002 seconds | Round=10
+time: 16.7371 seconds | Aggregating round=10
+time: 2532.9995442502 seconds | FL
+

@@ -1,0 +1,686 @@
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=1,
+time: 54.7962 seconds | Experiment
+time: 52.529700000000005 seconds | Round=1
+time: 7.4559 seconds | deploying contract
+time: 19.288099999999996 seconds | Training client=0
+time: 19.349400000000003 seconds | Training client=1
+time: 18.7104 seconds | Aggregating round=1
+time: 8.6677 seconds | setting weights to the blockchain
+time: 0.13179999999999997 seconds | saving aggregated model to storage (round=1)
+time: 7.892899999999999 seconds | setting aggregated model to the blockchain round=1
+time: 38.3969331668 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=5,
+time: 199.05339999999998 seconds | Experiment
+time: 55.00019999999999 seconds | Round=1
+time: 6.4233 seconds | deploying contract
+time: 18.55684 seconds | Training client=0
+time: 18.69704 seconds | Training client=1
+time: 18.025399999999998 seconds | Aggregating round=1
+time: 6.88692 seconds | setting weights to the blockchain
+time: 0.16760000000000003 seconds | saving aggregated model to storage (round=1)
+time: 7.8444 seconds | setting aggregated model to the blockchain round=1
+time: 35.0313 seconds | Round=2
+time: 16.3641 seconds | Aggregating round=2
+time: 0.1614 seconds | saving aggregated model to storage (round=2)
+time: 7.8134 seconds | setting aggregated model to the blockchain round=2
+time: 35.508500000000005 seconds | Round=3
+time: 16.8209 seconds | Aggregating round=3
+time: 0.1726 seconds | saving aggregated model to storage (round=3)
+time: 7.798900000000001 seconds | setting aggregated model to the blockchain round=3
+time: 35.0695 seconds | Round=4
+time: 16.315199999999997 seconds | Aggregating round=4
+time: 0.16570000000000001 seconds | saving aggregated model to storage (round=4)
+time: 7.8648 seconds | setting aggregated model to the blockchain round=4
+time: 35.517100000000006 seconds | Round=5
+time: 17.018700000000003 seconds | Aggregating round=5
+time: 0.1721 seconds | saving aggregated model to storage (round=5)
+time: 7.8158 seconds | setting aggregated model to the blockchain round=5
+time: 179.08673198329998 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=2, NUM_ROUNDS=10,
+time: 382.2099 seconds | Experiment
+time: 55.6112 seconds | Round=1
+time: 7.0432999999999995 seconds | deploying contract
+time: 18.79576 seconds | Training client=1
+time: 18.77355 seconds | Training client=0
+time: 16.9484 seconds | Aggregating round=1
+time: 6.96368 seconds | setting weights to the blockchain
+time: 0.1739 seconds | saving aggregated model to storage (round=1)
+time: 7.8095 seconds | setting aggregated model to the blockchain round=1
+time: 36.5227 seconds | Round=2
+time: 17.238 seconds | Aggregating round=2
+time: 0.164 seconds | saving aggregated model to storage (round=2)
+time: 7.806100000000001 seconds | setting aggregated model to the blockchain round=2
+time: 36.554500000000004 seconds | Round=3
+time: 17.5327 seconds | Aggregating round=3
+time: 0.1706 seconds | saving aggregated model to storage (round=3)
+time: 7.805199999999999 seconds | setting aggregated model to the blockchain round=3
+time: 36.5279 seconds | Round=4
+time: 17.679799999999997 seconds | Aggregating round=4
+time: 0.16950000000000004 seconds | saving aggregated model to storage (round=4)
+time: 7.8482 seconds | setting aggregated model to the blockchain round=4
+time: 35.530899999999995 seconds | Round=5
+time: 16.5418 seconds | Aggregating round=5
+time: 0.1725 seconds | saving aggregated model to storage (round=5)
+time: 7.839699999999999 seconds | setting aggregated model to the blockchain round=5
+time: 35.5807 seconds | Round=6
+time: 16.938499999999998 seconds | Aggregating round=6
+time: 0.16820000000000002 seconds | saving aggregated model to storage (round=6)
+time: 7.8334 seconds | setting aggregated model to the blockchain round=6
+time: 35.0248 seconds | Round=7
+time: 16.3505 seconds | Aggregating round=7
+time: 0.1698 seconds | saving aggregated model to storage (round=7)
+time: 7.8673 seconds | setting aggregated model to the blockchain round=7
+time: 35.5514 seconds | Round=8
+time: 16.945800000000002 seconds | Aggregating round=8
+time: 0.1771 seconds | saving aggregated model to storage (round=8)
+time: 7.831100000000001 seconds | setting aggregated model to the blockchain round=8
+time: 35.5429 seconds | Round=9
+time: 16.8123 seconds | Aggregating round=9
+time: 0.17459999999999998 seconds | saving aggregated model to storage (round=9)
+time: 7.8637 seconds | setting aggregated model to the blockchain round=9
+time: 35.53530000000001 seconds | Round=10
+time: 16.833800000000004 seconds | Aggregating round=10
+time: 0.19660000000000002 seconds | saving aggregated model to storage (round=10)
+time: 7.8241 seconds | setting aggregated model to the blockchain round=10
+time: 361.15933933739996 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=1,
+time: 111.34649999999999 seconds | Experiment
+time: 108.07939999999999 seconds | Round=1
+time: 22.477 seconds | deploying contract
+time: 28.265800000000002 seconds | Training client=4
+time: 27.809500000000003 seconds | Training client=1
+time: 28.2036 seconds | Training client=3
+time: 28.331 seconds | Training client=0
+time: 28.451300000000003 seconds | Training client=2
+time: 47.7668 seconds | Aggregating round=1
+time: 22.751299999999997 seconds | setting weights to the blockchain
+time: 0.13710000000000003 seconds | saving aggregated model to storage (round=1)
+time: 22.4364 seconds | setting aggregated model to the blockchain round=1
+time: 77.4057318001 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=5,
+time: 409.427 seconds | Experiment
+time: 107.6442 seconds | Round=1
+time: 22.0042 seconds | deploying contract
+time: 26.526519999999994 seconds | Training client=2
+time: 26.13678 seconds | Training client=3
+time: 25.943179999999998 seconds | Training client=4
+time: 25.910739999999997 seconds | Training client=1
+time: 26.0202 seconds | Training client=0
+time: 48.192099999999996 seconds | Aggregating round=1
+time: 23.014959999999995 seconds | setting weights to the blockchain
+time: 0.1862 seconds | saving aggregated model to storage (round=1)
+time: 22.376799999999996 seconds | setting aggregated model to the blockchain round=1
+time: 76.14009999999999 seconds | Round=2
+time: 47.4162 seconds | Aggregating round=2
+time: 0.19569999999999999 seconds | saving aggregated model to storage (round=2)
+time: 22.391700000000004 seconds | setting aggregated model to the blockchain round=2
+time: 74.12700000000001 seconds | Round=3
+time: 47.028800000000004 seconds | Aggregating round=3
+time: 0.1972 seconds | saving aggregated model to storage (round=3)
+time: 22.3835 seconds | setting aggregated model to the blockchain round=3
+time: 74.63749999999999 seconds | Round=4
+time: 49.2022 seconds | Aggregating round=4
+time: 0.197 seconds | saving aggregated model to storage (round=4)
+time: 22.4373 seconds | setting aggregated model to the blockchain round=4
+time: 74.1236 seconds | Round=5
+time: 48.537200000000006 seconds | Aggregating round=5
+time: 0.1981 seconds | saving aggregated model to storage (round=5)
+time: 22.497899999999998 seconds | setting aggregated model to the blockchain round=5
+time: 376.9676584915 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=5, NUM_ROUNDS=10,
+time: 773.7743 seconds | Experiment
+time: 106.77790000000002 seconds | Round=1
+time: 22.167700000000004 seconds | deploying contract
+time: 25.91249 seconds | Training client=1
+time: 25.89905 seconds | Training client=2
+time: 25.652109999999997 seconds | Training client=0
+time: 25.63908 seconds | Training client=4
+time: 25.751589999999997 seconds | Training client=3
+time: 47.3951 seconds | Aggregating round=1
+time: 22.61478 seconds | setting weights to the blockchain
+time: 0.2132 seconds | saving aggregated model to storage (round=1)
+time: 22.4132 seconds | setting aggregated model to the blockchain round=1
+time: 75.0913 seconds | Round=2
+time: 46.8314 seconds | Aggregating round=2
+time: 0.21350000000000002 seconds | saving aggregated model to storage (round=2)
+time: 22.487000000000002 seconds | setting aggregated model to the blockchain round=2
+time: 74.1086 seconds | Round=3
+time: 46.9095 seconds | Aggregating round=3
+time: 0.22080000000000002 seconds | saving aggregated model to storage (round=3)
+time: 22.487000000000002 seconds | setting aggregated model to the blockchain round=3
+time: 74.58970000000001 seconds | Round=4
+time: 47.8323 seconds | Aggregating round=4
+time: 0.2233 seconds | saving aggregated model to storage (round=4)
+time: 22.4434 seconds | setting aggregated model to the blockchain round=4
+time: 73.10940000000001 seconds | Round=5
+time: 47.584500000000006 seconds | Aggregating round=5
+time: 0.2242 seconds | saving aggregated model to storage (round=5)
+time: 22.518600000000003 seconds | setting aggregated model to the blockchain round=5
+time: 73.599 seconds | Round=6
+time: 48.4885 seconds | Aggregating round=6
+time: 0.23040000000000002 seconds | saving aggregated model to storage (round=6)
+time: 22.3892 seconds | setting aggregated model to the blockchain round=6
+time: 73.11089999999999 seconds | Round=7
+time: 47.8061 seconds | Aggregating round=7
+time: 0.2239 seconds | saving aggregated model to storage (round=7)
+time: 22.4261 seconds | setting aggregated model to the blockchain round=7
+time: 73.618 seconds | Round=8
+time: 47.8081 seconds | Aggregating round=8
+time: 0.21590000000000004 seconds | saving aggregated model to storage (round=8)
+time: 22.386699999999998 seconds | setting aggregated model to the blockchain round=8
+time: 73.134 seconds | Round=9
+time: 47.6879 seconds | Aggregating round=9
+time: 0.22959999999999994 seconds | saving aggregated model to storage (round=9)
+time: 22.4137 seconds | setting aggregated model to the blockchain round=9
+time: 73.61600000000001 seconds | Round=10
+time: 48.3239 seconds | Aggregating round=10
+time: 0.2233 seconds | saving aggregated model to storage (round=10)
+time: 22.4641 seconds | setting aggregated model to the blockchain round=10
+time: 741.2406076751 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=1,
+time: 211.93810000000002 seconds | Experiment
+time: 208.69050000000001 seconds | Round=1
+time: 46.3573 seconds | deploying contract
+time: 48.549899999999994 seconds | Training client=6
+time: 52.002100000000006 seconds | Training client=1
+time: 49.0754 seconds | Training client=3
+time: 50.0709 seconds | Training client=0
+time: 50.4398 seconds | Training client=5
+time: 46.62180000000001 seconds | Training client=9
+time: 50.8599 seconds | Training client=8
+time: 49.9467 seconds | Training client=7
+time: 45.5012 seconds | Training client=2
+time: 51.3318 seconds | Training client=4
+time: 98.0635 seconds | Aggregating round=1
+time: 47.9438 seconds | setting weights to the blockchain
+time: 0.20299999999999999 seconds | saving aggregated model to storage (round=1)
+time: 45.9187 seconds | setting aggregated model to the blockchain round=1
+time: 152.39001344570002 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=5,
+time: 796.0986999999999 seconds | Experiment
+time: 206.5375 seconds | Round=1
+time: 46.751 seconds | deploying contract
+time: 40.1776 seconds | Training client=2
+time: 40.38138000000001 seconds | Training client=3
+time: 41.78884 seconds | Training client=4
+time: 40.08256 seconds | Training client=6
+time: 37.5323 seconds | Training client=0
+time: 39.429179999999995 seconds | Training client=9
+time: 38.3775 seconds | Training client=1
+time: 39.11328 seconds | Training client=8
+time: 41.82772 seconds | Training client=5
+time: 38.0632 seconds | Training client=7
+time: 98.71589999999999 seconds | Aggregating round=1
+time: 47.69956 seconds | setting weights to the blockchain
+time: 0.1859 seconds | saving aggregated model to storage (round=1)
+time: 45.9773 seconds | setting aggregated model to the blockchain round=1
+time: 149.31119999999999 seconds | Round=2
+time: 98.6255 seconds | Aggregating round=2
+time: 0.18780000000000002 seconds | saving aggregated model to storage (round=2)
+time: 46.73819999999999 seconds | setting aggregated model to the blockchain round=2
+time: 147.24869999999999 seconds | Round=3
+time: 97.54999999999998 seconds | Aggregating round=3
+time: 0.188 seconds | saving aggregated model to storage (round=3)
+time: 45.833 seconds | setting aggregated model to the blockchain round=3
+time: 144.7587 seconds | Round=4
+time: 97.8083 seconds | Aggregating round=4
+time: 0.1796 seconds | saving aggregated model to storage (round=4)
+time: 46.3015 seconds | setting aggregated model to the blockchain round=4
+time: 143.3182 seconds | Round=5
+time: 98.91329999999999 seconds | Aggregating round=5
+time: 0.18650000000000003 seconds | saving aggregated model to storage (round=5)
+time: 47.1203 seconds | setting aggregated model to the blockchain round=5
+time: 734.9295495333 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=10, NUM_ROUNDS=10,
+time: 1513.4199999999996 seconds | Experiment
+time: 201.5733 seconds | Round=1
+time: 46.7801 seconds | deploying contract
+time: 46.15505 seconds | Training client=4
+time: 46.20661 seconds | Training client=5
+time: 46.254760000000005 seconds | Training client=2
+time: 46.13539000000001 seconds | Training client=6
+time: 46.18186999999999 seconds | Training client=8
+time: 46.16629999999999 seconds | Training client=0
+time: 46.22818 seconds | Training client=9
+time: 46.26625000000001 seconds | Training client=7
+time: 46.19362999999999 seconds | Training client=3
+time: 46.21339 seconds | Training client=1
+time: 98.6685 seconds | Aggregating round=1
+time: 48.63075 seconds | setting weights to the blockchain
+time: 0.1747 seconds | saving aggregated model to storage (round=1)
+time: 46.4233 seconds | setting aggregated model to the blockchain round=1
+time: 145.2861 seconds | Round=2
+time: 98.8222 seconds | Aggregating round=2
+time: 0.1714 seconds | saving aggregated model to storage (round=2)
+time: 46.375899999999994 seconds | setting aggregated model to the blockchain round=2
+time: 145.8256 seconds | Round=3
+time: 99.07350000000001 seconds | Aggregating round=3
+time: 0.1812 seconds | saving aggregated model to storage (round=3)
+time: 46.418800000000005 seconds | setting aggregated model to the blockchain round=3
+time: 145.81310000000002 seconds | Round=4
+time: 98.95250000000001 seconds | Aggregating round=4
+time: 0.17770000000000002 seconds | saving aggregated model to storage (round=4)
+time: 46.78670000000001 seconds | setting aggregated model to the blockchain round=4
+time: 145.29620000000003 seconds | Round=5
+time: 98.51520000000001 seconds | Aggregating round=5
+time: 0.1724 seconds | saving aggregated model to storage (round=5)
+time: 46.505 seconds | setting aggregated model to the blockchain round=5
+time: 144.7916 seconds | Round=6
+time: 98.2936 seconds | Aggregating round=6
+time: 0.1791 seconds | saving aggregated model to storage (round=6)
+time: 46.473800000000004 seconds | setting aggregated model to the blockchain round=6
+time: 145.3214 seconds | Round=7
+time: 99.1989 seconds | Aggregating round=7
+time: 0.17629999999999998 seconds | saving aggregated model to storage (round=7)
+time: 46.810500000000005 seconds | setting aggregated model to the blockchain round=7
+time: 145.80769999999998 seconds | Round=8
+time: 99.9032 seconds | Aggregating round=8
+time: 0.17120000000000002 seconds | saving aggregated model to storage (round=8)
+time: 46.8012 seconds | setting aggregated model to the blockchain round=8
+time: 145.3064 seconds | Round=9
+time: 99.01809999999999 seconds | Aggregating round=9
+time: 0.17709999999999998 seconds | saving aggregated model to storage (round=9)
+time: 46.4473 seconds | setting aggregated model to the blockchain round=9
+time: 145.2717 seconds | Round=10
+time: 98.7414 seconds | Aggregating round=10
+time: 0.16829999999999998 seconds | saving aggregated model to storage (round=10)
+time: 46.428399999999996 seconds | setting aggregated model to the blockchain round=10
+time: 1454.8524630625 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=25, NUM_ROUNDS=1,
+time: 534.7332 seconds | Experiment
+time: 530.0412 seconds | Round=1
+time: 124.26289999999999 seconds | deploying contract
+time: 74.22139999999999 seconds | Training client=14
+time: 69.0806 seconds | Training client=18
+time: 65.90450000000001 seconds | Training client=0
+time: 65.6927 seconds | Training client=7
+time: 70.2002 seconds | Training client=11
+time: 68.011 seconds | Training client=23
+time: 71.8673 seconds | Training client=17
+time: 72.2771 seconds | Training client=12
+time: 74.68169999999999 seconds | Training client=16
+time: 69.77720000000001 seconds | Training client=24
+time: 65.5986 seconds | Training client=19
+time: 64.9754 seconds | Training client=4
+time: 72.8022 seconds | Training client=3
+time: 71.43429999999998 seconds | Training client=22
+time: 68.3427 seconds | Training client=13
+time: 66.7336 seconds | Training client=5
+time: 69.3237 seconds | Training client=2
+time: 68.2515 seconds | Training client=10
+time: 66.42339999999999 seconds | Training client=20
+time: 70.17800000000001 seconds | Training client=15
+time: 66.33510000000001 seconds | Training client=6
+time: 70.5104 seconds | Training client=1
+time: 70.2824 seconds | Training client=9
+time: 68.4376 seconds | Training client=21
+time: 69.9725 seconds | Training client=8
+time: 257.27250000000004 seconds | Aggregating round=1
+time: 123.4518 seconds | setting weights to the blockchain
+time: 0.27640000000000003 seconds | saving aggregated model to storage (round=1)
+time: 123.2064 seconds | setting aggregated model to the blockchain round=1
+time: 395.3837388627 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=25, NUM_ROUNDS=5,
+time: 2054.9908 seconds | Experiment
+time: 518.1090999999999 seconds | Round=1
+time: 123.50030000000001 seconds | deploying contract
+time: 68.0728 seconds | Training client=14
+time: 67.16646 seconds | Training client=17
+time: 64.94634 seconds | Training client=13
+time: 65.18373999999999 seconds | Training client=3
+time: 64.6229 seconds | Training client=23
+time: 64.0665 seconds | Training client=6
+time: 63.99655999999999 seconds | Training client=21
+time: 64.6023 seconds | Training client=4
+time: 66.37016 seconds | Training client=9
+time: 66.64408 seconds | Training client=22
+time: 65.11135999999999 seconds | Training client=15
+time: 63.310279999999985 seconds | Training client=20
+time: 63.9394 seconds | Training client=19
+time: 67.61612 seconds | Training client=24
+time: 63.46816 seconds | Training client=2
+time: 67.55906 seconds | Training client=0
+time: 66.06556 seconds | Training client=5
+time: 65.96755999999999 seconds | Training client=1
+time: 64.38083999999999 seconds | Training client=16
+time: 63.79146 seconds | Training client=18
+time: 66.64398 seconds | Training client=10
+time: 65.70914 seconds | Training client=7
+time: 66.70102 seconds | Training client=8
+time: 65.30922 seconds | Training client=11
+time: 64.44814000000001 seconds | Training client=12
+time: 254.8109 seconds | Aggregating round=1
+time: 123.26350000000001 seconds | setting weights to the blockchain
+time: 0.21679999999999996 seconds | saving aggregated model to storage (round=1)
+time: 122.04669999999999 seconds | setting aggregated model to the blockchain round=1
+time: 381.5462 seconds | Round=2
+time: 254.19520000000003 seconds | Aggregating round=2
+time: 0.2313 seconds | saving aggregated model to storage (round=2)
+time: 121.10420000000002 seconds | setting aggregated model to the blockchain round=2
+time: 384.60960000000006 seconds | Round=3
+time: 255.5525 seconds | Aggregating round=3
+time: 0.2192 seconds | saving aggregated model to storage (round=3)
+time: 122.06400000000001 seconds | setting aggregated model to the blockchain round=3
+time: 383.57710000000003 seconds | Round=4
+time: 254.0281 seconds | Aggregating round=4
+time: 0.22649999999999998 seconds | saving aggregated model to storage (round=4)
+time: 122.04990000000001 seconds | setting aggregated model to the blockchain round=4
+time: 382.5819 seconds | Round=5
+time: 252.94819999999999 seconds | Aggregating round=5
+time: 0.21260000000000004 seconds | saving aggregated model to storage (round=5)
+time: 120.9632 seconds | setting aggregated model to the blockchain round=5
+time: 1916.0923429999998 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=25, NUM_ROUNDS=10,
+time: 11237.677 seconds | Experiment
+time: 521.467 seconds | Round=1
+time: 124.4461 seconds | deploying contract
+time: 68.08617 seconds | Training client=21
+time: 66.76575 seconds | Training client=16
+time: 66.57496 seconds | Training client=24
+time: 64.93689 seconds | Training client=14
+time: 66.21548 seconds | Training client=15
+time: 66.525 seconds | Training client=19
+time: 65.18718000000001 seconds | Training client=10
+time: 66.66814 seconds | Training client=22
+time: 65.32321999999998 seconds | Training client=7
+time: 63.99844 seconds | Training client=6
+time: 65.56925 seconds | Training client=17
+time: 66.6877 seconds | Training client=2
+time: 68.23590999999999 seconds | Training client=3
+time: 66.69044 seconds | Training client=13
+time: 65.98468999999999 seconds | Training client=0
+time: 68.12383999999999 seconds | Training client=8
+time: 65.35467 seconds | Training client=18
+time: 65.22754 seconds | Training client=20
+time: 65.29275 seconds | Training client=12
+time: 69.05472 seconds | Training client=4
+time: 66.26777999999999 seconds | Training client=1
+time: 65.44135999999999 seconds | Training client=23
+time: 64.33938 seconds | Training client=9
+time: 65.88539999999999 seconds | Training client=5
+time: 66.05442000000001 seconds | Training client=11
+time: 255.39130000000006 seconds | Aggregating round=1
+time: 123.39016000000001 seconds | setting weights to the blockchain
+time: 0.21459999999999999 seconds | saving aggregated model to storage (round=1)
+time: 121.88840000000002 seconds | setting aggregated model to the blockchain round=1
+time: 384.95439999999996 seconds | Round=2
+time: 254.51639999999998 seconds | Aggregating round=2
+time: 0.20869999999999997 seconds | saving aggregated model to storage (round=2)
+time: 121.56209999999999 seconds | setting aggregated model to the blockchain round=2
+time: 383.5089 seconds | Round=3
+time: 254.00680000000003 seconds | Aggregating round=3
+time: 0.21879999999999997 seconds | saving aggregated model to storage (round=3)
+time: 120.94589999999998 seconds | setting aggregated model to the blockchain round=3
+time: 383.99609999999996 seconds | Round=4
+time: 253.6406 seconds | Aggregating round=4
+time: 0.21139999999999998 seconds | saving aggregated model to storage (round=4)
+time: 121.29659999999998 seconds | setting aggregated model to the blockchain round=4
+time: 382.98310000000004 seconds | Round=5
+time: 253.7832 seconds | Aggregating round=5
+time: 0.2138 seconds | saving aggregated model to storage (round=5)
+time: 121.86139999999997 seconds | setting aggregated model to the blockchain round=5
+time: 385.4708 seconds | Round=6
+time: 255.22569999999996 seconds | Aggregating round=6
+time: 0.2197 seconds | saving aggregated model to storage (round=6)
+time: 122.1194 seconds | setting aggregated model to the blockchain round=6
+time: 383.0026 seconds | Round=7
+time: 253.1393 seconds | Aggregating round=7
+time: 0.21200000000000002 seconds | saving aggregated model to storage (round=7)
+time: 120.9396 seconds | setting aggregated model to the blockchain round=7
+time: 385.4516 seconds | Round=8
+time: 255.2964 seconds | Aggregating round=8
+time: 0.2223 seconds | saving aggregated model to storage (round=8)
+time: 122.26559999999999 seconds | setting aggregated model to the blockchain round=8
+time: 385.98789999999997 seconds | Round=9
+time: 255.1754 seconds | Aggregating round=9
+time: 0.2105 seconds | saving aggregated model to storage (round=9)
+time: 121.83190000000002 seconds | setting aggregated model to the blockchain round=9
+time: 384.025 seconds | Round=10
+time: 254.2322 seconds | Aggregating round=10
+time: 0.217 seconds | saving aggregated model to storage (round=10)
+time: 121.6192 seconds | setting aggregated model to the blockchain round=10
+time: 3846.9072187749 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=50, NUM_ROUNDS=1,
+time: 5177.8732 seconds | Experiment
+time: 1070.0896 seconds | Round=1
+time: 248.9293 seconds | deploying contract
+time: 76.19879999999999 seconds | Training client=10
+time: 69.68430000000001 seconds | Training client=40
+time: 68.6104 seconds | Training client=9
+time: 62.328500000000005 seconds | Training client=33
+time: 75.83259999999999 seconds | Training client=26
+time: 71.7458 seconds | Training client=36
+time: 79.18549999999999 seconds | Training client=28
+time: 76.37069999999999 seconds | Training client=32
+time: 72.6359 seconds | Training client=38
+time: 75.30300000000001 seconds | Training client=13
+time: 75.4048 seconds | Training client=19
+time: 75.54220000000001 seconds | Training client=16
+time: 75.82090000000001 seconds | Training client=21
+time: 74.9587 seconds | Training client=35
+time: 75.40220000000001 seconds | Training client=44
+time: 72.8837 seconds | Training client=15
+time: 71.9156 seconds | Training client=45
+time: 76.7941 seconds | Training client=14
+time: 75.21589999999999 seconds | Training client=20
+time: 71.9524 seconds | Training client=27
+time: 75.53370000000001 seconds | Training client=12
+time: 74.6491 seconds | Training client=43
+time: 75.3742 seconds | Training client=48
+time: 78.0197 seconds | Training client=46
+time: 78.5454 seconds | Training client=5
+time: 79.7412 seconds | Training client=41
+time: 79.3779 seconds | Training client=31
+time: 69.4676 seconds | Training client=8
+time: 69.10119999999999 seconds | Training client=11
+time: 79.40939999999999 seconds | Training client=2
+time: 71.92510000000001 seconds | Training client=18
+time: 75.0096 seconds | Training client=30
+time: 75.84540000000001 seconds | Training client=3
+time: 76.06309999999999 seconds | Training client=0
+time: 75.0396 seconds | Training client=24
+time: 75.0605 seconds | Training client=29
+time: 72.66940000000001 seconds | Training client=47
+time: 69.37540000000001 seconds | Training client=49
+time: 68.7833 seconds | Training client=17
+time: 78.3655 seconds | Training client=7
+time: 75.1663 seconds | Training client=22
+time: 68.5247 seconds | Training client=42
+time: 72.80339999999998 seconds | Training client=25
+time: 67.85 seconds | Training client=39
+time: 74.8099 seconds | Training client=6
+time: 69.0278 seconds | Training client=34
+time: 68.4631 seconds | Training client=37
+time: 64.2842 seconds | Training client=23
+time: 72.7358 seconds | Training client=1
+time: 71.0277 seconds | Training client=4
+time: 517.9334000000001 seconds | Aggregating round=1
+time: 247.897 seconds | setting weights to the blockchain
+time: 0.24560000000000004 seconds | saving aggregated model to storage (round=1)
+time: 248.90900000000005 seconds | setting aggregated model to the blockchain round=1
+time: 804.7446951668 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=50, NUM_ROUNDS=5,
+time: 4267.6627 seconds | Experiment
+time: 1063.5520000000001 seconds | Round=1
+time: 248.6701 seconds | deploying contract
+time: 74.46568 seconds | Training client=14
+time: 73.75944 seconds | Training client=48
+time: 75.06216 seconds | Training client=27
+time: 77.29925999999999 seconds | Training client=47
+time: 75.05014 seconds | Training client=36
+time: 74.63714 seconds | Training client=41
+time: 73.71168 seconds | Training client=19
+time: 72.536 seconds | Training client=40
+time: 69.72816 seconds | Training client=20
+time: 69.31262000000001 seconds | Training client=6
+time: 75.10398 seconds | Training client=46
+time: 74.42685999999999 seconds | Training client=42
+time: 75.82396 seconds | Training client=15
+time: 72.71298 seconds | Training client=17
+time: 73.17254000000001 seconds | Training client=7
+time: 75.29124 seconds | Training client=23
+time: 76.48402 seconds | Training client=28
+time: 75.3231 seconds | Training client=8
+time: 74.24078 seconds | Training client=44
+time: 72.73754000000001 seconds | Training client=13
+time: 70.42122 seconds | Training client=39
+time: 71.0684 seconds | Training client=16
+time: 73.25908 seconds | Training client=49
+time: 78.13723999999999 seconds | Training client=24
+time: 74.14164 seconds | Training client=9
+time: 75.41942 seconds | Training client=22
+time: 73.16796000000001 seconds | Training client=2
+time: 75.921 seconds | Training client=4
+time: 72.68746 seconds | Training client=45
+time: 75.25654 seconds | Training client=31
+time: 75.25736 seconds | Training client=12
+time: 75.0896 seconds | Training client=30
+time: 76.18836 seconds | Training client=10
+time: 74.34053999999999 seconds | Training client=0
+time: 76.77919999999999 seconds | Training client=11
+time: 74.8541 seconds | Training client=21
+time: 73.27392 seconds | Training client=29
+time: 69.97246 seconds | Training client=25
+time: 75.83608 seconds | Training client=18
+time: 73.79972 seconds | Training client=43
+time: 76.1206 seconds | Training client=5
+time: 67.85496 seconds | Training client=1
+time: 71.61006 seconds | Training client=35
+time: 73.45572000000001 seconds | Training client=26
+time: 70.43983999999999 seconds | Training client=33
+time: 73.23912 seconds | Training client=38
+time: 70.83831999999998 seconds | Training client=3
+time: 74.82758000000001 seconds | Training client=34
+time: 73.21338 seconds | Training client=32
+time: 74.37143999999999 seconds | Training client=37
+time: 514.8379000000001 seconds | Aggregating round=1
+time: 248.8136 seconds | setting weights to the blockchain
+time: 0.23349999999999999 seconds | saving aggregated model to storage (round=1)
+time: 246.7835 seconds | setting aggregated model to the blockchain round=1
+time: 796.6927 seconds | Round=2
+time: 515.7097 seconds | Aggregating round=2
+time: 0.2307 seconds | saving aggregated model to storage (round=2)
+time: 246.22779999999997 seconds | setting aggregated model to the blockchain round=2
+time: 802.2586 seconds | Round=3
+time: 516.1551999999999 seconds | Aggregating round=3
+time: 0.23380000000000006 seconds | saving aggregated model to storage (round=3)
+time: 247.6159 seconds | setting aggregated model to the blockchain round=3
+time: 797.6403 seconds | Round=4
+time: 515.4451000000001 seconds | Aggregating round=4
+time: 0.23159999999999997 seconds | saving aggregated model to storage (round=4)
+time: 246.83709999999996 seconds | setting aggregated model to the blockchain round=4
+time: 800.3113999999999 seconds | Round=5
+time: 516.4008 seconds | Aggregating round=5
+time: 0.23520000000000002 seconds | saving aggregated model to storage (round=5)
+time: 247.63979999999998 seconds | setting aggregated model to the blockchain round=5
+time: 3993.8229960956996 seconds | FL
+
+Config: INCENTIVES_ON=False, BCFL=True, IPFS_ON=True, NUM_CLIENTS=50, NUM_ROUNDS=10,
+time: 8111.9769 seconds | Experiment
+time: 1068.7089 seconds | Round=1
+time: 248.22369999999995 seconds | deploying contract
+time: 72.24492 seconds | Training client=43
+time: 69.23332 seconds | Training client=39
+time: 67.48707999999999 seconds | Training client=15
+time: 68.33574 seconds | Training client=45
+time: 66.2789 seconds | Training client=21
+time: 60.60834 seconds | Training client=10
+time: 70.78009 seconds | Training client=33
+time: 70.64592999999999 seconds | Training client=16
+time: 69.88417 seconds | Training client=30
+time: 65.70105 seconds | Training client=14
+time: 70.94685 seconds | Training client=32
+time: 76.44811 seconds | Training client=0
+time: 70.32771999999999 seconds | Training client=5
+time: 77.71451 seconds | Training client=47
+time: 61.9609 seconds | Training client=38
+time: 72.81558999999999 seconds | Training client=44
+time: 68.29124 seconds | Training client=8
+time: 76.27631 seconds | Training client=19
+time: 64.55479 seconds | Training client=26
+time: 68.10713 seconds | Training client=22
+time: 82.26755999999999 seconds | Training client=7
+time: 63.02649 seconds | Training client=31
+time: 75.0981 seconds | Training client=1
+time: 74.24750999999999 seconds | Training client=28
+time: 67.85844 seconds | Training client=35
+time: 63.82852 seconds | Training client=25
+time: 67.95084000000001 seconds | Training client=20
+time: 70.11685 seconds | Training client=41
+time: 75.92825 seconds | Training client=40
+time: 69.1837 seconds | Training client=13
+time: 63.789390000000004 seconds | Training client=36
+time: 64.95671 seconds | Training client=27
+time: 83.30884 seconds | Training client=24
+time: 69.78587 seconds | Training client=18
+time: 63.35099999999999 seconds | Training client=11
+time: 68.95899999999997 seconds | Training client=37
+time: 61.94079000000001 seconds | Training client=29
+time: 72.49506 seconds | Training client=23
+time: 76.84466000000002 seconds | Training client=48
+time: 69.21557000000001 seconds | Training client=46
+time: 73.03401000000001 seconds | Training client=34
+time: 59.06365000000001 seconds | Training client=17
+time: 73.58148 seconds | Training client=4
+time: 70.28469 seconds | Training client=49
+time: 77.8143 seconds | Training client=12
+time: 68.81896 seconds | Training client=3
+time: 68.11232999999999 seconds | Training client=9
+time: 66.00479 seconds | Training client=6
+time: 74.90127000000001 seconds | Training client=2
+time: 78.62898999999999 seconds | Training client=42
+time: 517.2295 seconds | Aggregating round=1
+time: 248.70128999999997 seconds | setting weights to the blockchain
+time: 0.2433 seconds | saving aggregated model to storage (round=1)
+time: 248.53430000000003 seconds | setting aggregated model to the blockchain round=1
+time: 793.4838 seconds | Round=2
+time: 514.7116 seconds | Aggregating round=2
+time: 0.2475 seconds | saving aggregated model to storage (round=2)
+time: 246.66980000000004 seconds | setting aggregated model to the blockchain round=2
+time: 791.9527999999999 seconds | Round=3
+time: 515.3781999999999 seconds | Aggregating round=3
+time: 0.24320000000000003 seconds | saving aggregated model to storage (round=3)
+time: 246.73160000000001 seconds | setting aggregated model to the blockchain round=3
+time: 790.4696999999999 seconds | Round=4
+time: 515.5231 seconds | Aggregating round=4
+time: 0.25470000000000004 seconds | saving aggregated model to storage (round=4)
+time: 247.49 seconds | setting aggregated model to the blockchain round=4
+time: 785.0355000000001 seconds | Round=5
+time: 516.5171 seconds | Aggregating round=5
+time: 0.25710000000000005 seconds | saving aggregated model to storage (round=5)
+time: 247.6406 seconds | setting aggregated model to the blockchain round=5
+time: 783.4608000000001 seconds | Round=6
+time: 516.5513 seconds | Aggregating round=6
+time: 0.2507 seconds | saving aggregated model to storage (round=6)
+time: 247.82819999999998 seconds | setting aggregated model to the blockchain round=6
+time: 773.9233999999999 seconds | Round=7
+time: 514.8706999999999 seconds | Aggregating round=7
+time: 0.2521 seconds | saving aggregated model to storage (round=7)
+time: 247.6947 seconds | setting aggregated model to the blockchain round=7
+time: 772.4999 seconds | Round=8
+time: 515.9053 seconds | Aggregating round=8
+time: 0.2537 seconds | saving aggregated model to storage (round=8)
+time: 247.12109999999998 seconds | setting aggregated model to the blockchain round=8
+time: 774.0435 seconds | Round=9
+time: 515.5793000000001 seconds | Aggregating round=9
+time: 0.25920000000000004 seconds | saving aggregated model to storage (round=9)
+time: 247.25919999999996 seconds | setting aggregated model to the blockchain round=9
+time: 771.4637 seconds | Round=10
+time: 515.1854 seconds | Aggregating round=10
+time: 0.24419999999999997 seconds | saving aggregated model to storage (round=10)
+time: 247.2195 seconds | setting aggregated model to the blockchain round=10
+time: 7839.4092219874 seconds | FL
+

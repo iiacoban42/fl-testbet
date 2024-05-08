@@ -16,7 +16,7 @@ from config import INCENTIVES_ON, SOLO_BLOCKCHAIN_ON, NUM_CLIENTS, NUM_ROUNDS, I
 LOG_FILE = ""
 
 if INCENTIVES_ON:
-    LOG_FILE = f"logs/logs_flchan/exp{NUM_CLIENTS}{NUM_ROUNDS}.log"
+    LOG_FILE = f"logs/logs_statefl/exp{NUM_CLIENTS}{NUM_ROUNDS}.log"
 elif SOLO_BLOCKCHAIN_ON:
     LOG_FILE = f"logs/logs_bcfl/exp{NUM_CLIENTS}{NUM_ROUNDS}.log"
 else:

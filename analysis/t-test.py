@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 from scipy import stats
-from plot_results import parse_log, get_mean_time, get_cumulative_time
+from plot_results import parse_log, get_mean_time
 
 def independent_t_test(mean1, mean2, std1, std2, n=10):
     # Compute mean and standard deviation for each sample
@@ -30,16 +30,16 @@ def independent_t_test(mean1, mean2, std1, std2, n=10):
     return t_stat, p, critical_value
 
 
-def run_test_for_event(sampleFLChan, sampleBCFL, event, caption=""):
+def run_test_for_event(sampleStateFL, sampleBCFL, event, caption=""):
 
     labels, times_FL_training = get_mean_time(sampleBCFL, event)
-    labels, times_FLChan_training = get_mean_time(sampleFLChan, event)
+    labels, times_StateFL_training = get_mean_time(sampleStateFL, event)
     p_values = []
     critical_values = []
     t_stats = []
     sig = []
     for i, _ in enumerate(labels):
-        t_stat, p, critical_value = independent_t_test(times_FL_training[i], times_FLChan_training[i], 10, 10, 10)
+        t_stat, p, critical_value = independent_t_test(times_FL_training[i], times_StateFL_training[i], 10, 10, 10)
         # round up to 3 decimal places
         p = round(p, 3)
         critical_value = round(critical_value, 3)
@@ -63,23 +63,23 @@ def run_test_for_event(sampleFLChan, sampleBCFL, event, caption=""):
 
 
     # Write LaTeX code to a file
-    with open(f'stats_table/{event}.tex', 'w') as f:
+    with open(f'analysis/stats_table/{event}.tex', 'w') as f:
         f.write(latex_table)
 
     return df
 
 
-log_data_FL = parse_log("logs/res_plot/results_FL.txt")
-log_data_FLChan = parse_log("logs/res_plot/results_chanFL.txt")
-log_data_BCFL = parse_log("logs/res_plot/results_BCFL.txt")
+log_data_FL = parse_log("analysis/results/results_FL.txt")
+log_data_StateFL = parse_log("analysis/results/results_StateFL.txt")
+log_data_BCFL = parse_log("analysis/results/results_BCFL.txt")
 
 
 labels, times_FL_training = get_mean_time(log_data_FL, "Training")
-labels, times_FLChan_training = get_mean_time(log_data_FLChan, "Training")
+labels, times_StateFL_training = get_mean_time(log_data_StateFL, "Training")
 
 
-run_test_for_event(log_data_FLChan, log_data_BCFL, "Training", "T-test on Training Time")
-run_test_for_event(log_data_FLChan, log_data_BCFL, "Aggregating", "T-test on Aggregation Time")
-run_test_for_event(log_data_FLChan, log_data_BCFL, "Round", "T-test on Round Time")
-run_test_for_event(log_data_FLChan, log_data_BCFL, "FL", "T-test on FL Time")
-run_test_for_event(log_data_FLChan, log_data_BCFL, "Experiment", "T-test on E2E Time")
+run_test_for_event(log_data_StateFL, log_data_BCFL, "Training", "T-test on Training Time")
+run_test_for_event(log_data_StateFL, log_data_BCFL, "Aggregating", "T-test on Aggregation Time")
+run_test_for_event(log_data_StateFL, log_data_BCFL, "Round", "T-test on Round Time")
+run_test_for_event(log_data_StateFL, log_data_BCFL, "FL", "T-test on FL Time")
+run_test_for_event(log_data_StateFL, log_data_BCFL, "Experiment", "T-test on E2E Time")

@@ -124,6 +124,6 @@ def get_event_timing(path, output_path=None):
         with open("logs.txt", 'a') as file:
             file.write(str(logs_per_config))
 
-get_event_timing("logs/logs_fl/", "logs/results_FL.txt")
-get_event_timing("logs/logs_flchan/", "logs/results_chanFL.txt")
-get_event_timing("logs/logs_bcfl/", "logs/results_BCFL.txt")
+get_event_timing("logs/logs_fl/", "analysis/results/results_FL.txt")
+get_event_timing("logs/logs_statefl/", "analysis/results/results_StateFL.txt")
+get_event_timing("logs/logs_bcfl/", "analysis/results/results_BCFL.txt")

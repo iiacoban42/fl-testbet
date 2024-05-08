@@ -1,7 +1,7 @@
 import matplotlib.pyplot as plt
 import numpy as np
 
-plot_path = "plots/"
+plot_path = "analysis/plots/"
 
 plt.rcParams.update({'font.size': 16})
 def parse_log(file_path):
@@ -153,27 +153,27 @@ def plot_stacked_bar(data, title, channel=False):
 
 
 
-def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
+def plot_mean_time_diff(data_FL, data_BCFL, data_StateFL, event, title):
 
     if event == 'Experiment':
         labels, mean_times_FL = get_mean_time(data_FL, "FL")
-        labels, mean_times_FLChan_fl_time = get_mean_time(data_FLChan, "FL")
-        labels, opening_times = get_mean_time(data_FLChan, "opening channels")
-        labels, settling_times = get_mean_time(data_FLChan, "settling channels")
+        labels, mean_times_StateFL_fl_time = get_mean_time(data_StateFL, "FL")
+        labels, opening_times = get_mean_time(data_StateFL, "opening channels")
+        labels, settling_times = get_mean_time(data_StateFL, "settling channels")
         channel_times = np.add(opening_times, settling_times).tolist()
-        mean_times_FLChan = np.add(mean_times_FLChan_fl_time, channel_times).tolist()
+        mean_times_StateFL = np.add(mean_times_StateFL_fl_time, channel_times).tolist()
 
         labels, mean_times_BCFL = get_mean_time(data_BCFL, 'FL')
 
     else:
 
         labels, mean_times_FL = get_mean_time(data_FL, event)
-        labels, mean_times_FLChan = get_mean_time(data_FLChan, event)
+        labels, mean_times_StateFL = get_mean_time(data_StateFL, event)
         labels, mean_times_BCFL = get_mean_time(data_BCFL, event)
 
-    min_len = min(len(mean_times_FL), len(mean_times_FLChan), len(mean_times_BCFL))
+    min_len = min(len(mean_times_FL), len(mean_times_StateFL), len(mean_times_BCFL))
     mean_times_FL = mean_times_FL[:min_len]
-    mean_times_FLChan = mean_times_FLChan[:min_len]
+    mean_times_StateFL = mean_times_StateFL[:min_len]
     mean_times_BCFL = mean_times_BCFL[:min_len]
     labels = labels[:min_len]
 
@@ -182,7 +182,7 @@ def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
     x = np.arange(len(labels))
 
     plt.bar(x - width, mean_times_BCFL, width, label='Mean Times BCFL', color='orange')
-    plt.bar(x, mean_times_FLChan, width, label='Mean Times StateFL', color='blue')
+    plt.bar(x, mean_times_StateFL, width, label='Mean Times StateFL', color='blue')
     plt.bar(x + width, mean_times_FL, width, label='Mean Times FL', color='gray')
 
     plt.title(title)
@@ -195,16 +195,16 @@ def plot_mean_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
     # plt.show()
 
 
-def plot_cumulative_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
+def plot_cumulative_time_diff(data_FL, data_BCFL, data_StateFL, event, title):
 
 
     labels, times_FL = get_cumulative_time(data_FL, event)
-    labels, times_FLChan = get_cumulative_time(data_FLChan, event)
+    labels, times_StateFL = get_cumulative_time(data_StateFL, event)
     labels, times_BCFL = get_cumulative_time(data_BCFL, event)
 
-    min_len = min(len(times_FL), len(times_FLChan), len(times_BCFL))
+    min_len = min(len(times_FL), len(times_StateFL), len(times_BCFL))
     times_FL = times_FL[:min_len]
-    times_FLChan = times_FLChan[:min_len]
+    times_StateFL = times_StateFL[:min_len]
     times_BCFL = times_BCFL[:min_len]
     labels = labels[:min_len]
 
@@ -213,7 +213,7 @@ def plot_cumulative_time_diff(data_FL, data_BCFL, data_FLChan, event, title):
     x = np.arange(len(labels))
 
     plt.bar(x - width, times_BCFL, width, label='Cumulative Times BCFL', color='orange')
-    plt.bar(x, times_FLChan, width, label='Cumulative Times StateFL', color='blue')
+    plt.bar(x, times_StateFL, width, label='Cumulative Times StateFL', color='blue')
     plt.bar(x + width, times_FL, width, label='Cumulative Times FL', color='gray')
 
     plt.title(title)
@@ -271,29 +271,29 @@ def plot_number_of_requests(data, event, title):
     # plt.show()
 
 
-log_data_FL = parse_log("logs/res_plot/results_FL.txt")
-log_data_FLChan = parse_log("logs/res_plot/results_chanFL.txt")
-log_data_BCFL = parse_log("logs/res_plot/results_BCFL.txt")
+log_data_FL = parse_log("analysis/results/results_FL.txt")
+log_data_StateFL = parse_log("analysis/results/results_StateFL.txt")
+log_data_BCFL = parse_log("analysis/results/results_BCFL.txt")
 
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Training", 'Mean Client Training Time: FL vs BCFL vs StateFL')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 'Mean Aggregation Time: FL vs BCFL vs StateFL')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Mean Round Time: FL vs BCFL vs StateFL')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "FL", 'Federated Learning Time: FL vs BCFL vs StateFL')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Experiment", 'E2E Time: FL vs BCFL vs StateFL')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Training", 'Mean Client Training Time: FL vs BCFL vs StateFL')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Aggregating", 'Mean Aggregation Time: FL vs BCFL vs StateFL')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Round", 'Mean Round Time: FL vs BCFL vs StateFL')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "FL", 'Federated Learning Time: FL vs BCFL vs StateFL')
+plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Experiment", 'E2E Time: FL vs BCFL vs StateFL')
 
-plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Round", 'Cumulative Round Time: FL vs BCFL vs StateFL')
-plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Aggregating", 'Cumulative Aggregation Time: FL vs BCFL vs StateFL')
-plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_FLChan, "Training", 'Cumulative training Time: FL vs BCFL vs StateFL')
-
-
-plot_number_of_requests(log_data_FLChan, "ipfs", 'IPFS Requests')
-plot_number_of_requests(log_data_FLChan, "perun", 'Perun Requests')
+plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Round", 'Cumulative Round Time: FL vs BCFL vs StateFL')
+plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Aggregating", 'Cumulative Aggregation Time: FL vs BCFL vs StateFL')
+plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Training", 'Cumulative training Time: FL vs BCFL vs StateFL')
 
 
+plot_number_of_requests(log_data_StateFL, "ipfs", 'IPFS Requests')
+plot_number_of_requests(log_data_StateFL, "perun", 'Perun Requests')
 
-plot_channel_time(log_data_FLChan, 'Time to Handle Channel Opening and Closing')
 
 
-plot_stacked_bar(log_data_FLChan, 'StateFL Events', channel=True)
+plot_channel_time(log_data_StateFL, 'Time to Handle Channel Opening and Closing')
+
+
+plot_stacked_bar(log_data_StateFL, 'StateFL Events', channel=True)
 plot_stacked_bar(log_data_FL, 'FL Events', channel=False)
 plot_stacked_bar(log_data_BCFL, 'BCFL Events', channel=False)

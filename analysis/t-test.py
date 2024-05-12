@@ -3,15 +3,13 @@ import pandas as pd
 from scipy import stats
 from plot_results import parse_log, get_mean_time
 
-def independent_t_test(mean1, mean2, std1, std2, n=10):
+def independent_t_test(mean1, mean2, std1, std2, n1, n2):
     # Compute mean and standard deviation for each sample
     # mean1, mean2 = np.mean(sample1), np.mean(sample2)
     # std1, std2 = np.std(sample1, ddof=1), np.std(sample2, ddof=1)
 
     # # Compute the standard error of the difference between means
     # n1, n2 = len(sample1), len(sample2)
-    n1 = n
-    n2 = n
     sed = np.sqrt((std1**2 / n1) + (std2**2 / n2))
 
     # Compute the t statistic
@@ -32,14 +30,27 @@ def independent_t_test(mean1, mean2, std1, std2, n=10):
 
 def run_test_for_event(sampleStateFL, sampleBCFL, event, caption=""):
 
-    labels, times_FL_training = get_mean_time(sampleBCFL, event)
-    labels, times_StateFL_training = get_mean_time(sampleStateFL, event)
+    if event == "Experiment":
+        labels, times_BCFL = get_mean_time(sampleBCFL, "FL")
+        labels, mean_times_StateFL_fl_time = get_mean_time(sampleStateFL, "FL")
+        labels, opening_times = get_mean_time(sampleStateFL, "opening channels")
+        labels, settling_times = get_mean_time(sampleStateFL, "settling channels")
+        channel_times = np.add(opening_times, settling_times).tolist()
+        times_StateFL = np.add(mean_times_StateFL_fl_time, channel_times).tolist()
+    else:
+        labels, times_BCFL = get_mean_time(sampleBCFL, event)
+        labels, times_StateFL = get_mean_time(sampleStateFL, event)
+
     p_values = []
     critical_values = []
     t_stats = []
     sig = []
+
     for i, _ in enumerate(labels):
-        t_stat, p, critical_value = independent_t_test(times_FL_training[i], times_StateFL_training[i], 10, 10, 10)
+        BCFL_std = np.std(times_BCFL, ddof=1)
+        StateFL_std = np.std(times_StateFL, ddof=1)
+
+        t_stat, p, critical_value = independent_t_test(times_BCFL[i], times_StateFL[i], BCFL_std, StateFL_std, len(times_BCFL), len(times_StateFL))
         # round up to 3 decimal places
         p = round(p, 3)
         critical_value = round(critical_value, 3)

@@ -1,0 +1,404 @@
+KEY_ALICE=0x1af2e950272dd403de7a5760d41c6e44d92b6d02797e51810795ff03cc2cda4f
+KEY_BOB=0xf63d7d8e930bccd74e93cf5662fde2c28fd8be95edb70c73f1bdd863d07f412e
+BALANCE=100000000000000000000
+
+ganache-cli --host 127.0.0.1 --port 8545 --account $KEY_DEPLOYER,$BALANCE --account $KEY_ALICE,$BALANCE --account $KEY_BOB,$BALANCE --blockTime=5
+This version of µWS is not compatible with your Node.js build:
+
+Error: Cannot find module '../binaries/uws_darwin_arm64_127.node'
+Require stack:
+- /opt/homebrew/lib/node_modules/ganache/node_modules/@trufflesuite/uws-js-unofficial/src/uws.js
+- /opt/homebrew/lib/node_modules/ganache/dist/node/cli.js
+Falling back to a NodeJS implementation; performance may be degraded.
+
+
+ganache v7.8.0 (@ganache/cli: 0.9.0, @ganache/core: 0.9.0)
+Starting RPC server
+
+Available Accounts
+==================
+(0) 0xe84d227431DfFcF14Fb8fa39818DFd4e864aeB13 (100 ETH)
+(1) 0x56FD289cEe714a5E471c418436EFA63E780D7a87 (100 ETH)
+(2) 0x6536425BE95A6661F6C6f68D709B6BE152785Df6 (100 ETH)
+
+Private Keys
+==================
+(0) 0x79ea8f62d97bc0591a4224c1725fca6b00de5b2cea286fe2e0bb35c5e76be46e
+(1) 0x1af2e950272dd403de7a5760d41c6e44d92b6d02797e51810795ff03cc2cda4f
+(2) 0xf63d7d8e930bccd74e93cf5662fde2c28fd8be95edb70c73f1bdd863d07f412e
+
+Default Gas Price
+==================
+2000000000
+
+BlockGas Limit
+==================
+30000000
+
+Call Gas Limit
+==================
+50000000
+
+Chain Id
+==================
+1337
+
+RPC Listening on 127.0.0.1:8545
+eth_gasPrice
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0x938c004fde691d1bb172f5e292a5a5acece908c1d4124452e8b9183e90e7de10
+  Contract created: 0x29f777ddbd226ff2f06d6d2d9be2b2c39785e0c1
+  Gas usage: 2676043
+  Block number: 2
+  Block time: Sun May 12 2024 02:20:15 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_getCode
+eth_gasPrice
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0x89e681fb7278533b11ee89483ed970bf7a4365c36b3f3c1a2f05c2d15c7a1523
+  Contract created: 0x4e1d65a1e558029058903528140438802a6b5dfc
+  Gas usage: 869281
+  Block number: 3
+  Block time: Sun May 12 2024 02:20:20 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_getCode
+eth_gasPrice
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0x6155cf92fafafd718e2c66b05a33ba11837c1c16c926ad0be4532a9e84f46a43
+  Contract created: 0x2040cf1e422bf20fda7c7452c930122f4147997d
+  Gas usage: 1473359
+  Block number: 4
+  Block time: Sun May 12 2024 02:20:25 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionReceipt
+eth_getCode
+eth_getCode
+eth_getCode
+eth_call
+eth_getCode
+eth_getCode
+eth_call
+eth_getBalance
+eth_getBalance
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_subscribe
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_subscribe
+eth_getBlockByNumber
+eth_subscribe
+eth_subscribe
+eth_subscribe
+eth_subscribe
+eth_getLogs
+eth_getLogs
+eth_getLogs
+eth_getLogs
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_subscribe
+eth_subscribe
+eth_subscribe
+eth_subscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_gasPrice
+eth_gasPrice
+eth_getTransactionCount
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0xbc6c2d26ee78a460c3bff4f2a86dbf30e5368014f0af69fb738c763380c47273
+  Gas usage: 45872
+  Block number: 5
+  Block time: Sun May 12 2024 02:20:30 GMT+0200 (Central European Summer Time)
+
+
+  Transaction: 0x9ecbf94f993e7c8eeff85595d36cd52ed809bac6e9343ba687f76a28458a189d
+  Gas usage: 91744
+  Block number: 5
+  Block time: Sun May 12 2024 02:20:30 GMT+0200 (Central European Summer Time)
+
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_getBlockByNumber
+eth_subscribe
+eth_subscribe
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_getBlockByNumber
+eth_subscribe
+eth_getLogs
+eth_getBlockByNumber
+eth_subscribe
+eth_gasPrice
+eth_getBlockByNumber
+eth_subscribe
+eth_getBlockByNumber
+eth_getTransactionCount
+eth_getLogs
+eth_subscribe
+eth_getBlockByNumber
+eth_getLogs
+eth_sendRawTransaction
+eth_subscribe
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0xdc070bbdafcdf253cf7a3cd9acafa3f9607044db328c594b44d6399de577bb3d
+  Gas usage: 103714
+  Block number: 6
+  Block time: Sun May 12 2024 02:20:35 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionByHash
+eth_getTransactionByHash
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_subscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_gasPrice
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0xb618d9351eddeb8b5413a53fea550d6d56371cd02ec23c9144a24fcbda3ef079
+  Gas usage: 105940
+  Block number: 9
+  Block time: Sun May 12 2024 02:20:51 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionByHash
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_gasPrice
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0x17e8818ec3a926fbf08006ba9487d2907cf6a714f208ecee316095a727d27a6b
+  Gas usage: 105490
+  Block number: 10
+  Block time: Sun May 12 2024 02:20:56 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionByHash
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_gasPrice
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0x1c7cc9c789eaa70e2da5a371bed92d2a50cb87ba08242595d3948d4ade1a65f0
+  Gas usage: 106030
+  Block number: 11
+  Block time: Sun May 12 2024 02:21:01 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionByHash
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_gasPrice
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0xf0476b022d3d5e763c271217d0d089a968aa3bb98eb416317b1a4e72654fc965
+  Gas usage: 105460
+  Block number: 12
+  Block time: Sun May 12 2024 02:21:06 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionByHash
+eth_getTransactionByHash
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_getBlockByNumber
+eth_subscribe
+eth_getLogs
+eth_getBlockByNumber
+eth_subscribe
+eth_getBlockByNumber
+eth_subscribe
+eth_getLogs
+eth_unsubscribe
+eth_gasPrice
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0xc93b85706eb7adc3b0aab4cb40530b4a0d0f8217e8ad4e7ef7c7a29c4f682fba
+  Gas usage: 101688
+  Block number: 13
+  Block time: Sun May 12 2024 02:21:11 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_getBlockByNumber
+eth_subscribe
+eth_getLogs
+eth_getBlockByNumber
+eth_subscribe
+eth_gasPrice
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0xe9f6a80ec8ec15002bfc96849f382d0a19a9ab792036851702d69d839c9735a8
+  Gas usage: 41531
+  Block number: 14
+  Block time: Sun May 12 2024 02:21:16 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_getBlockByNumber
+eth_subscribe
+eth_getLogs
+eth_getBlockByNumber
+eth_subscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_getBlockByNumber
+eth_subscribe
+eth_getLogs
+eth_getBlockByNumber
+eth_subscribe
+eth_gasPrice
+eth_getTransactionCount
+eth_sendRawTransaction
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+eth_getTransactionReceipt
+
+  Transaction: 0x8642ad0813d6c4a323be1fe02db9ea3ea46ef7c1572c2be77cbc2dd50c96b190
+  Gas usage: 41543
+  Block number: 15
+  Block time: Sun May 12 2024 02:21:21 GMT+0200 (Central European Summer Time)
+
+eth_getTransactionReceipt
+eth_getBlockByNumber
+eth_subscribe
+eth_getTransactionReceipt
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe
+eth_unsubscribe

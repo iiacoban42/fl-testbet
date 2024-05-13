@@ -119,11 +119,13 @@ def get_event_timing(path, output_path=None):
             # res += "\n"
             # print("\n")
 
-    if output_path:
+    if output_path is not None:
         dump_mean_timing(logs_per_config, output_path)
         with open("logs.txt", 'a') as file:
             file.write(str(logs_per_config))
 
-get_event_timing("logs/logs_fl/", "analysis/results/results_FL.txt")
-get_event_timing("logs/logs_statefl/", "analysis/results/results_StateFL.txt")
-get_event_timing("logs/logs_bcfl/", "analysis/results/results_BCFL.txt")
+    return logs_per_config
+
+# get_event_timing("logs/logs_fl/", "analysis/results/results_FL.txt")
+# get_event_timing("logs/logs_statefl/", "analysis/results/results_StateFL.txt")
+# get_event_timing("logs/logs_bcfl/", "analysis/results/results_BCFL.txt")

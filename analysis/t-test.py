@@ -2,6 +2,8 @@ import numpy as np
 import pandas as pd
 from scipy import stats
 from plot_results import parse_log, get_mean_time
+from get_stats import get_event_timing
+
 
 def independent_t_test(mean1, mean2, std1, std2, n1, n2):
     # Compute mean and standard deviation for each sample
@@ -28,29 +30,84 @@ def independent_t_test(mean1, mean2, std1, std2, n1, n2):
     return t_stat, p, critical_value
 
 
+def get_event_avg_per_round(logs_per_config):
+    round_times = {}
+    training_times = {}
+    aggregation_times = {}
+
+    for config, events in logs_per_config.items():
+        for event, timings in events.items():
+            if "Round=" in event:
+                if config not in round_times:
+                    round_times[config] = []
+                round_times[config].append(timings)
+
+            elif "Training client=" in event:
+                if config not in training_times:
+                    training_times[config] = []
+                training_times[config].append(timings)
+
+            elif "Aggregating round=" in event:
+                if config not in aggregation_times:
+                    aggregation_times[config] = []
+                aggregation_times[config].append(timings)
+
+
+    # col_means = [sum(i)/len(i) for i in zip(*arr)] #column wise means
+    # row_means = [sum(i)/len(i) for i in arr] #row wise means
+
+    for config, rounds in round_times.items():
+        means = [sum(i)/len(i) for i in zip(*rounds)]
+        logs_per_config[config]['Round'] = means
+
+    for config, aggr in aggregation_times.items():
+        means = [sum(i)/len(i) for i in zip(*aggr)]
+        logs_per_config[config]['Aggregating'] = means
+
+    for config, training in training_times.items():
+        means = [sum(i)/len(i) for i in zip(*training)]
+        logs_per_config[config]['Training'] = means
+
+    return logs_per_config
+
+
+def get_event_times(logs_per_config, event):
+    res = {}
+
+    for config, events in logs_per_config.items():
+        rounds_clients = tuple(map(int, [s.split('=')[1] for s in config.split(',') if 'ROUNDS' in s or 'NUM_CLIENTS' in s]))
+        res[rounds_clients] = events[event]
+
+    return res
+
+
 def run_test_for_event(sampleStateFL, sampleBCFL, event, caption=""):
 
     if event == "Experiment":
-        labels, times_BCFL = get_mean_time(sampleBCFL, "FL")
-        labels, mean_times_StateFL_fl_time = get_mean_time(sampleStateFL, "FL")
-        labels, opening_times = get_mean_time(sampleStateFL, "opening channels")
-        labels, settling_times = get_mean_time(sampleStateFL, "settling channels")
-        channel_times = np.add(opening_times, settling_times).tolist()
-        times_StateFL = np.add(mean_times_StateFL_fl_time, channel_times).tolist()
+        opening_times = get_event_times(sampleStateFL, "opening channels")
+        settling_times = get_event_times(sampleStateFL, "settling channels")
+        sampleBCFL = get_event_times(sampleBCFL, "FL")
+        sampleStateFL = get_event_times(sampleStateFL, "FL")
+
+        for config, events in sampleStateFL.items():
+            channel_time = np.add(opening_times[config], settling_times[config]).tolist()
+            sampleStateFL[config] = np.add(events, channel_time).tolist()
     else:
-        labels, times_BCFL = get_mean_time(sampleBCFL, event)
-        labels, times_StateFL = get_mean_time(sampleStateFL, event)
+        sampleStateFL = get_event_times(sampleStateFL, event)
+        sampleBCFL = get_event_times(sampleBCFL, event)
 
     p_values = []
     critical_values = []
     t_stats = []
     sig = []
 
-    for i, _ in enumerate(labels):
-        BCFL_std = np.std(times_BCFL, ddof=1)
-        StateFL_std = np.std(times_StateFL, ddof=1)
+    for config, _ in sampleBCFL.items():
+        BCFL_std = np.std(sampleBCFL[config], ddof=1)
+        StateFL_std = np.std(sampleStateFL[config], ddof=1)
+        BCFL_mean = np.mean(sampleBCFL[config])
+        StateFL_mean = np.mean(sampleStateFL[config])
 
-        t_stat, p, critical_value = independent_t_test(times_BCFL[i], times_StateFL[i], BCFL_std, StateFL_std, len(times_BCFL), len(times_StateFL))
+        t_stat, p, critical_value = independent_t_test(BCFL_mean, StateFL_mean, BCFL_std, StateFL_std, len(sampleBCFL[config]), len(sampleStateFL[config]))
         # round up to 3 decimal places
         p = round(p, 3)
         critical_value = round(critical_value, 3)
@@ -64,6 +121,8 @@ def run_test_for_event(sampleStateFL, sampleBCFL, event, caption=""):
             sig.append(True)
         else:
             sig.append(False)
+
+    labels = [f'{config}' for config in sampleBCFL.keys()]
 
     d = {'(#C, #R)': labels, 'p-value': p_values, 't-value': t_stats, 'significant': sig}
     df = pd.DataFrame(data=d)
@@ -80,17 +139,22 @@ def run_test_for_event(sampleStateFL, sampleBCFL, event, caption=""):
     return df
 
 
-log_data_FL = parse_log("analysis/results/results_FL.txt")
-log_data_StateFL = parse_log("analysis/results/results_StateFL.txt")
-log_data_BCFL = parse_log("analysis/results/results_BCFL.txt")
 
+# log_data_StateFL = parse_log("analysis/results/results_StateFL.txt")
+# log_data_BCFL = parse_log("analysis/results/results_BCFL.txt")
 
-labels, times_FL_training = get_mean_time(log_data_FL, "Training")
-labels, times_StateFL_training = get_mean_time(log_data_StateFL, "Training")
+log_data_StateFL = get_event_timing("logs/logs_statefl/")
+log_data_BCFL = get_event_timing("logs/logs_bcfl/")
 
+log_data_StateFL = get_event_avg_per_round(log_data_StateFL)
+log_data_BCFL = get_event_avg_per_round(log_data_BCFL)
 
 run_test_for_event(log_data_StateFL, log_data_BCFL, "Training", "T-test on Training Time")
+
 run_test_for_event(log_data_StateFL, log_data_BCFL, "Aggregating", "T-test on Aggregation Time")
+
 run_test_for_event(log_data_StateFL, log_data_BCFL, "Round", "T-test on Round Time")
+
 run_test_for_event(log_data_StateFL, log_data_BCFL, "FL", "T-test on FL Time")
+
 run_test_for_event(log_data_StateFL, log_data_BCFL, "Experiment", "T-test on E2E Time")

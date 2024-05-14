@@ -126,6 +126,3 @@ def get_event_timing(path, output_path=None):
 
     return logs_per_config
 
-# get_event_timing("logs/logs_fl/", "analysis/results/results_FL.txt")
-# get_event_timing("logs/logs_statefl/", "analysis/results/results_StateFL.txt")
-# get_event_timing("logs/logs_bcfl/", "analysis/results/results_BCFL.txt")

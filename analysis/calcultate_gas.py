@@ -51,7 +51,7 @@ df = calculate_cumulative_gas_usage(directory)
 with open('analysis/stats_table/gas_usage_table.tex', 'w') as f:
     f.write(df.to_latex(index=False))
 
-    df = df.loc[df['#R'] != "no disputes"]
+    # df = df.loc[df['#R'] != "no disputes"]
 
     # Plot the total gas usage
     plt.figure(figsize=(10, 6))

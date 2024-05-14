@@ -271,29 +271,3 @@ def plot_number_of_requests(data, event, title):
     # plt.show()
 
 
-log_data_FL = parse_log("analysis/results/results_FL.txt")
-log_data_StateFL = parse_log("analysis/results/results_StateFL.txt")
-log_data_BCFL = parse_log("analysis/results/results_BCFL.txt")
-
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Training", 'Mean Client Training Time: FL vs BCFL vs StateFL')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Aggregating", 'Mean Aggregation Time: FL vs BCFL vs StateFL')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Round", 'Mean Round Time: FL vs BCFL vs StateFL')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "FL", 'Federated Learning Time: FL vs BCFL vs StateFL')
-plot_mean_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Experiment", 'E2E Time: FL vs BCFL vs StateFL')
-
-plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Round", 'Cumulative Round Time: FL vs BCFL vs StateFL')
-plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Aggregating", 'Cumulative Aggregation Time: FL vs BCFL vs StateFL')
-plot_cumulative_time_diff(log_data_FL, log_data_BCFL, log_data_StateFL, "Training", 'Cumulative training Time: FL vs BCFL vs StateFL')
-
-
-plot_number_of_requests(log_data_StateFL, "ipfs", 'IPFS Requests')
-plot_number_of_requests(log_data_StateFL, "perun", 'Perun Requests')
-
-
-
-plot_channel_time(log_data_StateFL, 'Time to Handle Channel Opening and Closing')
-
-
-plot_stacked_bar(log_data_StateFL, 'StateFL Events', channel=True)
-plot_stacked_bar(log_data_FL, 'FL Events', channel=False)
-plot_stacked_bar(log_data_BCFL, 'BCFL Events', channel=False)
